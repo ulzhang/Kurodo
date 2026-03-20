@@ -2,3 +2,40 @@
 .cheatsheet-section { margin: 30px 0; }
 .cheatsheet-section h2 { font-family: Arial, sans-serif; border-bottom: 2px solid #4a90d9; padding-bottom: 8px; margin-bottom: 15px; }
 .cheatsheet-embed iframe { width: 100%; border: none; overflow: hidden; }
+
+/* ===== RESPONSIVE / MOBILE STYLES ===== */
+@media screen and (max-width: 768px) {
+    body.c44 {
+        max-width: 100% !important;
+        padding: 12px !important;
+    }
+
+    span[style*="overflow: hidden"][style*="display: inline-block"] {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    span[style*="overflow: hidden"][style*="display: inline-block"] img {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .nav {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 8px 16px !important;
+    }
+
+    .nav a {
+        margin-right: 0 !important;
+    }
+
+    .related-lessons {
+        padding: 10px !important;
+        margin: 12px 0 !important;
+    }
+
+    .cheatsheet-embed iframe {
+        width: 100% !important;
+    }
+}
