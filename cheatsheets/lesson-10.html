@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 10 Cheat Sheet - Potential Form</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 11pt;
+            line-height: 1.4;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 18pt;
+            border-bottom: 3px solid #333;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+        h2 {
+            font-size: 13pt;
+            background: #f0f0f0;
+            padding: 6px 10px;
+            margin: 15px 0 10px 0;
+            border-left: 4px solid #9b59b6;
+        }
+        .pattern {
+            background: #f5f0ff;
+            border: 1px solid #9b59b6;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 4px;
+        }
+        .pattern-name {
+            font-weight: bold;
+            color: #6c3483;
+        }
+        .japanese {
+            font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif;
+            font-size: 14pt;
+        }
+        .example {
+            margin: 6px 0;
+            padding-left: 15px;
+            border-left: 2px solid #ddd;
+        }
+        .example .jp { font-weight: bold; }
+        .example .en { color: #666; font-style: italic; }
+        .warning {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            padding: 8px 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            font-size: 10pt;
+        }
+        .warning-title { color: #721c24; font-weight: bold; }
+        .key-point {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            padding: 8px 10px;
+            margin: 8px 0;
+            border-radius: 4px;
+        }
+        .particle {
+            display: inline-block;
+            background: #e7f1ff;
+            border: 1px solid #b8daff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            font-size: 10pt;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 6px 8px;
+            text-align: left;
+        }
+        th { background: #f5f5f5; }
+        .footer {
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 1px solid #ddd;
+            font-size: 9pt;
+            color: #666;
+            text-align: center;
+        }
+        .tip {
+            background: #e8f5e9;
+            border-left: 4px solid #27ae60;
+            padding: 8px 12px;
+            margin: 10px 0;
+        }
+        @media print {
+            body { padding: 10px; }
+            .warning, .key-point, .pattern { break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Lesson 10: Potential Form (Conjugations)</h1>
+
+    <h2>Key Concept: Helper Verbs, Not Conjugation</h2>
+    <div class="key-point">
+        Japanese doesn't have "conjugation" - it uses <strong>helper verbs</strong> attached to verb stems. The potential form attaches to the <strong>e-stem</strong>.
+    </div>
+
+    <h2>Forming the Potential</h2>
+
+    <div class="pattern">
+        <span class="pattern-name">Godan Verbs: E-stem + る</span>
+        <p>Change the final う-sound to its え-row equivalent, then add る</p>
+    </div>
+
+    <table>
+        <tr>
+            <th>Dictionary</th>
+            <th>E-stem</th>
+            <th>Potential</th>
+            <th>Meaning</th>
+        </tr>
+        <tr>
+            <td class="japanese">買う</td>
+            <td class="japanese">買え</td>
+            <td class="japanese">買える</td>
+            <td>can buy</td>
+        </tr>
+        <tr>
+            <td class="japanese">聞く</td>
+            <td class="japanese">聞け</td>
+            <td class="japanese">聞ける</td>
+            <td>can hear</td>
+        </tr>
+        <tr>
+            <td class="japanese">話す</td>
+            <td class="japanese">話せ</td>
+            <td class="japanese">話せる</td>
+            <td>can speak</td>
+        </tr>
+        <tr>
+            <td class="japanese">持つ</td>
+            <td class="japanese">持て</td>
+            <td class="japanese">持てる</td>
+            <td>can hold</td>
+        </tr>
+        <tr>
+            <td class="japanese">読む</td>
+            <td class="japanese">読め</td>
+            <td class="japanese">読める</td>
+            <td>can read</td>
+        </tr>
+    </table>
+
+    <div class="pattern">
+        <span class="pattern-name">Ichidan Verbs: Remove る + られる</span>
+    </div>
+
+    <table>
+        <tr>
+            <th>Dictionary</th>
+            <th>Potential</th>
+            <th>Meaning</th>
+        </tr>
+        <tr>
+            <td class="japanese">食べる</td>
+            <td class="japanese">食べられる</td>
+            <td>can eat</td>
+        </tr>
+        <tr>
+            <td class="japanese">見る</td>
+            <td class="japanese">見られる</td>
+            <td>can see</td>
+        </tr>
+    </table>
+
+    <div class="pattern">
+        <span class="pattern-name">Irregular Verbs</span>
+    </div>
+
+    <table>
+        <tr>
+            <th>Dictionary</th>
+            <th>Potential</th>
+            <th>Note</th>
+        </tr>
+        <tr>
+            <td class="japanese">する</td>
+            <td class="japanese">できる</td>
+            <td>Completely different word (出来る = "come out")</td>
+        </tr>
+        <tr>
+            <td class="japanese">来る</td>
+            <td class="japanese">来られる</td>
+            <td>Regular ichidan-style ending</td>
+        </tr>
+    </table>
+
+    <h2>Critical: が Marks What CAN BE Done</h2>
+    <div class="key-point">
+        With potential form, <span class="particle">が</span> marks the <strong>thing that is do-able</strong>, not the person doing it. This is because potential describes a state!
+    </div>
+
+    <div class="example">
+        <p class="jp japanese">本が読める</p>
+        <p class="en">The book is readable. (NOT "I can read the book")</p>
+        <p class="en">が marks 本 (book) = book is the subject!</p>
+    </div>
+
+    <div class="example">
+        <p class="jp japanese">私は本が読める</p>
+        <p class="en">As for me, the book is readable. / To me, the book is readable.</p>
+    </div>
+
+    <div class="tip">
+        <strong>Compare:</strong> Just like たい form (Lesson 9), the thing being wanted/possible takes が.
+    </div>
+
+    <h2>できる - The Potential of する</h2>
+    <div class="pattern">
+        <span class="pattern-name">日本語ができる</span>
+        <p>"Japanese is possible" (not "I can do Japanese")</p>
+    </div>
+
+    <div class="example">
+        <p class="jp japanese">私は日本語ができる</p>
+        <p class="en">To me, Japanese is possible.</p>
+    </div>
+
+    <h2>Potential Form is an Ichidan Verb</h2>
+    <div class="key-point">
+        The potential helper (even just る) creates a regular ichidan verb. Conjugate it like any other!
+    </div>
+
+    <table>
+        <tr>
+            <th>Form</th>
+            <th>Example</th>
+            <th>Meaning</th>
+        </tr>
+        <tr>
+            <td>Positive</td>
+            <td class="japanese">歩ける</td>
+            <td>can walk</td>
+        </tr>
+        <tr>
+            <td>Negative</td>
+            <td class="japanese">歩けない</td>
+            <td>can't walk</td>
+        </tr>
+        <tr>
+            <td>Past</td>
+            <td class="japanese">歩けた</td>
+            <td>could walk</td>
+        </tr>
+        <tr>
+            <td>Past Negative</td>
+            <td class="japanese">歩けなかった</td>
+            <td>couldn't walk</td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>Form</th>
+            <th>できる</th>
+            <th>Meaning</th>
+        </tr>
+        <tr>
+            <td>Positive</td>
+            <td class="japanese">できる</td>
+            <td>is possible</td>
+        </tr>
+        <tr>
+            <td>Negative</td>
+            <td class="japanese">できない</td>
+            <td>isn't possible</td>
+        </tr>
+        <tr>
+            <td>Past</td>
+            <td class="japanese">できた</td>
+            <td>was possible</td>
+        </tr>
+        <tr>
+            <td>Past Negative</td>
+            <td class="japanese">できなかった</td>
+            <td>wasn't possible</td>
+        </tr>
+    </table>
+
+    <h2>Common Mistakes</h2>
+    <div class="warning">
+        <span class="warning-title">Using を instead of が with potential</span><br>
+        ✗ <span class="japanese">本を読める</span> (treating "I" as subject)<br>
+        ✓ <span class="japanese">本が読める</span> (book is the subject = is readable)
+    </div>
+
+    <div class="warning">
+        <span class="warning-title">Thinking potential = "I can do X"</span><br>
+        The literal meaning is "X is do-able" - the focus is on X, not on you.
+    </div>
+
+    <div class="warning">
+        <span class="warning-title">Forgetting できる is irregular</span><br>
+        ✗ <span class="japanese">しられる</span><br>
+        ✓ <span class="japanese">できる</span> (completely different word for する potential)
+    </div>
+
+    <h2>Quick Reference: E-stem Changes</h2>
+    <table>
+        <tr>
+            <th>Ending</th>
+            <th>E-stem</th>
+            <th>Example</th>
+        </tr>
+        <tr><td>う</td><td>え</td><td class="japanese">買う → 買える</td></tr>
+        <tr><td>く</td><td>け</td><td class="japanese">書く → 書ける</td></tr>
+        <tr><td>ぐ</td><td>げ</td><td class="japanese">泳ぐ → 泳げる</td></tr>
+        <tr><td>す</td><td>せ</td><td class="japanese">話す → 話せる</td></tr>
+        <tr><td>つ</td><td>て</td><td class="japanese">持つ → 持てる</td></tr>
+        <tr><td>ぬ</td><td>ね</td><td class="japanese">死ぬ → 死ねる</td></tr>
+        <tr><td>ぶ</td><td>べ</td><td class="japanese">飛ぶ → 飛べる</td></tr>
+        <tr><td>む</td><td>め</td><td class="japanese">読む → 読める</td></tr>
+        <tr><td>る</td><td>れ</td><td class="japanese">取る → 取れる</td></tr>
+    </table>
+
+    <div class="footer">
+        Cure Dolly's Organic Japanese - Lesson 10 Cheat Sheet<br>
+        <a href="../lessons/lesson-10.html">Full Lesson</a> | <a href="../index.html">Index</a>
+    </div>
+</body>
+</html>

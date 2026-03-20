@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 1 Cheat Sheet - Core Sentence Structure</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 11pt;
+            line-height: 1.4;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 18pt;
+            border-bottom: 3px solid #333;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+        h2 {
+            font-size: 13pt;
+            background: #f0f0f0;
+            padding: 6px 10px;
+            margin: 15px 0 10px 0;
+            border-left: 4px solid #4a90d9;
+        }
+        .pattern {
+            background: #fff8e6;
+            border: 1px solid #ffd700;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 4px;
+        }
+        .pattern-name {
+            font-weight: bold;
+            color: #856404;
+        }
+        .japanese {
+            font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif;
+            font-size: 14pt;
+        }
+        .example {
+            margin: 6px 0;
+            padding-left: 15px;
+            border-left: 2px solid #ddd;
+        }
+        .example .jp { font-weight: bold; }
+        .example .en { color: #666; font-style: italic; }
+        .warning {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            padding: 8px 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            font-size: 10pt;
+        }
+        .warning-title { color: #721c24; font-weight: bold; }
+        .key-point {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            padding: 8px 10px;
+            margin: 8px 0;
+            border-radius: 4px;
+        }
+        .particle {
+            display: inline-block;
+            background: #e7f1ff;
+            border: 1px solid #b8daff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            font-size: 10pt;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 6px 8px;
+            text-align: left;
+        }
+        th { background: #f5f5f5; }
+        .footer {
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 1px solid #ddd;
+            font-size: 9pt;
+            color: #666;
+            text-align: center;
+        }
+        @media print {
+            body { padding: 10px; }
+            .warning, .key-point, .pattern { break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Lesson 1: Core Sentence Structure</h1>
+
+    <h2>The Three Sentence Types</h2>
+    <p>Every Japanese sentence has the same core: <strong>A + Engine</strong>. The engine determines the sentence type.</p>
+
+    <table>
+        <tr>
+            <th>Type</th>
+            <th>Engine</th>
+            <th>Pattern</th>
+            <th>Example</th>
+        </tr>
+        <tr>
+            <td>A does B (Verb)</td>
+            <td>Ends in う-sound</td>
+            <td>A <span class="particle">が</span> Verb</td>
+            <td class="japanese">さくらが歩く</td>
+        </tr>
+        <tr>
+            <td>A is B (Noun)</td>
+            <td><span class="japanese">だ</span></td>
+            <td>A <span class="particle">が</span> B <span class="particle">だ</span></td>
+            <td class="japanese">さくらが日本人だ</td>
+        </tr>
+        <tr>
+            <td>A is B (Adjective)</td>
+            <td>Ends in い</td>
+            <td>A <span class="particle">が</span> い-adj</td>
+            <td class="japanese">ペンが赤い</td>
+        </tr>
+    </table>
+
+    <h2>The Particle が</h2>
+    <div class="key-point">
+        <span class="particle">が</span> is the center of Japanese grammar. It marks the <strong>subject</strong> - the doer or be-er of the sentence.
+    </div>
+
+    <div class="pattern">
+        <span class="pattern-name">Subject Marker:</span> A <span class="particle">が</span> [does/is something]
+    </div>
+
+    <div class="example">
+        <p class="jp japanese">さくらが歩く</p>
+        <p class="en">Sakura walks. (Sakura = the one who walks)</p>
+    </div>
+
+    <h2>The Copula だ</h2>
+    <div class="pattern">
+        <span class="pattern-name">A is B:</span> A <span class="particle">が</span> B <span class="particle">だ</span>
+    </div>
+
+    <div class="example">
+        <p class="jp japanese">さくらが日本人だ</p>
+        <p class="en">Sakura is Japanese. (だ = equals sign, works one way only)</p>
+    </div>
+
+    <h2>い-Adjectives</h2>
+    <div class="key-point">
+        い-adjectives already contain "is" - no <span class="japanese">だ</span> needed!
+    </div>
+
+    <div class="example">
+        <p class="jp japanese">ペンが赤い</p>
+        <p class="en">The pen is red. (赤い = "is-red", not just "red")</p>
+    </div>
+
+    <h2>Common Mistakes</h2>
+    <div class="warning">
+        <span class="warning-title">Don't add だ to い-adjectives!</span><br>
+        ✗ <span class="japanese">ペンが赤いだ</span><br>
+        ✓ <span class="japanese">ペンが赤い</span>
+    </div>
+
+    <div class="warning">
+        <span class="warning-title">Don't forget が marks the subject!</span><br>
+        Every sentence needs a が-marked subject (even if invisible).
+    </div>
+
+    <h2>Quick Reference</h2>
+    <table>
+        <tr>
+            <th>Element</th>
+            <th>Function</th>
+            <th>Example</th>
+        </tr>
+        <tr>
+            <td><span class="particle">が</span></td>
+            <td>Subject marker</td>
+            <td class="japanese">犬が</td>
+        </tr>
+        <tr>
+            <td><span class="particle">だ</span></td>
+            <td>Copula (A=B)</td>
+            <td class="japanese">学生だ</td>
+        </tr>
+        <tr>
+            <td>Verb (う)</td>
+            <td>Action engine</td>
+            <td class="japanese">歩く、食べる</td>
+        </tr>
+        <tr>
+            <td>い-adj</td>
+            <td>Description engine</td>
+            <td class="japanese">赤い、大きい</td>
+        </tr>
+    </table>
+
+    <div class="footer">
+        Cure Dolly's Organic Japanese - Lesson 1 Cheat Sheet
+    </div>
+</body>
+</html>

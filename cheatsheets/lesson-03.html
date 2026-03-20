@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 3 Cheat Sheet - The は Particle & に Particle</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 11pt;
+            line-height: 1.4;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 18pt;
+            border-bottom: 3px solid #333;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+        h2 {
+            font-size: 13pt;
+            background: #f0f0f0;
+            padding: 6px 10px;
+            margin: 15px 0 10px 0;
+            border-left: 4px solid #4a90d9;
+        }
+        .pattern {
+            background: #fff8e6;
+            border: 1px solid #ffd700;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 4px;
+        }
+        .pattern-name {
+            font-weight: bold;
+            color: #856404;
+        }
+        .japanese {
+            font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif;
+            font-size: 14pt;
+        }
+        .example {
+            margin: 6px 0;
+            padding-left: 15px;
+            border-left: 2px solid #ddd;
+        }
+        .example .jp { font-weight: bold; }
+        .example .en { color: #666; font-style: italic; }
+        .warning {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            padding: 8px 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            font-size: 10pt;
+        }
+        .warning-title { color: #721c24; font-weight: bold; }
+        .key-point {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            padding: 8px 10px;
+            margin: 8px 0;
+            border-radius: 4px;
+        }
+        .particle {
+            display: inline-block;
+            background: #e7f1ff;
+            border: 1px solid #b8daff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .particle-topic {
+            display: inline-block;
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .zero {
+            display: inline-block;
+            background: #f0f0f0;
+            border: 1px dashed #999;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-style: italic;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            font-size: 10pt;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 6px 8px;
+            text-align: left;
+        }
+        th { background: #f5f5f5; }
+        .footer {
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 1px solid #ddd;
+            font-size: 9pt;
+            color: #666;
+            text-align: center;
+        }
+        @media print {
+            body { padding: 10px; }
+            .warning, .key-point, .pattern { break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Lesson 3: The は & に Particles</h1>
+
+    <h2>The Topic Marker は</h2>
+    <div class="key-point">
+        <span class="particle-topic">は</span> marks the <strong>topic</strong> - what we're talking about. It is NOT the subject! The subject (が) may be invisible.
+    </div>
+
+    <div class="pattern">
+        <span class="pattern-name">Topic + Statement:</span> Topic <span class="particle-topic">は</span> <span class="zero">∅が</span> [statement]
+    </div>
+
+    <div class="example">
+        <p class="jp japanese">私はアメリカ人だ</p>
+        <p class="en">= 私は <span class="zero">∅が</span> アメリカ人だ</p>
+        <p class="en">As for me, (I) am American.</p>
+    </div>
+
+    <h2>The "Eel Sentence" - Why は ≠ Subject</h2>
+    <div class="example">
+        <p class="jp japanese">私はうなぎだ</p>
+        <p class="en">NOT "I am an eel"!</p>
+        <p class="en">= As for me, (it) is eel. (ordering food context)</p>
+    </div>
+
+    <div class="warning">
+        <span class="warning-title">は replaces が but doesn't become が!</span><br>
+        The zero pronoun takes over as the subject.<br>
+        <span class="japanese">私<span class="particle-topic">は</span> <span class="zero">∅が</span> うなぎだ</span> - ∅ = "it" (my order), not "I"
+    </div>
+
+    <h2>Logical vs Non-Logical Particles</h2>
+    <table>
+        <tr>
+            <th>Type</th>
+            <th>Particles</th>
+            <th>Function</th>
+        </tr>
+        <tr>
+            <td><strong>Logical</strong></td>
+            <td><span class="particle">が</span> <span class="particle">を</span> <span class="particle">に</span></td>
+            <td>Define sentence structure (who does what to whom)</td>
+        </tr>
+        <tr>
+            <td><strong>Non-logical</strong></td>
+            <td><span class="particle-topic">は</span></td>
+            <td>Marks topic only - doesn't affect logic</td>
+        </tr>
+    </table>
+
+    <h2>The Target Marker に</h2>
+    <div class="key-point">
+        <span class="particle">に</span> marks the <strong>target/destination</strong> of an action.
+    </div>
+
+    <div class="pattern">
+        <span class="pattern-name">Throwing/Giving:</span> A <span class="particle">が</span> Object <span class="particle">を</span> Target <span class="particle">に</span> Verb
+    </div>
+
+    <div class="example">
+        <p class="jp japanese">私がボールをさくらに投げる</p>
+        <p class="en">I throw the ball at Sakura.</p>
+    </div>
+
+    <h2>Particle Roles Comparison</h2>
+    <table>
+        <tr>
+            <th>Particle</th>
+            <th>Role</th>
+            <th>Question</th>
+            <th>Example</th>
+        </tr>
+        <tr>
+            <td><span class="particle">が</span></td>
+            <td>Subject</td>
+            <td>Who does it?</td>
+            <td class="japanese">私<span class="particle">が</span>投げる</td>
+        </tr>
+        <tr>
+            <td><span class="particle">を</span></td>
+            <td>Object</td>
+            <td>What is acted on?</td>
+            <td class="japanese">ボール<span class="particle">を</span>投げる</td>
+        </tr>
+        <tr>
+            <td><span class="particle">に</span></td>
+            <td>Target</td>
+            <td>To/at whom?</td>
+            <td class="japanese">さくら<span class="particle">に</span>投げる</td>
+        </tr>
+        <tr>
+            <td><span class="particle-topic">は</span></td>
+            <td>Topic</td>
+            <td>What about?</td>
+            <td class="japanese">ボール<span class="particle-topic">は</span>...</td>
+        </tr>
+    </table>
+
+    <h2>Word Order Doesn't Matter - Particles Do!</h2>
+    <div class="example">
+        <p class="jp japanese">私にさくらがボールを投げる</p>
+        <p class="en">= Sakura throws the ball at me. (さくらが = Sakura is the thrower)</p>
+    </div>
+
+    <div class="warning">
+        <span class="warning-title">Changing は doesn't change logic!</span><br>
+        <span class="japanese">私はボールをさくらに投げる</span> = As for me, I throw...<br>
+        <span class="japanese">ボールは私がさくらに投げる</span> = As for the ball, I throw it...<br>
+        Same action, different topics.
+    </div>
+
+    <div class="footer">
+        Cure Dolly's Organic Japanese - Lesson 3 Cheat Sheet
+    </div>
+</body>
+</html>
