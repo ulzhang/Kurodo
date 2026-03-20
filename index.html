@@ -6,35 +6,59 @@
     <title>Cure Dolly Textbook</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            max-width: 800px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            max-width: 640px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 40px 20px;
             line-height: 1.6;
+            color: #1a1a1a;
+        }
+        header {
+            margin-bottom: 32px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e0e0e0;
         }
         h1 {
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin: 0 0 6px 0;
+        }
+        .subtitle {
+            color: #666;
+            font-size: 0.95rem;
+            margin: 0;
         }
         ul {
             list-style: none;
             padding: 0;
+            margin: 0;
         }
         li {
-            padding: 8px 0;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #f0f0f0;
         }
         a {
-            color: #333;
+            display: block;
+            padding: 10px 12px;
+            color: #1a1a1a;
             text-decoration: none;
+            font-size: 0.95rem;
+            border-radius: 6px;
+            transition: background-color 0.15s;
         }
         a:hover {
-            color: #007bff;
+            background-color: #f5f7fa;
+            color: #2563eb;
+        }
+        @media (max-width: 768px) {
+            body { padding: 20px 16px; }
         }
     </style>
 </head>
 <body>
-<h1>Cure Dolly Textbook</h1>
+<header>
+    <h1>Cure Dolly Textbook</h1>
+    <p class="subtitle">Japanese grammar from the ground up &mdash; 88 lessons</p>
+</header>
 
 <ul>
   <li><a href="lessons/lesson-01.html">Lesson 1: Type of sentences</a></li>

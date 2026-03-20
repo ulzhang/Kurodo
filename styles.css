@@ -7,7 +7,7 @@
 @media screen and (max-width: 768px) {
     body.c44 {
         max-width: 100% !important;
-        padding: 12px !important;
+        padding: 16px !important;
     }
 
     span[style*="overflow: hidden"][style*="display: inline-block"] {
@@ -38,4 +38,140 @@
     .cheatsheet-embed iframe {
         width: 100% !important;
     }
+}
+
+/* ===== READABILITY IMPROVEMENTS ===== */
+
+body.c44.doc-content {
+    max-width: 42em;
+    margin: 0 auto;
+    padding: 40px 48px;
+    color: #1a1a1a;
+    background: #fff;
+}
+
+body.c44 p,
+body.c44 li {
+    font-size: 1rem !important;
+    line-height: 1.8 !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif !important;
+    color: #1a1a1a !important;
+}
+
+body.c44 p {
+    margin-bottom: 0.4em !important;
+}
+
+body.c44 p.c2 {
+    margin-bottom: 0.1em !important;
+}
+
+body.c44 h1 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-size: 1.75rem !important;
+    line-height: 1.3 !important;
+    color: #111 !important;
+    padding-top: 8px !important;
+    padding-bottom: 12px !important;
+    margin-bottom: 20px !important;
+    border-bottom: 2px solid #e0e0e0 !important;
+}
+
+body.c44 h2 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-size: 1.35rem !important;
+    line-height: 1.35 !important;
+    color: #222 !important;
+    padding-top: 1.5em !important;
+    padding-bottom: 6px !important;
+    margin-bottom: 12px !important;
+    border-bottom: 1px solid #eaeaea !important;
+}
+
+body.c44 h3 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-size: 1.15rem !important;
+    color: #333 !important;
+}
+
+body.c44 span[style*="overflow: hidden"][style*="display: inline-block"] {
+    margin: 12px 0 !important;
+    border-radius: 6px !important;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+body.c44 a.c7 {
+    color: #2563eb !important;
+    text-decoration-color: #93b4f5 !important;
+    text-underline-offset: 2px;
+}
+
+body.c44 a.c7:hover {
+    color: #1d4ed8 !important;
+    text-decoration-color: #1d4ed8 !important;
+}
+
+.nav {
+    padding: 14px 0 !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-size: 0.9rem !important;
+    border-color: #e2e8f0 !important;
+}
+
+.nav a {
+    color: #2563eb !important;
+    text-decoration: none !important;
+    padding: 4px 0 !important;
+    transition: color 0.15s;
+}
+
+.nav a:hover {
+    color: #1d4ed8 !important;
+    text-decoration: underline !important;
+}
+
+.related-lessons {
+    background: #f8f9fa !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 8px !important;
+    padding: 16px 20px !important;
+    margin: 28px 0 !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+.related-lessons h3 {
+    font-size: 0.85rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    color: #555 !important;
+    margin-bottom: 8px !important;
+}
+
+.related-lessons li {
+    font-size: 0.9rem !important;
+    line-height: 1.6 !important;
+    padding: 2px 0 !important;
+}
+
+.related-lessons a {
+    color: #2563eb !important;
+    text-decoration: none !important;
+}
+
+.related-lessons a:hover {
+    text-decoration: underline !important;
+}
+
+.cheatsheet-section {
+    margin-top: 36px !important;
+    padding-top: 24px;
+    border-top: 2px solid #e2e8f0;
+}
+
+.cheatsheet-section h2 {
+    font-size: 0.85rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    color: #555 !important;
+    border-bottom-color: #e2e8f0 !important;
 }
