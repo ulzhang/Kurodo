@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 1: とうちゃく</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 2.0;
+            color: #1a1a1a;
+        }
+        .nav {
+            padding: 10px 0;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            line-height: 1.6;
+        }
+        .nav a {
+            margin-right: 20px;
+            color: #2563eb;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+        .nav a:hover { text-decoration: underline; }
+        .nav .disabled {
+            color: #bbb;
+            pointer-events: none;
+        }
+        .nav-bottom {
+            margin-top: 30px;
+            padding-top: 10px;
+            border-top: 1px solid #ccc;
+            border-bottom: none;
+        }
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin: 0 0 4px 0;
+        }
+        .chapter-sub {
+            color: #666;
+            font-size: 0.95rem;
+            margin: 0 0 8px 0;
+        }
+        .chapter-intro {
+            color: #888;
+            font-size: 0.85rem;
+            margin-bottom: 28px;
+            line-height: 1.5;
+        }
+        h2 {
+            font-size: 1.2rem;
+            margin-top: 2.5em;
+            margin-bottom: 0.5em;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #e0e0e0;
+            color: #333;
+        }
+        h2 .scene-num {
+            color: #999;
+            font-weight: 400;
+            font-size: 0.85rem;
+            margin-right: 6px;
+        }
+
+        /* Sentence blocks */
+        .s {
+            padding: 8px 12px;
+            margin: 4px -12px;
+            border-radius: 8px;
+            cursor: pointer;
+            border-left: 4px solid transparent;
+            transition: background-color 0.12s, border-color 0.12s;
+        }
+        .s:hover {
+            background-color: #f5f7fa;
+        }
+        .s.active {
+            background-color: #f8f9fa;
+            border-left-color: #2563eb;
+        }
+        .jp {
+            font-size: 1.15rem;
+            margin: 0;
+            line-height: 2.2;
+        }
+        ruby {
+            ruby-position: over;
+        }
+        rt {
+            font-size: 0.55em;
+            color: #888;
+        }
+
+        /* Breakdown panel */
+        .bd {
+            background: #f0f4f8;
+            border-radius: 6px;
+            padding: 10px 14px;
+            margin-top: 6px;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+        .w {
+            display: inline-block;
+            margin: 2px 8px 2px 0;
+            white-space: nowrap;
+        }
+        .word {
+            font-weight: 600;
+        }
+        .gl {
+            color: #555;
+            font-size: 0.85em;
+        }
+        .gl a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .gl a:hover {
+            text-decoration: underline;
+        }
+
+        /* Grammar notes */
+        .grammar-note {
+            background: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            border-radius: 8px;
+            padding: 14px 18px;
+            margin: 20px 0;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            cursor: default;
+        }
+        .grammar-note strong {
+            color: #b45309;
+        }
+        .grammar-note a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        .grammar-note a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 20px 16px; }
+            .s { padding: 8px 8px; margin: 4px -8px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="nav">
+    <a href="../index.html">← Index</a>
+    <a href="index.html">← Reader Index</a>
+    <span class="disabled">Next Chapter →</span>
+</div>
+
+<h1>だい１しょう：とうちゃく</h1>
+<p class="chapter-sub">Chapter 1: Arrival</p>
+<p class="chapter-intro">Grammar from Lessons 1-5: sentence types, が・は・を・に particles, past tense, て-form. Tap any sentence for a word-by-word breakdown.</p>
+
+<!-- ================= SCENE 1: 着陸 ================= -->
+<h2><span class="scene-num">一</span>ちゃくりく</h2>
+
+<div class="s">
+  <p class="jp">ぼくはケビンだ。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word">ぼく</span><span class="gl">[I (male)]</span></span>
+    <span class="w"><span class="word">は</span><span class="gl">[topic <a href="../lessons/lesson-03.html">→L3</a>]</span></span>
+    <span class="w"><span class="word">ケビン</span><span class="gl">[Kevin]</span></span>
+    <span class="w"><span class="word">だ</span><span class="gl">[am/is (copula) <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp">アメリカ<ruby>人<rt>じん</rt></ruby>だ。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word">アメリカ<ruby>人<rt>じん</rt></ruby></span><span class="gl">[American person]</span></span>
+    <span class="w"><span class="word">だ</span><span class="gl">[am/is <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp">エンジニアだ。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word">エンジニア</span><span class="gl">[engineer]</span></span>
+    <span class="w"><span class="word">だ</span><span class="gl">[am/is <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>今<rt>いま</rt></ruby>、<ruby>飛行機<rt>ひこうき</rt></ruby>の<ruby>中<rt>なか</rt></ruby>にいる。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>今<rt>いま</rt></ruby></span><span class="gl">[now]</span></span>
+    <span class="w"><span class="word"><ruby>飛行機<rt>ひこうき</rt></ruby></span><span class="gl">[airplane]</span></span>
+    <span class="w"><span class="word">の</span><span class="gl">[of/possessive]</span></span>
+    <span class="w"><span class="word"><ruby>中<rt>なか</rt></ruby></span><span class="gl">[inside]</span></span>
+    <span class="w"><span class="word">に</span><span class="gl">[at/in <a href="../lessons/lesson-03.html">→L3</a>]</span></span>
+    <span class="w"><span class="word">いる</span><span class="gl">[exist (living thing) <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>窓<rt>まど</rt></ruby>から<ruby>外<rt>そと</rt></ruby>を<ruby>見<rt>み</rt></ruby>た。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>窓<rt>まど</rt></ruby></span><span class="gl">[window]</span></span>
+    <span class="w"><span class="word">から</span><span class="gl">[from]</span></span>
+    <span class="w"><span class="word"><ruby>外<rt>そと</rt></ruby></span><span class="gl">[outside]</span></span>
+    <span class="w"><span class="word">を</span><span class="gl">[object <a href="../lessons/lesson-03.html">→L3</a>]</span></span>
+    <span class="w"><span class="word"><ruby>見<rt>み</rt></ruby>た</span><span class="gl">[looked (past) <a href="../lessons/lesson-04.html">→L4</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>下<rt>した</rt></ruby>に<ruby>日本<rt>にほん</rt></ruby>がある。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>下<rt>した</rt></ruby></span><span class="gl">[below]</span></span>
+    <span class="w"><span class="word">に</span><span class="gl">[at <a href="../lessons/lesson-03.html">→L3</a>]</span></span>
+    <span class="w"><span class="word"><ruby>日本<rt>にほん</rt></ruby></span><span class="gl">[Japan]</span></span>
+    <span class="w"><span class="word">が</span><span class="gl">[subject <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+    <span class="w"><span class="word">ある</span><span class="gl">[exists (thing) <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>空<rt>そら</rt></ruby>が<ruby>青<rt>あお</rt></ruby>い。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>空<rt>そら</rt></ruby></span><span class="gl">[sky]</span></span>
+    <span class="w"><span class="word">が</span><span class="gl">[subject <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+    <span class="w"><span class="word"><ruby>青<rt>あお</rt></ruby>い</span><span class="gl">[is-blue (adj) <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>日本<rt>にほん</rt></ruby>は<ruby>初<rt>はじ</rt></ruby>めてだ。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>日本<rt>にほん</rt></ruby></span><span class="gl">[Japan]</span></span>
+    <span class="w"><span class="word">は</span><span class="gl">[topic <a href="../lessons/lesson-03.html">→L3</a>]</span></span>
+    <span class="w"><span class="word"><ruby>初<rt>はじ</rt></ruby>めて</span><span class="gl">[first time]</span></span>
+    <span class="w"><span class="word">だ</span><span class="gl">[is <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>心<rt>こころ</rt></ruby>が<ruby>速<rt>はや</rt></ruby>い。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>心<rt>こころ</rt></ruby></span><span class="gl">[heart]</span></span>
+    <span class="w"><span class="word">が</span><span class="gl">[subject <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+    <span class="w"><span class="word"><ruby>速<rt>はや</rt></ruby>い</span><span class="gl">[is-fast (adj) <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>飛行機<rt>ひこうき</rt></ruby>が<ruby>下<rt>お</rt></ruby>りた。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>飛行機<rt>ひこうき</rt></ruby></span><span class="gl">[airplane]</span></span>
+    <span class="w"><span class="word">が</span><span class="gl">[subject <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+    <span class="w"><span class="word"><ruby>下<rt>お</rt></ruby>りた</span><span class="gl">[descended/landed (past) <a href="../lessons/lesson-04.html">→L4</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>成田空港<rt>なりたくうこう</rt></ruby>に<ruby>着<rt>つ</rt></ruby>いた。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>成田空港<rt>なりたくうこう</rt></ruby></span><span class="gl">[Narita Airport]</span></span>
+    <span class="w"><span class="word">に</span><span class="gl">[to/at <a href="../lessons/lesson-03.html">→L3</a>]</span></span>
+    <span class="w"><span class="word"><ruby>着<rt>つ</rt></ruby>いた</span><span class="gl">[arrived (past) <a href="../lessons/lesson-04.html">→L4</a>]</span></span>
+  </div>
+</div>
+
+<div class="grammar-note">
+    <strong>Grammar: Three sentence types (Lesson 1)</strong><br>
+    You just saw all three core sentence types from <a href="../lessons/lesson-01.html">Lesson 1</a>:<br>
+    <strong>A is B:</strong> ケビン<strong>だ</strong> (Kevin = copula)<br>
+    <strong>A does B:</strong> <ruby>飛行機<rt>ひこうき</rt></ruby>が<ruby>下<rt>お</rt></ruby>り<strong>た</strong> (plane = landed)<br>
+    <strong>A is [adj]:</strong> <ruby>空<rt>そら</rt></ruby>が<ruby>青<rt>あお</rt></ruby><strong>い</strong> (sky = is-blue)<br>
+    Every Japanese sentence is one of these three.
+</div>
+
+<!-- ================= SCENE 2: 入国審査 ================= -->
+<h2><span class="scene-num">二</span>にゅうこくしんさ</h2>
+
+<div class="s">
+  <p class="jp"><ruby>飛行機<rt>ひこうき</rt></ruby>から<ruby>出<rt>で</rt></ruby>た。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>飛行機<rt>ひこうき</rt></ruby></span><span class="gl">[airplane]</span></span>
+    <span class="w"><span class="word">から</span><span class="gl">[from]</span></span>
+    <span class="w"><span class="word"><ruby>出<rt>で</rt></ruby>た</span><span class="gl">[exited (past) <a href="../lessons/lesson-04.html">→L4</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>長<rt>なが</rt></ruby>い<ruby>通路<rt>つうろ</rt></ruby>を<ruby>歩<rt>ある</rt></ruby>いた。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>長<rt>なが</rt></ruby>い</span><span class="gl">[long (adj) <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+    <span class="w"><span class="word"><ruby>通路<rt>つうろ</rt></ruby></span><span class="gl">[corridor]</span></span>
+    <span class="w"><span class="word">を</span><span class="gl">[object/path <a href="../lessons/lesson-03.html">→L3</a>]</span></span>
+    <span class="w"><span class="word"><ruby>歩<rt>ある</rt></ruby>いた</span><span class="gl">[walked (past) <a href="../lessons/lesson-04.html">→L4</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>入国審査<rt>にゅうこくしんさ</rt></ruby>に<ruby>来<rt>き</rt></ruby>た。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>入国審査<rt>にゅうこくしんさ</rt></ruby></span><span class="gl">[immigration inspection]</span></span>
+    <span class="w"><span class="word">に</span><span class="gl">[to <a href="../lessons/lesson-03.html">→L3</a>]</span></span>
+    <span class="w"><span class="word"><ruby>来<rt>き</rt></ruby>た</span><span class="gl">[came (past, irregular) <a href="../lessons/lesson-05.html">→L5</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>人<rt>ひと</rt></ruby>が<ruby>多<rt>おお</rt></ruby>い。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>人<rt>ひと</rt></ruby></span><span class="gl">[people]</span></span>
+    <span class="w"><span class="word">が</span><span class="gl">[subject <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+    <span class="w"><span class="word"><ruby>多<rt>おお</rt></ruby>い</span><span class="gl">[is-many (adj) <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>列<rt>れつ</rt></ruby>が<ruby>長<rt>なが</rt></ruby>い。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>列<rt>れつ</rt></ruby></span><span class="gl">[line/queue]</span></span>
+    <span class="w"><span class="word">が</span><span class="gl">[subject <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+    <span class="w"><span class="word"><ruby>長<rt>なが</rt></ruby>い</span><span class="gl">[is-long (adj) <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp">ぼくの<ruby>番<rt>ばん</rt></ruby>が<ruby>来<rt>き</rt></ruby>た。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word">ぼく</span><span class="gl">[I]</span></span>
+    <span class="w"><span class="word">の</span><span class="gl">[possessive]</span></span>
+    <span class="w"><span class="word"><ruby>番<rt>ばん</rt></ruby></span><span class="gl">[turn]</span></span>
+    <span class="w"><span class="word">が</span><span class="gl">[subject <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+    <span class="w"><span class="word"><ruby>来<rt>き</rt></ruby>た</span><span class="gl">[came (past) <a href="../lessons/lesson-05.html">→L5</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>係<rt>かかり</rt></ruby>の<ruby>人<rt>ひと</rt></ruby>がパスポートを<ruby>見<rt>み</rt></ruby>た。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>係<rt>かかり</rt></ruby></span><span class="gl">[duty/charge]</span></span>
+    <span class="w"><span class="word">の</span><span class="gl">[of]</span></span>
+    <span class="w"><span class="word"><ruby>人<rt>ひと</rt></ruby></span><span class="gl">[person]</span></span>
+    <span class="w"><span class="word">が</span><span class="gl">[subject <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+    <span class="w"><span class="word">パスポート</span><span class="gl">[passport]</span></span>
+    <span class="w"><span class="word">を</span><span class="gl">[object <a href="../lessons/lesson-03.html">→L3</a>]</span></span>
+    <span class="w"><span class="word"><ruby>見<rt>み</rt></ruby>た</span><span class="gl">[looked at (past) <a href="../lessons/lesson-04.html">→L4</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp">スタンプを<ruby>押<rt>お</rt></ruby>した。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word">スタンプ</span><span class="gl">[stamp]</span></span>
+    <span class="w"><span class="word">を</span><span class="gl">[object <a href="../lessons/lesson-03.html">→L3</a>]</span></span>
+    <span class="w"><span class="word"><ruby>押<rt>お</rt></ruby>した</span><span class="gl">[pressed/stamped (past) <a href="../lessons/lesson-04.html">→L4</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>通<rt>とお</rt></ruby>った。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>通<rt>とお</rt></ruby>った</span><span class="gl">[passed through (past) <a href="../lessons/lesson-04.html">→L4</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>日本<rt>にほん</rt></ruby>にいる。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>日本<rt>にほん</rt></ruby></span><span class="gl">[Japan]</span></span>
+    <span class="w"><span class="word">に</span><span class="gl">[in/at <a href="../lessons/lesson-03.html">→L3</a>]</span></span>
+    <span class="w"><span class="word">いる</span><span class="gl">[exist (I am here) <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+  </div>
+</div>
+
+<div class="grammar-note">
+    <strong>Grammar: は vs が (<a href="../lessons/lesson-03.html">Lesson 3</a>)</strong><br>
+    Notice: ぼく<strong>は</strong>ケビンだ (as for me — topic) vs <ruby>列<rt>れつ</rt></ruby><strong>が</strong><ruby>長<rt>なが</rt></ruby>い (the line — subject).<br>
+    は flags what you're talking <em>about</em>. が marks who or what does/is the thing. They're different jobs. は is never part of the core logic — it just sets the stage.
+</div>
+
+<!-- ================= SCENE 3: 荷物 ================= -->
+<h2><span class="scene-num">三</span>にもつ</h2>
+
+<div class="s">
+  <p class="jp"><ruby>荷物<rt>にもつ</rt></ruby>を<ruby>取<rt>と</rt></ruby>りに<ruby>行<rt>い</rt></ruby>った。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>荷物<rt>にもつ</rt></ruby></span><span class="gl">[luggage]</span></span>
+    <span class="w"><span class="word">を</span><span class="gl">[object <a href="../lessons/lesson-03.html">→L3</a>]</span></span>
+    <span class="w"><span class="word"><ruby>取<rt>と</rt></ruby>り</span><span class="gl">[take (stem)]</span></span>
+    <span class="w"><span class="word">に</span><span class="gl">[in order to <a href="../lessons/lesson-03.html">→L3</a>]</span></span>
+    <span class="w"><span class="word"><ruby>行<rt>い</rt></ruby>った</span><span class="gl">[went (past, irregular) <a href="../lessons/lesson-05.html">→L5</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>広<rt>ひろ</rt></ruby>い<ruby>部屋<rt>へや</rt></ruby>だ。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>広<rt>ひろ</rt></ruby>い</span><span class="gl">[wide/spacious (adj) <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+    <span class="w"><span class="word"><ruby>部屋<rt>へや</rt></ruby></span><span class="gl">[room]</span></span>
+    <span class="w"><span class="word">だ</span><span class="gl">[is <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>人<rt>ひと</rt></ruby>がたくさんいる。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>人<rt>ひと</rt></ruby></span><span class="gl">[people]</span></span>
+    <span class="w"><span class="word">が</span><span class="gl">[subject <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+    <span class="w"><span class="word">たくさん</span><span class="gl">[many/a lot]</span></span>
+    <span class="w"><span class="word">いる</span><span class="gl">[exist (living) <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp">みんな<ruby>荷物<rt>にもつ</rt></ruby>を<ruby>待<rt>ま</rt></ruby>っている。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word">みんな</span><span class="gl">[everyone]</span></span>
+    <span class="w"><span class="word"><ruby>荷物<rt>にもつ</rt></ruby></span><span class="gl">[luggage]</span></span>
+    <span class="w"><span class="word">を</span><span class="gl">[object <a href="../lessons/lesson-03.html">→L3</a>]</span></span>
+    <span class="w"><span class="word"><ruby>待<rt>ま</rt></ruby>っている</span><span class="gl">[waiting (ongoing) <a href="../lessons/lesson-04.html">→L4</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp">ベルトが<ruby>動<rt>うご</rt></ruby>いている。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word">ベルト</span><span class="gl">[belt/conveyor]</span></span>
+    <span class="w"><span class="word">が</span><span class="gl">[subject <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+    <span class="w"><span class="word"><ruby>動<rt>うご</rt></ruby>いている</span><span class="gl">[is moving (ongoing) <a href="../lessons/lesson-04.html">→L4</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>大<rt>おお</rt></ruby>きい<ruby>黒<rt>くろ</rt></ruby>いカバンが<ruby>来<rt>き</rt></ruby>た。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>大<rt>おお</rt></ruby>きい</span><span class="gl">[big (adj) <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+    <span class="w"><span class="word"><ruby>黒<rt>くろ</rt></ruby>い</span><span class="gl">[black (adj)]</span></span>
+    <span class="w"><span class="word">カバン</span><span class="gl">[bag]</span></span>
+    <span class="w"><span class="word">が</span><span class="gl">[subject <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+    <span class="w"><span class="word"><ruby>来<rt>き</rt></ruby>た</span><span class="gl">[came (past) <a href="../lessons/lesson-05.html">→L5</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp">ぼくのではない。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word">ぼく</span><span class="gl">[I/my]</span></span>
+    <span class="w"><span class="word">の</span><span class="gl">[possessive]</span></span>
+    <span class="w"><span class="word">ではない</span><span class="gl">[is not (negative copula) <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp">ぼくのカバンは<ruby>青<rt>あお</rt></ruby>い。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word">ぼく</span><span class="gl">[my]</span></span>
+    <span class="w"><span class="word">の</span><span class="gl">[possessive]</span></span>
+    <span class="w"><span class="word">カバン</span><span class="gl">[bag]</span></span>
+    <span class="w"><span class="word">は</span><span class="gl">[topic <a href="../lessons/lesson-03.html">→L3</a>]</span></span>
+    <span class="w"><span class="word"><ruby>青<rt>あお</rt></ruby>い</span><span class="gl">[is-blue (adj) <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>待<rt>ま</rt></ruby>った。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>待<rt>ま</rt></ruby>った</span><span class="gl">[waited (past) <a href="../lessons/lesson-04.html">→L4</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>青<rt>あお</rt></ruby>いカバンが<ruby>来<rt>き</rt></ruby>た！</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>青<rt>あお</rt></ruby>い</span><span class="gl">[blue (adj)]</span></span>
+    <span class="w"><span class="word">カバン</span><span class="gl">[bag]</span></span>
+    <span class="w"><span class="word">が</span><span class="gl">[subject <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+    <span class="w"><span class="word"><ruby>来<rt>き</rt></ruby>た</span><span class="gl">[came (past) <a href="../lessons/lesson-05.html">→L5</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp">ぼくのだ。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word">ぼく</span><span class="gl">[my]</span></span>
+    <span class="w"><span class="word">の</span><span class="gl">[possessive]</span></span>
+    <span class="w"><span class="word">だ</span><span class="gl">[is <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp">カバンを<ruby>取<rt>と</rt></ruby>った。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word">カバン</span><span class="gl">[bag]</span></span>
+    <span class="w"><span class="word">を</span><span class="gl">[object <a href="../lessons/lesson-03.html">→L3</a>]</span></span>
+    <span class="w"><span class="word"><ruby>取<rt>と</rt></ruby>った</span><span class="gl">[took/grabbed (past) <a href="../lessons/lesson-04.html">→L4</a>]</span></span>
+  </div>
+</div>
+
+<div class="grammar-note">
+    <strong>Grammar: ている — ongoing state (<a href="../lessons/lesson-04.html">Lesson 4</a>)</strong><br>
+    <ruby>待<rt>ま</rt></ruby>っ<strong>ている</strong> = is waiting. <ruby>動<rt>うご</rt></ruby>い<strong>ている</strong> = is moving.<br>
+    The て-form (<a href="../lessons/lesson-05.html">Lesson 5</a>) + いる creates an ongoing state. You'll see this pattern everywhere. The belt isn't "moved" — it <em>is moving</em>, right now.
+</div>
+
+<!-- ================= SCENE 4: 空港のなか ================= -->
+<h2><span class="scene-num">四</span><ruby>空港<rt>くうこう</rt></ruby>のなか</h2>
+
+<div class="s">
+  <p class="jp"><ruby>空港<rt>くうこう</rt></ruby>は<ruby>大<rt>おお</rt></ruby>きい。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>空港<rt>くうこう</rt></ruby></span><span class="gl">[airport]</span></span>
+    <span class="w"><span class="word">は</span><span class="gl">[topic <a href="../lessons/lesson-03.html">→L3</a>]</span></span>
+    <span class="w"><span class="word"><ruby>大<rt>おお</rt></ruby>きい</span><span class="gl">[is-big (adj) <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>看板<rt>かんばん</rt></ruby>がたくさんある。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>看板<rt>かんばん</rt></ruby></span><span class="gl">[signs]</span></span>
+    <span class="w"><span class="word">が</span><span class="gl">[subject <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+    <span class="w"><span class="word">たくさん</span><span class="gl">[many]</span></span>
+    <span class="w"><span class="word">ある</span><span class="gl">[exist (things) <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>日本語<rt>にほんご</rt></ruby>の<ruby>看板<rt>かんばん</rt></ruby>がある。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>日本語<rt>にほんご</rt></ruby></span><span class="gl">[Japanese language]</span></span>
+    <span class="w"><span class="word">の</span><span class="gl">[of]</span></span>
+    <span class="w"><span class="word"><ruby>看板<rt>かんばん</rt></ruby></span><span class="gl">[signs]</span></span>
+    <span class="w"><span class="word">が</span><span class="gl">[subject <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+    <span class="w"><span class="word">ある</span><span class="gl">[exist <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>英語<rt>えいご</rt></ruby>の<ruby>看板<rt>かんばん</rt></ruby>もある。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>英語<rt>えいご</rt></ruby></span><span class="gl">[English language]</span></span>
+    <span class="w"><span class="word">の</span><span class="gl">[of]</span></span>
+    <span class="w"><span class="word"><ruby>看板<rt>かんばん</rt></ruby></span><span class="gl">[signs]</span></span>
+    <span class="w"><span class="word">も</span><span class="gl">[also/too]</span></span>
+    <span class="w"><span class="word">ある</span><span class="gl">[exist <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp">「<ruby>出口<rt>でぐち</rt></ruby>」が<ruby>見<rt>み</rt></ruby>えた。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>出口<rt>でぐち</rt></ruby></span><span class="gl">[exit]</span></span>
+    <span class="w"><span class="word">が</span><span class="gl">[subject <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+    <span class="w"><span class="word"><ruby>見<rt>み</rt></ruby>えた</span><span class="gl">[was visible/could see (past) <a href="../lessons/lesson-04.html">→L4</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp">あの<ruby>漢字<rt>かんじ</rt></ruby>は<ruby>分<rt>わ</rt></ruby>からない。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word">あの</span><span class="gl">[that (over there)]</span></span>
+    <span class="w"><span class="word"><ruby>漢字<rt>かんじ</rt></ruby></span><span class="gl">[kanji characters]</span></span>
+    <span class="w"><span class="word">は</span><span class="gl">[topic <a href="../lessons/lesson-03.html">→L3</a>]</span></span>
+    <span class="w"><span class="word"><ruby>分<rt>わ</rt></ruby>からない</span><span class="gl">[don't understand (negative) <a href="../lessons/lesson-04.html">→L4</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp">この<ruby>漢字<rt>かんじ</rt></ruby>も<ruby>分<rt>わ</rt></ruby>からない。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word">この</span><span class="gl">[this]</span></span>
+    <span class="w"><span class="word"><ruby>漢字<rt>かんじ</rt></ruby></span><span class="gl">[kanji]</span></span>
+    <span class="w"><span class="word">も</span><span class="gl">[also/either]</span></span>
+    <span class="w"><span class="word"><ruby>分<rt>わ</rt></ruby>からない</span><span class="gl">[don't understand]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>日本語<rt>にほんご</rt></ruby>は<ruby>難<rt>むずか</rt></ruby>しい…</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>日本語<rt>にほんご</rt></ruby></span><span class="gl">[Japanese]</span></span>
+    <span class="w"><span class="word">は</span><span class="gl">[topic <a href="../lessons/lesson-03.html">→L3</a>]</span></span>
+    <span class="w"><span class="word"><ruby>難<rt>むずか</rt></ruby>しい</span><span class="gl">[is-difficult (adj) <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>英語<rt>えいご</rt></ruby>の<ruby>看板<rt>かんばん</rt></ruby>を<ruby>見<rt>み</rt></ruby>て、<ruby>出口<rt>でぐち</rt></ruby>に<ruby>歩<rt>ある</rt></ruby>いた。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>英語<rt>えいご</rt></ruby></span><span class="gl">[English]</span></span>
+    <span class="w"><span class="word">の</span><span class="gl">[of]</span></span>
+    <span class="w"><span class="word"><ruby>看板<rt>かんばん</rt></ruby></span><span class="gl">[signs]</span></span>
+    <span class="w"><span class="word">を</span><span class="gl">[object <a href="../lessons/lesson-03.html">→L3</a>]</span></span>
+    <span class="w"><span class="word"><ruby>見<rt>み</rt></ruby>て</span><span class="gl">[looked at (て-form: "and then") <a href="../lessons/lesson-05.html">→L5</a>]</span></span>
+    <span class="w"><span class="word"><ruby>出口<rt>でぐち</rt></ruby></span><span class="gl">[exit]</span></span>
+    <span class="w"><span class="word">に</span><span class="gl">[toward <a href="../lessons/lesson-03.html">→L3</a>]</span></span>
+    <span class="w"><span class="word"><ruby>歩<rt>ある</rt></ruby>いた</span><span class="gl">[walked (past) <a href="../lessons/lesson-04.html">→L4</a>]</span></span>
+  </div>
+</div>
+
+<!-- ================= SCENE 5: 電車 ================= -->
+<h2><span class="scene-num">五</span><ruby>電車<rt>でんしゃ</rt></ruby></h2>
+
+<div class="s">
+  <p class="jp"><ruby>空港<rt>くうこう</rt></ruby>の<ruby>中<rt>なか</rt></ruby>に<ruby>駅<rt>えき</rt></ruby>がある。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>空港<rt>くうこう</rt></ruby></span><span class="gl">[airport]</span></span>
+    <span class="w"><span class="word">の</span><span class="gl">[of]</span></span>
+    <span class="w"><span class="word"><ruby>中<rt>なか</rt></ruby></span><span class="gl">[inside]</span></span>
+    <span class="w"><span class="word">に</span><span class="gl">[at <a href="../lessons/lesson-03.html">→L3</a>]</span></span>
+    <span class="w"><span class="word"><ruby>駅<rt>えき</rt></ruby></span><span class="gl">[station]</span></span>
+    <span class="w"><span class="word">が</span><span class="gl">[subject <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+    <span class="w"><span class="word">ある</span><span class="gl">[exists <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>成田<rt>なりた</rt></ruby>エクスプレスだ。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>成田<rt>なりた</rt></ruby>エクスプレス</span><span class="gl">[Narita Express]</span></span>
+    <span class="w"><span class="word">だ</span><span class="gl">[is <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>東京<rt>とうきょう</rt></ruby>に<ruby>行<rt>い</rt></ruby>く<ruby>電車<rt>でんしゃ</rt></ruby>だ。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>東京<rt>とうきょう</rt></ruby></span><span class="gl">[Tokyo]</span></span>
+    <span class="w"><span class="word">に</span><span class="gl">[to <a href="../lessons/lesson-03.html">→L3</a>]</span></span>
+    <span class="w"><span class="word"><ruby>行<rt>い</rt></ruby>く</span><span class="gl">[go <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+    <span class="w"><span class="word"><ruby>電車<rt>でんしゃ</rt></ruby></span><span class="gl">[train]</span></span>
+    <span class="w"><span class="word">だ</span><span class="gl">[is <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>切符<rt>きっぷ</rt></ruby>を<ruby>買<rt>か</rt></ruby>った。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>切符<rt>きっぷ</rt></ruby></span><span class="gl">[ticket]</span></span>
+    <span class="w"><span class="word">を</span><span class="gl">[object <a href="../lessons/lesson-03.html">→L3</a>]</span></span>
+    <span class="w"><span class="word"><ruby>買<rt>か</rt></ruby>った</span><span class="gl">[bought (past) <a href="../lessons/lesson-04.html">→L4</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>券売機<rt>けんばいき</rt></ruby>に<ruby>英語<rt>えいご</rt></ruby>があった。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>券売機<rt>けんばいき</rt></ruby></span><span class="gl">[ticket machine]</span></span>
+    <span class="w"><span class="word">に</span><span class="gl">[on/at <a href="../lessons/lesson-03.html">→L3</a>]</span></span>
+    <span class="w"><span class="word"><ruby>英語<rt>えいご</rt></ruby></span><span class="gl">[English]</span></span>
+    <span class="w"><span class="word">が</span><span class="gl">[subject <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+    <span class="w"><span class="word">あった</span><span class="gl">[existed (past) <a href="../lessons/lesson-04.html">→L4</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp">よかった。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word">よかった</span><span class="gl">[was good / what a relief (past adj) <a href="../lessons/lesson-04.html">→L4</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>電車<rt>でんしゃ</rt></ruby>に<ruby>乗<rt>の</rt></ruby>った。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>電車<rt>でんしゃ</rt></ruby></span><span class="gl">[train]</span></span>
+    <span class="w"><span class="word">に</span><span class="gl">[onto <a href="../lessons/lesson-03.html">→L3</a>]</span></span>
+    <span class="w"><span class="word"><ruby>乗<rt>の</rt></ruby>った</span><span class="gl">[boarded/rode (past) <a href="../lessons/lesson-04.html">→L4</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>席<rt>せき</rt></ruby>に<ruby>座<rt>すわ</rt></ruby>って、<ruby>窓<rt>まど</rt></ruby>から<ruby>外<rt>そと</rt></ruby>を<ruby>見<rt>み</rt></ruby>た。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>席<rt>せき</rt></ruby></span><span class="gl">[seat]</span></span>
+    <span class="w"><span class="word">に</span><span class="gl">[on/in <a href="../lessons/lesson-03.html">→L3</a>]</span></span>
+    <span class="w"><span class="word"><ruby>座<rt>すわ</rt></ruby>って</span><span class="gl">[sat down (て-form: "and then") <a href="../lessons/lesson-05.html">→L5</a>]</span></span>
+    <span class="w"><span class="word"><ruby>窓<rt>まど</rt></ruby></span><span class="gl">[window]</span></span>
+    <span class="w"><span class="word">から</span><span class="gl">[from]</span></span>
+    <span class="w"><span class="word"><ruby>外<rt>そと</rt></ruby></span><span class="gl">[outside]</span></span>
+    <span class="w"><span class="word">を</span><span class="gl">[object <a href="../lessons/lesson-03.html">→L3</a>]</span></span>
+    <span class="w"><span class="word"><ruby>見<rt>み</rt></ruby>た</span><span class="gl">[looked at (past) <a href="../lessons/lesson-04.html">→L4</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>電車<rt>でんしゃ</rt></ruby>が<ruby>動<rt>うご</rt></ruby>いた。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>電車<rt>でんしゃ</rt></ruby></span><span class="gl">[train]</span></span>
+    <span class="w"><span class="word">が</span><span class="gl">[subject <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+    <span class="w"><span class="word"><ruby>動<rt>うご</rt></ruby>いた</span><span class="gl">[moved/departed (past) <a href="../lessons/lesson-04.html">→L4</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>家<rt>いえ</rt></ruby>が<ruby>見<rt>み</rt></ruby>える。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>家<rt>いえ</rt></ruby></span><span class="gl">[houses]</span></span>
+    <span class="w"><span class="word">が</span><span class="gl">[subject <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+    <span class="w"><span class="word"><ruby>見<rt>み</rt></ruby>える</span><span class="gl">[are visible / can be seen]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>田<rt>た</rt></ruby>んぼが<ruby>見<rt>み</rt></ruby>える。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>田<rt>た</rt></ruby>んぼ</span><span class="gl">[rice paddies]</span></span>
+    <span class="w"><span class="word">が</span><span class="gl">[subject <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+    <span class="w"><span class="word"><ruby>見<rt>み</rt></ruby>える</span><span class="gl">[are visible]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>小<rt>ちい</rt></ruby>さい<ruby>町<rt>まち</rt></ruby>が<ruby>見<rt>み</rt></ruby>える。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>小<rt>ちい</rt></ruby>さい</span><span class="gl">[small (adj) <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+    <span class="w"><span class="word"><ruby>町<rt>まち</rt></ruby></span><span class="gl">[towns]</span></span>
+    <span class="w"><span class="word">が</span><span class="gl">[subject <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+    <span class="w"><span class="word"><ruby>見<rt>み</rt></ruby>える</span><span class="gl">[are visible]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp">これが<ruby>日本<rt>にほん</rt></ruby>だ。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word">これ</span><span class="gl">[this]</span></span>
+    <span class="w"><span class="word">が</span><span class="gl">[subject <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+    <span class="w"><span class="word"><ruby>日本<rt>にほん</rt></ruby></span><span class="gl">[Japan]</span></span>
+    <span class="w"><span class="word">だ</span><span class="gl">[is <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>電車<rt>でんしゃ</rt></ruby>は<ruby>速<rt>はや</rt></ruby>い。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>電車<rt>でんしゃ</rt></ruby></span><span class="gl">[train]</span></span>
+    <span class="w"><span class="word">は</span><span class="gl">[topic <a href="../lessons/lesson-03.html">→L3</a>]</span></span>
+    <span class="w"><span class="word"><ruby>速<rt>はや</rt></ruby>い</span><span class="gl">[is-fast (adj) <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>東京<rt>とうきょう</rt></ruby>が<ruby>近<rt>ちか</rt></ruby>い。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>東京<rt>とうきょう</rt></ruby></span><span class="gl">[Tokyo]</span></span>
+    <span class="w"><span class="word">が</span><span class="gl">[subject <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+    <span class="w"><span class="word"><ruby>近<rt>ちか</rt></ruby>い</span><span class="gl">[is-near (adj) <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp">ぼくは<ruby>疲<rt>つか</rt></ruby>れている。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word">ぼく</span><span class="gl">[I]</span></span>
+    <span class="w"><span class="word">は</span><span class="gl">[topic <a href="../lessons/lesson-03.html">→L3</a>]</span></span>
+    <span class="w"><span class="word"><ruby>疲<rt>つか</rt></ruby>れている</span><span class="gl">[am tired (ongoing state) <a href="../lessons/lesson-04.html">→L4</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp">でも、<ruby>楽<rt>たの</rt></ruby>しい。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word">でも</span><span class="gl">[but/however]</span></span>
+    <span class="w"><span class="word"><ruby>楽<rt>たの</rt></ruby>しい</span><span class="gl">[is-fun/enjoyable (adj) <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>東京駅<rt>とうきょうえき</rt></ruby>に<ruby>着<rt>つ</rt></ruby>いた。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>東京駅<rt>とうきょうえき</rt></ruby></span><span class="gl">[Tokyo Station]</span></span>
+    <span class="w"><span class="word">に</span><span class="gl">[at <a href="../lessons/lesson-03.html">→L3</a>]</span></span>
+    <span class="w"><span class="word"><ruby>着<rt>つ</rt></ruby>いた</span><span class="gl">[arrived (past) <a href="../lessons/lesson-04.html">→L4</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>電車<rt>でんしゃ</rt></ruby>から<ruby>出<rt>で</rt></ruby>て、ホームに<ruby>立<rt>た</rt></ruby>った。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>電車<rt>でんしゃ</rt></ruby></span><span class="gl">[train]</span></span>
+    <span class="w"><span class="word">から</span><span class="gl">[from]</span></span>
+    <span class="w"><span class="word"><ruby>出<rt>で</rt></ruby>て</span><span class="gl">[exited (て-form: "and then") <a href="../lessons/lesson-05.html">→L5</a>]</span></span>
+    <span class="w"><span class="word">ホーム</span><span class="gl">[platform]</span></span>
+    <span class="w"><span class="word">に</span><span class="gl">[on <a href="../lessons/lesson-03.html">→L3</a>]</span></span>
+    <span class="w"><span class="word"><ruby>立<rt>た</rt></ruby>った</span><span class="gl">[stood (past) <a href="../lessons/lesson-04.html">→L4</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>人<rt>ひと</rt></ruby>が<ruby>多<rt>おお</rt></ruby>い。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>人<rt>ひと</rt></ruby></span><span class="gl">[people]</span></span>
+    <span class="w"><span class="word">が</span><span class="gl">[subject <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+    <span class="w"><span class="word"><ruby>多<rt>おお</rt></ruby>い</span><span class="gl">[is-many (adj) <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>音<rt>おと</rt></ruby>が<ruby>大<rt>おお</rt></ruby>きい。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>音<rt>おと</rt></ruby></span><span class="gl">[sounds]</span></span>
+    <span class="w"><span class="word">が</span><span class="gl">[subject <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+    <span class="w"><span class="word"><ruby>大<rt>おお</rt></ruby>きい</span><span class="gl">[is-big/loud (adj) <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp">ここが<ruby>東京<rt>とうきょう</rt></ruby>だ。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word">ここ</span><span class="gl">[here]</span></span>
+    <span class="w"><span class="word">が</span><span class="gl">[subject <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+    <span class="w"><span class="word"><ruby>東京<rt>とうきょう</rt></ruby></span><span class="gl">[Tokyo]</span></span>
+    <span class="w"><span class="word">だ</span><span class="gl">[is <a href="../lessons/lesson-01.html">→L1</a>]</span></span>
+  </div>
+</div>
+
+<div class="s">
+  <p class="jp"><ruby>日本<rt>にほん</rt></ruby>に<ruby>来<rt>き</rt></ruby>た。</p>
+  <div class="bd" hidden>
+    <span class="w"><span class="word"><ruby>日本<rt>にほん</rt></ruby></span><span class="gl">[Japan]</span></span>
+    <span class="w"><span class="word">に</span><span class="gl">[to <a href="../lessons/lesson-03.html">→L3</a>]</span></span>
+    <span class="w"><span class="word"><ruby>来<rt>き</rt></ruby>た</span><span class="gl">[came (past) <a href="../lessons/lesson-05.html">→L5</a>]</span></span>
+  </div>
+</div>
+
+<div class="grammar-note">
+    <strong>Grammar: て-form as connector (<a href="../lessons/lesson-05.html">Lesson 5</a>)</strong><br>
+    <ruby>座<rt>すわ</rt></ruby><strong>って</strong>、<ruby>窓<rt>まど</rt></ruby>から<ruby>見<rt>み</rt></ruby>た = sat down <em>and then</em> looked out the window.<br>
+    <ruby>出<rt>で</rt></ruby><strong>て</strong>、ホームに<ruby>立<rt>た</rt></ruby>った = exited <em>and then</em> stood on the platform.<br>
+    The て-form chains actions together in sequence. It's one of the most useful tools in Japanese — you'll use it constantly from here on.
+</div>
+
+<div class="nav nav-bottom">
+    <a href="../index.html">← Index</a>
+    <a href="index.html">← Reader Index</a>
+    <span class="disabled">Next Chapter →</span>
+</div>
+
+<script>
+document.querySelectorAll('.s').forEach(function(s) {
+    s.addEventListener('click', function(e) {
+        if (e.target.closest('a')) return;
+        var bd = s.querySelector('.bd');
+        if (!bd) return;
+        if (bd.hidden) {
+            document.querySelectorAll('.bd:not([hidden])').forEach(function(other) {
+                other.hidden = true;
+                other.closest('.s').classList.remove('active');
+            });
+            bd.hidden = false;
+            s.classList.add('active');
+        } else {
+            bd.hidden = true;
+            s.classList.remove('active');
+        }
+    });
+});
+</script>
+
+</body>
+</html>

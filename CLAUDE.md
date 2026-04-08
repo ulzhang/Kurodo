@@ -10,14 +10,18 @@ This is **Cure Dolly Textbook** - a Japanese language learning resource based on
 
 ```
 Kurodo/
-├── index.html       (intro + navigation to all lessons)
-├── styles.css       (shared CSS)
-├── lessons/         (88 individual lesson files)
+├── index.html          (intro + navigation to all lessons)
+├── onomatopoeia.html   (onomatopoeia reference page)
+├── styles.css          (shared CSS for lesson pages)
+├── lessons/            (88 individual lesson files)
 │   ├── lesson-01.html
 │   ├── lesson-02.html
 │   └── ... through lesson-90.html
-├── cheatsheets/     (88 lesson cheatsheets)
-└── images/          (371 JPG visual aids)
+├── graded-readers/     (12-chapter graded reader story)
+│   ├── index.html      (reader table of contents)
+│   └── chapter-01.html (... through chapter-12.html)
+├── cheatsheets/        (88 lesson cheatsheets)
+└── images/             (371 JPG visual aids)
 ```
 
 ## Usage
