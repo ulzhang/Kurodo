@@ -14,151 +14,118 @@
             color: #1a1a1a;
         }
         header {
-            margin-bottom: 32px;
-            padding-bottom: 20px;
+            margin-bottom: 36px;
+            padding-bottom: 24px;
             border-bottom: 2px solid #e0e0e0;
         }
         h1 {
-            font-size: 1.75rem;
+            font-size: 1.85rem;
             font-weight: 700;
-            margin: 0 0 6px 0;
+            margin: 0 0 8px 0;
         }
         .subtitle {
-            color: #666;
-            font-size: 0.95rem;
+            color: #555;
+            font-size: 1rem;
+            margin: 0 0 12px 0;
+        }
+        .tagline {
+            color: #888;
+            font-size: 0.9rem;
             margin: 0;
+            line-height: 1.5;
         }
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+
+        /* Section headings */
+        .section-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #999;
+            margin: 32px 0 12px 0;
         }
-        li {
-            border-bottom: 1px solid #f0f0f0;
-        }
-        a {
+
+        /* Feature cards */
+        .card {
             display: block;
-            padding: 10px 12px;
-            color: #1a1a1a;
+            padding: 18px 20px;
+            margin-bottom: 12px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #ccc;
             text-decoration: none;
-            font-size: 0.95rem;
-            border-radius: 6px;
-            transition: background-color 0.15s;
+            color: #1a1a1a;
+            transition: background-color 0.15s, box-shadow 0.15s;
         }
-        a:hover {
-            background-color: #f5f7fa;
-            color: #2563eb;
+        .card:hover {
+            background-color: #f0f4f8;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
         }
+        .card-title {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin: 0 0 4px 0;
+        }
+        .card-desc {
+            font-size: 0.88rem;
+            color: #666;
+            margin: 0;
+            line-height: 1.5;
+        }
+        .card-meta {
+            font-size: 0.78rem;
+            color: #999;
+            margin: 8px 0 0 0;
+        }
+
+        /* Color accents */
+        .card-reader { border-left-color: #22c55e; }
+        .card-reader .card-title { color: #16a34a; }
+
+        .card-ref { border-left-color: #2563eb; }
+        .card-ref .card-title { color: #2563eb; }
+
+        .card-lessons { border-left-color: #8b5cf6; }
+        .card-lessons .card-title { color: #7c3aed; }
+
         @media (max-width: 768px) {
             body { padding: 20px 16px; }
         }
     </style>
 </head>
 <body>
+
 <header>
     <h1>Cure Dolly Textbook</h1>
-    <p class="subtitle">Japanese grammar from the ground up &mdash; 88 lessons</p>
+    <p class="subtitle">Japanese grammar from the ground up</p>
+    <p class="tagline">Based on the Cure Dolly YouTube course &mdash; 88 lessons, graded readers, and reference guides. Learn Japanese the way it actually works.</p>
 </header>
 
-<div style="margin-bottom: 24px; padding: 14px 16px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #2563eb;">
-    <a href="onomatopoeia.html" style="display: inline; padding: 0; font-size: 1rem; font-weight: 600; color: #2563eb; text-decoration: none;">Learning Japanese Through Onomatopoeia</a>
-    <span style="color: #666; font-size: 0.9rem;"> &mdash; sound symbolism, textures, emotions, and the grammar hiding inside them</span>
-</div>
+<!-- ===== START READING ===== -->
+<p class="section-label">Start Reading</p>
 
-<div style="margin-bottom: 24px; padding: 14px 16px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #22c55e;">
-    <a href="graded-readers/index.html" style="display: inline; padding: 0; font-size: 1rem; font-weight: 600; color: #22c55e; text-decoration: none;">Graded Readers: ケビンのにほん</a>
-    <span style="color: #666; font-size: 0.9rem;"> &mdash; a 12-chapter story to read alongside the lessons, starting from zero</span>
-</div>
+<a class="card card-reader" href="graded-readers/index.html">
+    <p class="card-title">ケビンのにほん &mdash; Graded Readers</p>
+    <p class="card-desc">A 12-chapter story following an American software engineer arriving in Japan. Read along as the grammar builds chapter by chapter. Tap any sentence for a word-by-word breakdown.</p>
+    <p class="card-meta">Chapter 1 available &middot; Covers Lessons 1&ndash;5</p>
+</a>
 
-<ul>
-  <li><a href="lessons/lesson-01.html">Lesson 1: Type of sentences</a></li>
-  <li><a href="lessons/lesson-02.html">Lesson 2: Omitting the subject</a></li>
-  <li><a href="lessons/lesson-03.html">Lesson 3: Particles</a></li>
-  <li><a href="lessons/lesson-04.html">Lesson 4: Past, present and future tense</a></li>
-  <li><a href="lessons/lesson-05.html">Lesson 5: Verb groups, て and た forms</a></li>
-  <li><a href="lessons/lesson-06.html">Lesson 6: Type of Adjectives</a></li>
-  <li><a href="lessons/lesson-07.html">Lesson 7: Negative Verbs</a></li>
-  <li><a href="lessons/lesson-08.html">Lesson 8: Particles に and へ</a></li>
-  <li><a href="lessons/lesson-09.html">Lesson 9: Expressing desire</a></li>
-  <li><a href="lessons/lesson-10.html">Lesson 10: Conjugations</a></li>
-  <li><a href="lessons/lesson-11.html">Lesson 11: Compound sentences, くれる, あげる, more て-form uses</a></li>
-  <li><a href="lessons/lesson-12.html">Lesson 12: と quotation</a></li>
-  <li><a href="lessons/lesson-13.html">Lesson 13: Receptive Form</a></li>
-  <li><a href="lessons/lesson-14.html">Lesson 14: も, こと, Adverbs</a></li>
-  <li><a href="lessons/lesson-15.html">Lesson 15: Transitive / Intransitive Verbs</a></li>
-  <li><a href="lessons/lesson-16.html">Lesson 16: てみる, の, と and や </a></li>
-  <li><a href="lessons/lesson-17.html">Lesson 17: How です / ます RUINS your Japanese</a></li>
-  <li><a href="lessons/lesson-18.html">Lesson 18: って = は ?? </a></li>
-  <li><a href="lessons/lesson-19.html">Lesson 19: Causative + &quot;causative passive&quot;</a></li>
-  <li><a href="lessons/lesson-20.html">Lesson 20: それ / その / そんな / そう</a></li>
-  <li><a href="lessons/lesson-21.html">Lesson 21: ておく / てある</a></li>
-  <li><a href="lessons/lesson-22.html">Lesson 22: ては ても - topic/comment magic!</a></li>
-  <li><a href="lessons/lesson-23.html">Lesson 23: だって</a></li>
-  <li><a href="lessons/lesson-24.html">Lesson 24: Hearsay and guesses! </a></li>
-  <li><a href="lessons/lesson-25.html">Lesson 25: らしい vs そうです + っぽい</a></li>
-  <li><a href="lessons/lesson-26.html">Lesson 26: Japanese similes: のように・のような ・みたい</a></li>
-  <li><a href="lessons/lesson-27.html">Lesson 27: ばかり</a></li>
-  <li><a href="lessons/lesson-29.html">Lesson 29: こと にする, こと になる. The simple logic behind them.</a></li>
-  <li><a href="lessons/lesson-30.html">Lesson 30: Japanese conditionals: と.</a></li>
-  <li><a href="lessons/lesson-31.html">Lesson 31: The BA conditional.</a></li>
-  <li><a href="lessons/lesson-32.html">Lesson 32: Conditionals made clear! Tara, nara</a></li>
-  <li><a href="lessons/lesson-33.html">Lesson 33: Dake, shika, bakari, nomi: making SENSE of Japanese limiting terms.</a></li>
-  <li><a href="lessons/lesson-34.html">Lesson 34: Understand any sentence. Powerful analysis technique.</a></li>
-  <li><a href="lessons/lesson-35.html">Lesson 35: Yori, no hou, ippou- how they MAKE SENSE!</a></li>
-  <li><a href="lessons/lesson-36.html">Lesson 36: ところ- the Japanese concept of Place - Grammar Magic</a></li>
-  <li><a href="lessons/lesson-37.html">Lesson 37: Dominate Japanese Text! New structure secrets + &quot;na vs no, なる &amp; taru adjectives&quot;</a></li>
-  <li><a href="lessons/lesson-38.html">Lesson 38: Know when &quot;it isn&#x27;t&quot; means &quot;it is&quot;: mysteries of じゃない janai, ではない de は nai</a></li>
-  <li><a href="lessons/lesson-39.html">Lesson 39: The か Ka-particle&#x27;s Secret Life! &quot;buried questions&quot;, Kana, Monka, Ka dou ka &amp; much more</a></li>
-  <li><a href="lessons/lesson-40.html">Lesson 40: 3 PITFALLS in Japanese and how to avoid them</a></li>
-  <li><a href="lessons/lesson-41.html">Lesson 41: 5 key facts they never tell you about the basic structure of Japanese</a></li>
-  <li><a href="lessons/lesson-42.html">Lesson 42: Why textbook &quot;grammar points&quot; are so misleading. Basic word-confusion | まま mama</a></li>
-  <li><a href="lessons/lesson-43.html">Lesson 43: Japanese learning PARADIGM SHIFT: Cut through the confusion</a></li>
-  <li><a href="lessons/lesson-44.html">Lesson 44: How to use natural Japanese: chau, chatta, how they really work ちゃう、ちゃった</a></li>
-  <li><a href="lessons/lesson-46.html">Lesson 46: Japanese Word Order MATTERS (more than you think) 2 Simple rules crack tough sentences</a></li>
-  <li><a href="lessons/lesson-47.html">Lesson 47: How to Understand Japanese: Your Secret Weapon for breaking down sentences</a></li>
-  <li><a href="lessons/lesson-48.html">Lesson 48: Dealing with ambiguity in Japanese 3 Laws that Make Everything Clear!</a></li>
-  <li><a href="lessons/lesson-49.html">Lesson 49: Japanese Point-of-View Deconfused! -もらう・てもらう morau, te-morau</a></li>
-  <li><a href="lessons/lesson-50.html">Lesson 50: 2 Aspects of Japanese that Foreigners Can&#x27;t Fathom させてもらう Last Secret of the Potential</a></li>
-  <li><a href="lessons/lesson-51.html">Lesson 51: Hands-on Japanese: How to read a Japanese Kaidan (ghost story)</a></li>
-  <li><a href="lessons/lesson-52.html">Lesson 52: In DEPTH Japanese Sentence Analysis in Real Native Context</a></li>
-  <li><a href="lessons/lesson-53.html">Lesson 53: Enjoy Japanese Horror in Japanese</a></li>
-  <li><a href="lessons/lesson-54.html">Lesson 54: IRREGULARITIES in Japanese and how they work | 見る、見られる、見れる、見える、聞く、聞ける、聞こえる</a></li>
-  <li><a href="lessons/lesson-55.html">Lesson 55: Secrets of the で particle. Why do we say みんなで行く? and 世界で一番?</a></li>
-  <li><a href="lessons/lesson-56.html">Lesson 56: &quot;agility&quot;: The Vital Language Factor No One Mentions. Deeper secrets of は and の particles</a></li>
-  <li><a href="lessons/lesson-57.html">Lesson 57: 込む Komu and the secret of multi-meaning Japanese words</a></li>
-  <li><a href="lessons/lesson-58.html">Lesson 58: Japanese double particles. How they really work | lesson 58</a></li>
-  <li><a href="lessons/lesson-59.html">Lesson 59: Untranslatable Japanese exists! How to understand it</a></li>
-  <li><a href="lessons/lesson-60.html">Lesson 60: The OTHER HALF of Japanese Structure - non-logical topic/comment structure</a></li>
-  <li><a href="lessons/lesson-61.html">Lesson 61: WA and GA: the Deeper Secrets! The yin- や ng structure of Japanese</a></li>
-  <li><a href="lessons/lesson-62.html">Lesson 62: Te-oku vs te-shimau, helper verb secrets. ておく てしまう </a></li>
-  <li><a href="lessons/lesson-63.html">Lesson 63: WILD sentence enders in real life Japanese かい、だい,、ぜ、ぞ、さ、から、し、ちょうだい</a></li>
-  <li><a href="lessons/lesson-64.html">Lesson 64: &quot;things&quot;get Strange! Mono and こと: advanced secrets: ものだ, ことがある, こと as sentence-ender</a></li>
-  <li><a href="lessons/lesson-65.html">Lesson 65: Coming and Going: Deeper secrets of 行く and 来る、て行くand て来る (te-iku, teくru)</a></li>
-  <li><a href="lessons/lesson-66.html">Lesson 66: HIDDEN Subjects in Japanese - and how to understand them</a></li>
-  <li><a href="lessons/lesson-67.html">Lesson 67: もう and まだ the time-relations that make sense of them (mou and mada)</a></li>
-  <li><a href="lessons/lesson-68.html">Lesson 68: Japanese &quot;underlying logic&quot;: わけ、そういうわけ、わけが分からない、わけない</a></li>
-  <li><a href="lessons/lesson-69.html">Lesson 69: Japanese in the Wild! Tackling native Japanese material. Kaidan 4</a></li>
-  <li><a href="lessons/lesson-70.html">Lesson 70: かける / かかる All-purpose Japanese Explained! Means everything = means nothing? Or real logic?</a></li>
-  <li><a href="lessons/lesson-71.html">Lesson 71: Japanese counters: 3 simple rules make them easy!</a></li>
-  <li><a href="lessons/lesson-72.html">Lesson 72: Best kept secrets of Japanese structure - The Great Connector (い-stem magic)</a></li>
-  <li><a href="lessons/lesson-73.html">Lesson 73: Secrets of 気 Ki - ki になる, ki にする, kiが する, ki ni いる etc. 気になる、気にする、気がする、気に入る</a></li>
-  <li><a href="lessons/lesson-74.html">Lesson 74: LOVE and other mysteries of こと! あなたのことが好き、私のことが嫌い、ということ、そういうこと、どういうこと、そんなこと</a></li>
-  <li><a href="lessons/lesson-75.html">Lesson 75: Japanese is NOT English: How expression strategies differ | polite Eihongo=rude Japanese</a></li>
-  <li><a href="lessons/lesson-76.html">Lesson 76: The Right Opening? aku, akeru, hiraku, hirakeru | あく、あける、ひらく、ひらける、 開く、開け</a></li>
-  <li><a href="lessons/lesson-77.html">Lesson 77: Real Japanese Structure vs Tae Kim - Structural Review of Tae Kim&#x27;s Japanese Grammar</a></li>
-  <li><a href="lessons/lesson-78.html">Lesson 78: Breaking the Core: Tae Kim vs the Copula | Japanese Structure-Based Critical Review</a></li>
-  <li><a href="lessons/lesson-79.html">Lesson 79: 1/3 of all Japanese sentences cracked! Deeper secret of the copula. +The Tae Kim fallacy</a></li>
-  <li><a href="lessons/lesson-80.html">Lesson 80: Understand Japanese Even When they Leave Bits Out! Dropped particles &amp; casual omissions</a></li>
-  <li><a href="lessons/lesson-81.html">Lesson 81: Global principle of all Japanese word-forms.</a></li>
-  <li><a href="lessons/lesson-82.html">Lesson 82: なんて Nante なんか Nanka など Nado: 3 Common words clarified.</a></li>
-  <li><a href="lessons/lesson-83.html">Lesson 83: Three Levels of Command in Japanese: て-form commands, なさい, な-commands, imperative form.</a></li>
-  <li><a href="lessons/lesson-84.html">Lesson 84: である and the Structure of Japanese. What older copulas tell us: である, であります、でござる、でございます</a></li>
-  <li><a href="lessons/lesson-85.html">Lesson 85: まい the negative helper that never gets explained properly</a></li>
-  <li><a href="lessons/lesson-86.html">Lesson 86: 次第 (次第) - What it really means and how it really works.</a></li>
-  <li><a href="lessons/lesson-87.html">Lesson 87: Japanese Structure INVERTED: the strange life of しか. How it really works.</a></li>
-  <li><a href="lessons/lesson-88.html">Lesson 88: The Indestructible Core of Japanese. How the logic never fails. Xをしたい vs Xがしたい </a></li>
-  <li><a href="lessons/lesson-89.html">Lesson 89: De-mystifying Japanese. Let the world&#x27;s most logical language shine! The Universal Subject</a></li>
-  <li><a href="lessons/lesson-90.html">Lesson 90: Japanese Punctuation: How it REALLY works.</a></li>
-</ul>
+<!-- ===== REFERENCE ===== -->
+<p class="section-label">Reference</p>
+
+<a class="card card-ref" href="onomatopoeia.html">
+    <p class="card-title">Onomatopoeia Guide</p>
+    <p class="card-desc">Sound symbolism, textures, emotions, and the grammar hiding inside them. 35+ words with examples and pattern explanations.</p>
+</a>
+
+<!-- ===== LESSONS ===== -->
+<p class="section-label">Grammar Lessons</p>
+
+<a class="card card-lessons" href="lessons/index.html">
+    <p class="card-title">All 88 Lessons</p>
+    <p class="card-desc">The complete Cure Dolly grammar course, from core sentence types to advanced structure. Grouped by difficulty: Foundations, Intermediate, Advanced, Deep Dive, and Mastery.</p>
+    <p class="card-meta">Lessons 1&ndash;90 (28 &amp; 45 skipped in original)</p>
+</a>
+
 </body>
 </html>
