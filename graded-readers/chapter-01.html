@@ -148,6 +148,34 @@
             text-decoration: underline;
         }
 
+        /* Furigana toggle */
+        .toggle-bar {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+        .toggle-btn {
+            font-size: 0.8rem;
+            padding: 5px 12px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            background: #fff;
+            color: #666;
+            cursor: pointer;
+            transition: background-color 0.12s, color 0.12s;
+        }
+        .toggle-btn:hover {
+            background: #f5f7fa;
+        }
+        .toggle-btn.active {
+            background: #2563eb;
+            color: #fff;
+            border-color: #2563eb;
+        }
+        body.no-furigana rt {
+            display: none;
+        }
+
         @media (max-width: 768px) {
             body { padding: 20px 16px; }
             .s { padding: 8px 8px; margin: 4px -8px; }
@@ -165,6 +193,10 @@
 <h1>だい１しょう：とうちゃく</h1>
 <p class="chapter-sub">Chapter 1: Arrival</p>
 <p class="chapter-intro">Grammar from Lessons 1-5: sentence types, が・は・を・に particles, past tense, て-form. Tap any sentence for a word-by-word breakdown.</p>
+
+<div class="toggle-bar">
+    <button class="toggle-btn active" id="furigana-toggle" onclick="document.body.classList.toggle('no-furigana'); this.classList.toggle('active')">ふりがな</button>
+</div>
 
 <!-- ================= SCENE 1: 着陸 ================= -->
 <h2><span class="scene-num">一</span>ちゃくりく</h2>
