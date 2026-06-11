@@ -1,0 +1,148 @@
+/* ==========================================================================
+   chapters.css — styling for the consolidated "chapter" view.
+   Additive only: loaded alongside styles.css by lessons/chapter-NN.html and
+   lessons/chapters.html. Does not affect the original per-lesson pages.
+   ========================================================================== */
+
+/* ---- Chapter heading ---------------------------------------------------- */
+.chapter-eyebrow {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #7c3aed;
+    margin: 0 0 2px 0;
+}
+.chapter-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.95rem;
+    font-weight: 700;
+    line-height: 1.15;
+    color: #1a1a1a;
+    margin: 0 0 6px 0;
+}
+
+/* ---- Chapter intro card ------------------------------------------------- */
+.chapter-intro {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f5ff;
+    border-left: 4px solid #8b5cf6;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 16px 0 8px 0;
+    line-height: 1.6;
+    color: #2b2b2b;
+}
+.chapter-intro p {
+    margin: 0 0 10px 0;
+    font-size: 0.95rem;
+}
+.chapter-intro p:last-child { margin-bottom: 0; }
+.chapter-intro .chapter-sources-label {
+    font-size: 0.74rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #7c3aed;
+    margin-bottom: 4px;
+}
+.chapter-intro ul {
+    margin: 0;
+    padding-left: 18px;
+}
+.chapter-intro li {
+    margin: 3px 0;
+    font-size: 0.9rem;
+    color: #333;
+}
+.chapter-intro a { color: #2563eb; text-decoration: none; }
+.chapter-intro a:hover { text-decoration: underline; }
+.chapter-intro .yt {
+    color: #888;
+    font-size: 0.82rem;
+}
+
+/* ---- Former-lesson section header --------------------------------------- */
+.chapter-section {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1a1a1a;
+    margin: 46px 0 4px 0;
+    padding-bottom: 7px;
+    border-bottom: 2px solid #e3dcff;
+}
+.chapter-section .chapter-section-kicker {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5cf6;
+    margin-bottom: 3px;
+}
+/* First section sits closer to the intro, not 46px down. */
+.chapter-section.first { margin-top: 22px; }
+
+/* ---- Editorial bridge between sections ---------------------------------- */
+.chapter-bridge {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    color: #6a6a6a;
+    line-height: 1.55;
+    font-size: 0.95rem;
+    margin: 16px 0 4px 0;
+    padding: 2px 0 2px 14px;
+    border-left: 3px solid #ddd;
+    scroll-margin-top: 18px;
+}
+
+/* ---- Cheat-sheet per-lesson labels -------------------------------------- */
+.cheatsheet-section h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #555;
+    margin: 22px 0 8px 0;
+}
+
+/* ==========================================================================
+   chapters.html — chapter index (mirrors lessons/index.html styling)
+   ========================================================================== */
+.chapter-list-card {
+    display: block;
+    padding: 16px 18px;
+    margin-bottom: 10px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #8b5cf6;
+    text-decoration: none;
+    color: #1a1a1a;
+    transition: background-color 0.15s, box-shadow 0.15s;
+}
+.chapter-list-card:hover {
+    background-color: #f3eeff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.chapter-list-card .num {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #7c3aed;
+    margin: 0 0 2px 0;
+}
+.chapter-list-card .title {
+    font-size: 1.08rem;
+    font-weight: 600;
+    color: #7c3aed;
+    margin: 0 0 4px 0;
+}
+.chapter-list-card .covers {
+    font-size: 0.84rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.45;
+}
