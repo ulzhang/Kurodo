@@ -1,0 +1,2615 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>72 Japanese Sentence Patterns — Cure Dolly Textbook</title>
+  <style>
+    :root { --accent: #ec4899; --accent-dark: #be185d; --accent-soft: #fdf2f8; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+      line-height: 1.6;
+      color: #1a1a1a;
+    }
+    .nav { padding: 10px 0; margin-bottom: 20px; border-bottom: 1px solid #ccc; }
+    .nav a { color: #2563eb; text-decoration: none; font-size: 0.95rem; }
+    .nav a:hover { text-decoration: underline; }
+    .nav a + a { margin-left: 18px; }
+
+    header { margin-bottom: 12px; padding-bottom: 20px; border-bottom: 2px solid #f0d9e7; }
+    h1 { font-size: 1.85rem; font-weight: 700; margin: 0 0 6px; }
+    h1 .jp-title { color: var(--accent-dark); }
+    .subtitle { color: #666; font-size: 0.95rem; margin: 0 0 4px; }
+    .lang-key { color: #999; font-size: 0.85rem; margin: 8px 0 0; }
+    .lang-key b { color: var(--accent-dark); font-weight: 600; }
+
+    /* Furigana toggle */
+    .toggle-bar { display: flex; gap: 8px; align-items: center; margin: 18px 0 4px; }
+    .toggle-label { font-size: 0.82rem; color: #888; }
+    .toggle-btn {
+      border: 1px solid #d1d5db; background: #fff; color: #555;
+      border-radius: 20px; padding: 5px 14px; font-size: 0.82rem; cursor: pointer;
+      transition: all 0.12s;
+    }
+    .toggle-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+    /* Table of contents */
+    .toc { margin: 22px 0 10px; }
+    .toc h2 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: #999; margin: 0 0 10px; }
+    .toc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 2px 10px; }
+    .toc-item { display: flex; gap: 8px; align-items: baseline; padding: 4px 6px; border-radius: 6px;
+      text-decoration: none; color: #333; font-size: 0.9rem; }
+    .toc-item:hover { background: var(--accent-soft); }
+    .toc-num { color: var(--accent); font-weight: 700; font-size: 0.78rem; min-width: 20px; }
+    .toc-jp { color: #333; }
+
+    /* Pattern block */
+    .pat {
+      margin: 14px -16px; padding: 22px 16px 8px;
+      border-top: 1px solid #f0e3eb; scroll-margin-top: 12px;
+    }
+    .pat-head { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+    .pat-num {
+      font-size: 0.9rem; font-weight: 800; color: #fff; background: var(--accent);
+      border-radius: 8px; padding: 3px 9px; letter-spacing: 0.02em;
+    }
+    .pat-headtext { flex: 1 1 auto; }
+    .pat-jp { font-size: 1.6rem; font-weight: 700; margin: 0; color: #1a1a1a; line-height: 1.25; }
+    .pat-romaji { margin: 2px 0 0; color: #999; font-size: 0.9rem; font-style: italic; }
+    .pat-name { margin: 0; color: var(--accent-dark); font-weight: 600; font-size: 1rem; flex: 0 0 auto; }
+
+    .pattern-box {
+      background: var(--accent-soft); border-left: 4px solid var(--accent);
+      border-radius: 8px; padding: 10px 14px; margin: 14px 0 6px;
+      font-size: 1.05rem; line-height: 1.7;
+    }
+    .pb-label {
+      display: inline-block; font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.07em;
+      font-weight: 700; color: var(--accent-dark); margin-right: 10px; vertical-align: 1px;
+    }
+    .note { margin: 8px 0 14px; color: #444; font-size: 0.94rem; }
+
+    /* Example cards (tap to expand) */
+    .examples { margin-top: 4px; }
+    .s {
+      padding: 10px 12px; margin: 8px -12px; border-radius: 10px; cursor: pointer;
+      border-left: 4px solid transparent; background: #fafafa;
+      transition: background-color 0.12s, border-color 0.12s;
+    }
+    .s:hover { background-color: #f5f7fa; }
+    .s.active { background-color: #fff; border-left-color: var(--accent); box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+    .jp { font-size: 1.2rem; margin: 0; line-height: 2.1; }
+    .zh { font-size: 1.02rem; margin: 3px 0 0; color: #1f2937; }
+    .zh .pinyin { color: #9ca3af; font-size: 0.82rem; margin-left: 8px; font-style: italic; }
+    .en { margin: 3px 0 0; color: #6b7280; font-size: 0.92rem; font-style: italic; }
+    ruby { ruby-position: over; }
+    rt { font-size: 0.55em; color: #aaa; font-weight: 400; }
+    body.no-furigana rt { display: none; }
+
+    .bd { background: #f0f4f8; border-radius: 6px; padding: 10px 14px; margin-top: 8px; font-size: 0.9rem; line-height: 1.9; }
+    .w { display: inline-block; margin: 2px 8px 2px 0; white-space: nowrap; }
+    .word { font-weight: 600; }
+    .gl { color: #555; font-size: 0.85em; }
+    .romaji { margin: 6px 0 0; padding-top: 6px; border-top: 1px solid #dfe3e8; color: #888; font-size: 0.85em; font-style: italic; }
+
+    .backtotop { margin: 10px 0 0; text-align: right; }
+    .backtotop a { color: #c0c0c0; text-decoration: none; font-size: 0.78rem; }
+    .backtotop a:hover { color: var(--accent); }
+
+    @media (max-width: 768px) {
+      body { padding: 20px 16px 60px; }
+      .pat-name { flex-basis: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="nav"><a href="index.html">← Home</a><a href="graded-readers/index.html">Graded Readers</a><a href="onomatopoeia.html">Onomatopoeia</a></div>
+
+<header>
+  <h1>72 Japanese Sentence Patterns</h1>
+  <p class="subtitle">The most useful everyday patterns — each shown three ways, side by side.</p>
+  <p class="lang-key">Every example appears in <b>日本語</b> (Japanese), <b>中文</b> (Simplified Chinese + pinyin), and English. Tap any sentence for a word-by-word breakdown.</p>
+  <div class="toggle-bar">
+    <span class="toggle-label">Reading aid:</span>
+    <button id="furi-toggle" class="toggle-btn active" type="button">Furigana: on</button>
+  </div>
+</header>
+
+<nav class="toc" id="toc">
+  <h2>All 72 patterns</h2>
+  <div class="toc-grid">
+      <a class="toc-item" href="#p1"><span class="toc-num">01</span><span class="toc-jp">これは〜です</span></a>
+      <a class="toc-item" href="#p2"><span class="toc-num">02</span><span class="toc-jp">私は〜です</span></a>
+      <a class="toc-item" href="#p3"><span class="toc-num">03</span><span class="toc-jp">〜は…です（1）</span></a>
+      <a class="toc-item" href="#p4"><span class="toc-num">04</span><span class="toc-jp">〜は…です（2）</span></a>
+      <a class="toc-item" href="#p5"><span class="toc-num">05</span><span class="toc-jp">〜は…にいます</span></a>
+      <a class="toc-item" href="#p6"><span class="toc-num">06</span><span class="toc-jp">〜は…にあります</span></a>
+      <a class="toc-item" href="#p7"><span class="toc-num">07</span><span class="toc-jp">〜します</span></a>
+      <a class="toc-item" href="#p8"><span class="toc-num">08</span><span class="toc-jp">〜したいです</span></a>
+      <a class="toc-item" href="#p9"><span class="toc-num">09</span><span class="toc-jp">〜しています（1）</span></a>
+      <a class="toc-item" href="#p10"><span class="toc-num">10</span><span class="toc-jp">〜しています（2）</span></a>
+      <a class="toc-item" href="#p11"><span class="toc-num">11</span><span class="toc-jp">〜しました</span></a>
+      <a class="toc-item" href="#p12"><span class="toc-num">12</span><span class="toc-jp">もう〜しました</span></a>
+      <a class="toc-item" href="#p13"><span class="toc-num">13</span><span class="toc-jp">〜したことがあります</span></a>
+      <a class="toc-item" href="#p14"><span class="toc-num">14</span><span class="toc-jp">〜（することが）できます</span></a>
+      <a class="toc-item" href="#p15"><span class="toc-num">15</span><span class="toc-jp">〜してもいいです</span></a>
+      <a class="toc-item" href="#p16"><span class="toc-num">16</span><span class="toc-jp">〜は何ですか</span></a>
+      <a class="toc-item" href="#p17"><span class="toc-num">17</span><span class="toc-jp">〜は誰ですか</span></a>
+      <a class="toc-item" href="#p18"><span class="toc-num">18</span><span class="toc-jp">〜はいつですか</span></a>
+      <a class="toc-item" href="#p19"><span class="toc-num">19</span><span class="toc-jp">〜はどこですか</span></a>
+      <a class="toc-item" href="#p20"><span class="toc-num">20</span><span class="toc-jp">どうして〜? なぜ〜?</span></a>
+      <a class="toc-item" href="#p21"><span class="toc-num">21</span><span class="toc-jp">〜はどうですか</span></a>
+      <a class="toc-item" href="#p22"><span class="toc-num">22</span><span class="toc-jp">〜おめでとう</span></a>
+      <a class="toc-item" href="#p23"><span class="toc-num">23</span><span class="toc-jp">〜ありがとう</span></a>
+      <a class="toc-item" href="#p24"><span class="toc-num">24</span><span class="toc-jp">〜してくれてありがとう</span></a>
+      <a class="toc-item" href="#p25"><span class="toc-num">25</span><span class="toc-jp">〜（して）ごめんなさい</span></a>
+      <a class="toc-item" href="#p26"><span class="toc-num">26</span><span class="toc-jp">〜しませんか</span></a>
+      <a class="toc-item" href="#p27"><span class="toc-num">27</span><span class="toc-jp">〜しましょうか</span></a>
+      <a class="toc-item" href="#p28"><span class="toc-num">28</span><span class="toc-jp">〜と思います</span></a>
+      <a class="toc-item" href="#p29"><span class="toc-num">29</span><span class="toc-jp">〜といいですね</span></a>
+      <a class="toc-item" href="#p30"><span class="toc-num">30</span><span class="toc-jp">前は〜しました</span></a>
+      <a class="toc-item" href="#p31"><span class="toc-num">31</span><span class="toc-jp">よく〜します</span></a>
+      <a class="toc-item" href="#p32"><span class="toc-num">32</span><span class="toc-jp">〜しやすいです</span></a>
+      <a class="toc-item" href="#p33"><span class="toc-num">33</span><span class="toc-jp">〜しづらいです</span></a>
+      <a class="toc-item" href="#p34"><span class="toc-num">34</span><span class="toc-jp">〜が好きです</span></a>
+      <a class="toc-item" href="#p35"><span class="toc-num">35</span><span class="toc-jp">〜がほしいです</span></a>
+      <a class="toc-item" href="#p36"><span class="toc-num">36</span><span class="toc-jp">〜が必要です</span></a>
+      <a class="toc-item" href="#p37"><span class="toc-num">37</span><span class="toc-jp">〜だそうです</span></a>
+      <a class="toc-item" href="#p38"><span class="toc-num">38</span><span class="toc-jp">〜らしい</span></a>
+      <a class="toc-item" href="#p39"><span class="toc-num">39</span><span class="toc-jp">〜のようです</span></a>
+      <a class="toc-item" href="#p40"><span class="toc-num">40</span><span class="toc-jp">〜そうです</span></a>
+      <a class="toc-item" href="#p41"><span class="toc-num">41</span><span class="toc-jp">〜するはずです</span></a>
+      <a class="toc-item" href="#p42"><span class="toc-num">42</span><span class="toc-jp">〜すぎます</span></a>
+      <a class="toc-item" href="#p43"><span class="toc-num">43</span><span class="toc-jp">…より〜です</span></a>
+      <a class="toc-item" href="#p44"><span class="toc-num">44</span><span class="toc-jp">〜かもしれません</span></a>
+      <a class="toc-item" href="#p45"><span class="toc-num">45</span><span class="toc-jp">〜してしまいました</span></a>
+      <a class="toc-item" href="#p46"><span class="toc-num">46</span><span class="toc-jp">〜したところです</span></a>
+      <a class="toc-item" href="#p47"><span class="toc-num">47</span><span class="toc-jp">〜しなさい</span></a>
+      <a class="toc-item" href="#p48"><span class="toc-num">48</span><span class="toc-jp">あまり〜ない</span></a>
+      <a class="toc-item" href="#p49"><span class="toc-num">49</span><span class="toc-jp">それほど〜ない</span></a>
+      <a class="toc-item" href="#p50"><span class="toc-num">50</span><span class="toc-jp">よく〜</span></a>
+      <a class="toc-item" href="#p51"><span class="toc-num">51</span><span class="toc-jp">まったく〜ない</span></a>
+      <a class="toc-item" href="#p52"><span class="toc-num">52</span><span class="toc-jp">〜させてください</span></a>
+      <a class="toc-item" href="#p53"><span class="toc-num">53</span><span class="toc-jp">〜させます</span></a>
+      <a class="toc-item" href="#p54"><span class="toc-num">54</span><span class="toc-jp">〜されました</span></a>
+      <a class="toc-item" href="#p55"><span class="toc-num">55</span><span class="toc-jp">〜するつもりです</span></a>
+      <a class="toc-item" href="#p56"><span class="toc-num">56</span><span class="toc-jp">〜が得意（苦手）です</span></a>
+      <a class="toc-item" href="#p57"><span class="toc-num">57</span><span class="toc-jp">〜しそうです</span></a>
+      <a class="toc-item" href="#p58"><span class="toc-num">58</span><span class="toc-jp">〜をどうぞ</span></a>
+      <a class="toc-item" href="#p59"><span class="toc-num">59</span><span class="toc-jp">どうぞ〜してください</span></a>
+      <a class="toc-item" href="#p60"><span class="toc-num">60</span><span class="toc-jp">どうも〜</span></a>
+      <a class="toc-item" href="#p61"><span class="toc-num">61</span><span class="toc-jp">とても〜</span></a>
+      <a class="toc-item" href="#p62"><span class="toc-num">62</span><span class="toc-jp">また〜</span></a>
+      <a class="toc-item" href="#p63"><span class="toc-num">63</span><span class="toc-jp">たぶん〜</span></a>
+      <a class="toc-item" href="#p64"><span class="toc-num">64</span><span class="toc-jp">きっと〜</span></a>
+      <a class="toc-item" href="#p65"><span class="toc-num">65</span><span class="toc-jp">念のために〜</span></a>
+      <a class="toc-item" href="#p66"><span class="toc-num">66</span><span class="toc-jp">〜しないで（ください）</span></a>
+      <a class="toc-item" href="#p67"><span class="toc-num">67</span><span class="toc-jp">〜してはいけません</span></a>
+      <a class="toc-item" href="#p68"><span class="toc-num">68</span><span class="toc-jp">〜してみて（ください）</span></a>
+      <a class="toc-item" href="#p69"><span class="toc-num">69</span><span class="toc-jp">〜、お願いします</span></a>
+      <a class="toc-item" href="#p70"><span class="toc-num">70</span><span class="toc-jp">〜をください</span></a>
+      <a class="toc-item" href="#p71"><span class="toc-num">71</span><span class="toc-jp">〜してください</span></a>
+      <a class="toc-item" href="#p72"><span class="toc-num">72</span><span class="toc-jp">〜していただけませんか</span></a>
+  </div>
+</nav>
+
+<main>
+      <section class="pat" id="p1">
+        <div class="pat-head">
+          <span class="pat-num">01</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">これは〜です</h2>
+            <p class="pat-romaji">Kore wa ~ desu</p>
+          </div>
+          <p class="pat-name">This is ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>これは + [noun] + です</div>
+        <p class="note">Point at something near you and name it. これ = “this (thing by me),” は marks the topic, and です is the polite “is/am/are.”</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp">これは<ruby>本<rt>ほん</rt></ruby>です。</p>
+          <p class="zh">这是书。<span class="pinyin">Zhè shì shū.</span></p>
+          <p class="en">This is a book.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">これ</span><span class="gl">[this]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">本</span><span class="gl">[book]</span></span><span class="w"><span class="word">です</span><span class="gl">[is (polite)]</span></span>
+            <p class="romaji">Kore wa hon desu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp">これは<ruby>私<rt>わたし</rt></ruby>のかばんです。</p>
+          <p class="zh">这是我的包。<span class="pinyin">Zhè shì wǒ de bāo.</span></p>
+          <p class="en">This is my bag.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">これ</span><span class="gl">[this]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">私</span><span class="gl">[I]</span></span><span class="w"><span class="word">の</span><span class="gl">[&#x27;s]</span></span><span class="w"><span class="word">かばん</span><span class="gl">[bag]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span>
+            <p class="romaji">Kore wa watashi no kaban desu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p2">
+        <div class="pat-head">
+          <span class="pat-num">02</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp"><ruby>私<rt>わたし</rt></ruby>は〜です</h2>
+            <p class="pat-romaji">Watashi wa ~ desu</p>
+          </div>
+          <p class="pat-name">I am ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>私は + [noun] + です</div>
+        <p class="note">Introduce yourself or state your role. 私 = “I,” and は marks you as the topic of the sentence.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>私<rt>わたし</rt></ruby>は<ruby>学生<rt>がくせい</rt></ruby>です。</p>
+          <p class="zh">我是学生。<span class="pinyin">Wǒ shì xuésheng.</span></p>
+          <p class="en">I&#x27;m a student.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">私</span><span class="gl">[I]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">学生</span><span class="gl">[student]</span></span><span class="w"><span class="word">です</span><span class="gl">[am]</span></span>
+            <p class="romaji">Watashi wa gakusei desu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>私<rt>わたし</rt></ruby>はケビンです。</p>
+          <p class="zh">我是凯文。<span class="pinyin">Wǒ shì Kǎiwén.</span></p>
+          <p class="en">I&#x27;m Kevin.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">私</span><span class="gl">[I]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">ケビン</span><span class="gl">[Kevin]</span></span><span class="w"><span class="word">です</span><span class="gl">[am]</span></span>
+            <p class="romaji">Watashi wa Kebin desu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p3">
+        <div class="pat-head">
+          <span class="pat-num">03</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜は…です（1）</h2>
+            <p class="pat-romaji">~ wa ... desu</p>
+          </div>
+          <p class="pat-name">~ is … (identity)</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[topic] は + [noun] + です</div>
+        <p class="note">State what someone or something is. The topic (marked by は) is identified by the noun before です.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>田中<rt>たなか</rt></ruby>さんは<ruby>先生<rt>せんせい</rt></ruby>です。</p>
+          <p class="zh">田中是老师。<span class="pinyin">Tiánzhōng shì lǎoshī.</span></p>
+          <p class="en">Mr. Tanaka is a teacher.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">田中さん</span><span class="gl">[Mr. Tanaka]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">先生</span><span class="gl">[teacher]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span>
+            <p class="romaji">Tanaka-san wa sensei desu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp">あの<ruby>人<rt>ひと</rt></ruby>は<ruby>医者<rt>いしゃ</rt></ruby>です。</p>
+          <p class="zh">那个人是医生。<span class="pinyin">Nàge rén shì yīshēng.</span></p>
+          <p class="en">That person is a doctor.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">あの</span><span class="gl">[that]</span></span><span class="w"><span class="word">人</span><span class="gl">[person]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">医者</span><span class="gl">[doctor]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span>
+            <p class="romaji">Ano hito wa isha desu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p4">
+        <div class="pat-head">
+          <span class="pat-num">04</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜は…です（2）</h2>
+            <p class="pat-romaji">~ wa ... desu</p>
+          </div>
+          <p class="pat-name">~ is … (description)</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[topic] は + [adjective] + です</div>
+        <p class="note">Describe the topic with an adjective. です keeps the adjective polite and works with both い- and な-adjectives.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp">この<ruby>店<rt>みせ</rt></ruby>は<ruby>有名<rt>ゆうめい</rt></ruby>です。</p>
+          <p class="zh">这家店很有名。<span class="pinyin">Zhè jiā diàn hěn yǒumíng.</span></p>
+          <p class="en">This shop is famous.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">この</span><span class="gl">[this]</span></span><span class="w"><span class="word">店</span><span class="gl">[shop]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">有名</span><span class="gl">[famous]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span>
+            <p class="romaji">Kono mise wa yuumei desu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>今日<rt>きょう</rt></ruby>は<ruby>暑<rt>あつ</rt></ruby>いです。</p>
+          <p class="zh">今天很热。<span class="pinyin">Jīntiān hěn rè.</span></p>
+          <p class="en">It&#x27;s hot today.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">今日</span><span class="gl">[today]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">暑い</span><span class="gl">[hot]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span>
+            <p class="romaji">Kyou wa atsui desu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p5">
+        <div class="pat-head">
+          <span class="pat-num">05</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜は…にいます</h2>
+            <p class="pat-romaji">~ wa ... ni imasu</p>
+          </div>
+          <p class="pat-name">~ is (located) at … (animate)</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[living thing] は + [place] + に + います</div>
+        <p class="note">Say where a living thing is. います is the “to be / exist” verb for people and animals; に marks the location.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>猫<rt>ねこ</rt></ruby>は<ruby>部屋<rt>へや</rt></ruby>にいます。</p>
+          <p class="zh">猫在房间里。<span class="pinyin">Māo zài fángjiān lǐ.</span></p>
+          <p class="en">The cat is in the room.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">猫</span><span class="gl">[cat]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">部屋</span><span class="gl">[room]</span></span><span class="w"><span class="word">に</span><span class="gl">[in]</span></span><span class="w"><span class="word">います</span><span class="gl">[is (animate)]</span></span>
+            <p class="romaji">Neko wa heya ni imasu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>父<rt>ちち</rt></ruby>は<ruby>会社<rt>かいしゃ</rt></ruby>にいます。</p>
+          <p class="zh">爸爸在公司。<span class="pinyin">Bàba zài gōngsī.</span></p>
+          <p class="en">My father is at the office.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">父</span><span class="gl">[(my) father]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">会社</span><span class="gl">[company/office]</span></span><span class="w"><span class="word">に</span><span class="gl">[at]</span></span><span class="w"><span class="word">います</span><span class="gl">[is]</span></span>
+            <p class="romaji">Chichi wa kaisha ni imasu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p6">
+        <div class="pat-head">
+          <span class="pat-num">06</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜は…にあります</h2>
+            <p class="pat-romaji">~ wa ... ni arimasu</p>
+          </div>
+          <p class="pat-name">~ is (located) at … (inanimate)</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[object/place] は + [place] + に + あります</div>
+        <p class="note">Say where an object or place is. あります is the “to be / exist” verb for non-living things.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>銀行<rt>ぎんこう</rt></ruby>は<ruby>駅<rt>えき</rt></ruby>の<ruby>前<rt>まえ</rt></ruby>にあります。</p>
+          <p class="zh">银行在车站前面。<span class="pinyin">Yínháng zài chēzhàn qiánmiàn.</span></p>
+          <p class="en">The bank is in front of the station.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">銀行</span><span class="gl">[bank]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">駅</span><span class="gl">[station]</span></span><span class="w"><span class="word">の</span><span class="gl">[&#x27;s]</span></span><span class="w"><span class="word">前</span><span class="gl">[front]</span></span><span class="w"><span class="word">に</span><span class="gl">[at]</span></span><span class="w"><span class="word">あります</span><span class="gl">[is (inanimate)]</span></span>
+            <p class="romaji">Ginkou wa eki no mae ni arimasu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp">トイレはあそこにあります。</p>
+          <p class="zh">厕所在那边。<span class="pinyin">Cèsuǒ zài nàbiān.</span></p>
+          <p class="en">The toilet is over there.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">トイレ</span><span class="gl">[toilet]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">あそこ</span><span class="gl">[over there]</span></span><span class="w"><span class="word">に</span><span class="gl">[at]</span></span><span class="w"><span class="word">あります</span><span class="gl">[is]</span></span>
+            <p class="romaji">Toire wa asoko ni arimasu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p7">
+        <div class="pat-head">
+          <span class="pat-num">07</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜します</h2>
+            <p class="pat-romaji">~ shimasu</p>
+          </div>
+          <p class="pat-name">do ~ / will do ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[object] を + [verb]-ます</div>
+        <p class="note">The basic polite verb ending for present or future actions. を marks the thing the action acts on.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>毎日<rt>まいにち</rt></ruby><ruby>日本語<rt>にほんご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>します。</p>
+          <p class="zh">我每天学习日语。<span class="pinyin">Wǒ měitiān xuéxí Rìyǔ.</span></p>
+          <p class="en">I study Japanese every day.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">毎日</span><span class="gl">[every day]</span></span><span class="w"><span class="word">日本語</span><span class="gl">[Japanese]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">勉強します</span><span class="gl">[study]</span></span>
+            <p class="romaji">Mainichi nihongo o benkyou shimasu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>明日<rt>あした</rt></ruby>テニスをします。</p>
+          <p class="zh">我明天打网球。<span class="pinyin">Wǒ míngtiān dǎ wǎngqiú.</span></p>
+          <p class="en">I&#x27;ll play tennis tomorrow.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">明日</span><span class="gl">[tomorrow]</span></span><span class="w"><span class="word">テニス</span><span class="gl">[tennis]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">します</span><span class="gl">[do/play]</span></span>
+            <p class="romaji">Ashita tenisu o shimasu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p8">
+        <div class="pat-head">
+          <span class="pat-num">08</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜したいです</h2>
+            <p class="pat-romaji">~ shitai desu</p>
+          </div>
+          <p class="pat-name">want to do ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[verb stem] + たいです</div>
+        <p class="note">Express your own desire to do something. Attach たい to the verb stem; the object often takes が instead of を.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>寿司<rt>すし</rt></ruby>が<ruby>食<rt>た</rt></ruby>べたいです。</p>
+          <p class="zh">我想吃寿司。<span class="pinyin">Wǒ xiǎng chī shòusī.</span></p>
+          <p class="en">I want to eat sushi.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">寿司</span><span class="gl">[sushi]</span></span><span class="w"><span class="word">が</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">食べたい</span><span class="gl">[want to eat]</span></span><span class="w"><span class="word">です</span><span class="gl">[(polite)]</span></span>
+            <p class="romaji">Sushi ga tabetai desu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>日本<rt>にほん</rt></ruby>に<ruby>行<rt>い</rt></ruby>きたいです。</p>
+          <p class="zh">我想去日本。<span class="pinyin">Wǒ xiǎng qù Rìběn.</span></p>
+          <p class="en">I want to go to Japan.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">日本</span><span class="gl">[Japan]</span></span><span class="w"><span class="word">に</span><span class="gl">[to]</span></span><span class="w"><span class="word">行きたい</span><span class="gl">[want to go]</span></span><span class="w"><span class="word">です</span><span class="gl">[(polite)]</span></span>
+            <p class="romaji">Nihon ni ikitai desu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p9">
+        <div class="pat-head">
+          <span class="pat-num">09</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜しています（1）</h2>
+            <p class="pat-romaji">~ shite imasu</p>
+          </div>
+          <p class="pat-name">be doing ~ (in progress)</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[verb] て-form + います</div>
+        <p class="note">Describe an action happening right now. Take the て-form of the verb and add います.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>今<rt>いま</rt></ruby>、<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>んでいます。</p>
+          <p class="zh">我现在在看书。<span class="pinyin">Wǒ xiànzài zài kàn shū.</span></p>
+          <p class="en">I&#x27;m reading a book right now.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">今</span><span class="gl">[now]</span></span><span class="w"><span class="word">本</span><span class="gl">[book]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">読んでいます</span><span class="gl">[am reading]</span></span>
+            <p class="romaji">Ima, hon o yonde imasu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>母<rt>はは</rt></ruby>は<ruby>料理<rt>りょうり</rt></ruby>をしています。</p>
+          <p class="zh">妈妈在做饭。<span class="pinyin">Māma zài zuò fàn.</span></p>
+          <p class="en">My mother is cooking.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">母</span><span class="gl">[(my) mother]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">料理</span><span class="gl">[cooking]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">しています</span><span class="gl">[is doing]</span></span>
+            <p class="romaji">Haha wa ryouri o shite imasu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p10">
+        <div class="pat-head">
+          <span class="pat-num">10</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜しています（2）</h2>
+            <p class="pat-romaji">~ shite imasu</p>
+          </div>
+          <p class="pat-name">~ (ongoing state / habit)</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[verb] て-form + います</div>
+        <p class="note">The same て+います also expresses a continuing state or habit — not just a live action, but how things stand.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>銀行<rt>ぎんこう</rt></ruby>に<ruby>勤<rt>つと</rt></ruby>めています。</p>
+          <p class="zh">我在银行工作。<span class="pinyin">Wǒ zài yínháng gōngzuò.</span></p>
+          <p class="en">I work at a bank.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">銀行</span><span class="gl">[bank]</span></span><span class="w"><span class="word">に</span><span class="gl">[at]</span></span><span class="w"><span class="word">勤めています</span><span class="gl">[am employed]</span></span>
+            <p class="romaji">Ginkou ni tsutomete imasu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>結婚<rt>けっこん</rt></ruby>しています。</p>
+          <p class="zh">我已经结婚了。<span class="pinyin">Wǒ yǐjīng jiéhūn le.</span></p>
+          <p class="en">I&#x27;m married.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">結婚しています</span><span class="gl">[am married]</span></span>
+            <p class="romaji">Kekkon shite imasu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p11">
+        <div class="pat-head">
+          <span class="pat-num">11</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜しました</h2>
+            <p class="pat-romaji">~ shimashita</p>
+          </div>
+          <p class="pat-name">did ~ (past)</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[verb stem] + ました</div>
+        <p class="note">The polite past tense. Use it for actions that are already finished.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>昨日<rt>きのう</rt></ruby><ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>ました。</p>
+          <p class="zh">我昨天看了电影。<span class="pinyin">Wǒ zuótiān kàn le diànyǐng.</span></p>
+          <p class="en">I watched a movie yesterday.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">昨日</span><span class="gl">[yesterday]</span></span><span class="w"><span class="word">映画</span><span class="gl">[movie]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">見ました</span><span class="gl">[watched]</span></span>
+            <p class="romaji">Kinou eiga o mimashita.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>朝<rt>あさ</rt></ruby>ごはんを<ruby>食<rt>た</rt></ruby>べました。</p>
+          <p class="zh">我吃了早饭。<span class="pinyin">Wǒ chī le zǎofàn.</span></p>
+          <p class="en">I ate breakfast.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">朝ごはん</span><span class="gl">[breakfast]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">食べました</span><span class="gl">[ate]</span></span>
+            <p class="romaji">Asagohan o tabemashita.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p12">
+        <div class="pat-head">
+          <span class="pat-num">12</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">もう〜しました</h2>
+            <p class="pat-romaji">mou ~ shimashita</p>
+          </div>
+          <p class="pat-name">already did ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>もう + [verb stem] + ました</div>
+        <p class="note">Say something is already done. もう = “already,” added in front of the past-tense verb.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp">もう<ruby>宿題<rt>しゅくだい</rt></ruby>をしました。</p>
+          <p class="zh">我已经做完作业了。<span class="pinyin">Wǒ yǐjīng zuòwán zuòyè le.</span></p>
+          <p class="en">I&#x27;ve already done my homework.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">もう</span><span class="gl">[already]</span></span><span class="w"><span class="word">宿題</span><span class="gl">[homework]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">しました</span><span class="gl">[did]</span></span>
+            <p class="romaji">Mou shukudai o shimashita.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp">もう<ruby>昼<rt>ひる</rt></ruby>ごはんを<ruby>食<rt>た</rt></ruby>べました。</p>
+          <p class="zh">我已经吃过午饭了。<span class="pinyin">Wǒ yǐjīng chīguò wǔfàn le.</span></p>
+          <p class="en">I&#x27;ve already had lunch.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">もう</span><span class="gl">[already]</span></span><span class="w"><span class="word">昼ごはん</span><span class="gl">[lunch]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">食べました</span><span class="gl">[ate]</span></span>
+            <p class="romaji">Mou hirugohan o tabemashita.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p13">
+        <div class="pat-head">
+          <span class="pat-num">13</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜したことがあります</h2>
+            <p class="pat-romaji">~ shita koto ga arimasu</p>
+          </div>
+          <p class="pat-name">have done ~ before</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[verb] past-plain + ことがあります</div>
+        <p class="note">Talk about an experience — something you have done at least once. Use the plain past verb + ことがあります.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>日本<rt>にほん</rt></ruby>に<ruby>行<rt>い</rt></ruby>ったことがあります。</p>
+          <p class="zh">我去过日本。<span class="pinyin">Wǒ qùguò Rìběn.</span></p>
+          <p class="en">I have been to Japan.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">日本</span><span class="gl">[Japan]</span></span><span class="w"><span class="word">に</span><span class="gl">[to]</span></span><span class="w"><span class="word">行った</span><span class="gl">[went]</span></span><span class="w"><span class="word">こと</span><span class="gl">[the fact/act]</span></span><span class="w"><span class="word">が</span><span class="gl">[[subject]]</span></span><span class="w"><span class="word">あります</span><span class="gl">[there is (= have)]</span></span>
+            <p class="romaji">Nihon ni itta koto ga arimasu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>馬<rt>うま</rt></ruby>に<ruby>乗<rt>の</rt></ruby>ったことがあります。</p>
+          <p class="zh">我骑过马。<span class="pinyin">Wǒ qíguò mǎ.</span></p>
+          <p class="en">I have ridden a horse before.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">馬</span><span class="gl">[horse]</span></span><span class="w"><span class="word">に</span><span class="gl">[on]</span></span><span class="w"><span class="word">乗った</span><span class="gl">[rode]</span></span><span class="w"><span class="word">こと</span><span class="gl">[the fact/act]</span></span><span class="w"><span class="word">が</span><span class="gl">[[subject]]</span></span><span class="w"><span class="word">あります</span><span class="gl">[have]</span></span>
+            <p class="romaji">Uma ni notta koto ga arimasu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p14">
+        <div class="pat-head">
+          <span class="pat-num">14</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜（することが）できます</h2>
+            <p class="pat-romaji">~ (suru koto ga) dekimasu</p>
+          </div>
+          <p class="pat-name">can do ~ / be able to</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[noun] が + できます  /  [verb] こと + が + できます</div>
+        <p class="note">Express ability. Use [noun] + ができます, or take a dictionary-form verb + ことができます.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>日本語<rt>にほんご</rt></ruby>を<ruby>話<rt>はな</rt></ruby>すことができます。</p>
+          <p class="zh">我会说日语。<span class="pinyin">Wǒ huì shuō Rìyǔ.</span></p>
+          <p class="en">I can speak Japanese.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">日本語</span><span class="gl">[Japanese]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">話す</span><span class="gl">[speak]</span></span><span class="w"><span class="word">こと</span><span class="gl">[the act]</span></span><span class="w"><span class="word">が</span><span class="gl">[[subject]]</span></span><span class="w"><span class="word">できます</span><span class="gl">[can do]</span></span>
+            <p class="romaji">Nihongo o hanasu koto ga dekimasu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp">ピアノができます。</p>
+          <p class="zh">我会弹钢琴。<span class="pinyin">Wǒ huì tán gāngqín.</span></p>
+          <p class="en">I can play the piano.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">ピアノ</span><span class="gl">[piano]</span></span><span class="w"><span class="word">が</span><span class="gl">[[subject]]</span></span><span class="w"><span class="word">できます</span><span class="gl">[can do]</span></span>
+            <p class="romaji">Piano ga dekimasu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p15">
+        <div class="pat-head">
+          <span class="pat-num">15</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜してもいいです</h2>
+            <p class="pat-romaji">~ shitemo ii desu</p>
+          </div>
+          <p class="pat-name">may do ~ / it&#x27;s OK to ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[verb] て-form + もいいです</div>
+        <p class="note">Give or ask permission. て-form + もいいです literally means “even if you do ~, it's fine.” Add か to ask.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp">ここで<ruby>写真<rt>しゃしん</rt></ruby>を<ruby>撮<rt>と</rt></ruby>ってもいいです。</p>
+          <p class="zh">这里可以拍照。<span class="pinyin">Zhèlǐ kěyǐ pāizhào.</span></p>
+          <p class="en">You may take photos here.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">ここ</span><span class="gl">[here]</span></span><span class="w"><span class="word">で</span><span class="gl">[at]</span></span><span class="w"><span class="word">写真</span><span class="gl">[photo]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">撮っても</span><span class="gl">[even if (you) take]</span></span><span class="w"><span class="word">いい</span><span class="gl">[good]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span>
+            <p class="romaji">Koko de shashin o totte mo ii desu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>入<rt>はい</rt></ruby>ってもいいですか。</p>
+          <p class="zh">我可以进来吗？<span class="pinyin">Wǒ kěyǐ jìnlái ma?</span></p>
+          <p class="en">May I come in?</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">入っても</span><span class="gl">[even if (I) enter]</span></span><span class="w"><span class="word">いい</span><span class="gl">[good]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span><span class="w"><span class="word">か</span><span class="gl">[?]</span></span>
+            <p class="romaji">Haitte mo ii desu ka.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p16">
+        <div class="pat-head">
+          <span class="pat-num">16</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜は<ruby>何<rt>なん</rt></ruby>ですか</h2>
+            <p class="pat-romaji">~ wa nan desu ka</p>
+          </div>
+          <p class="pat-name">what is ~?</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[topic] は + 何 + ですか</div>
+        <p class="note">Ask what something is. 何 = “what,” and か turns the sentence into a question.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp">これは<ruby>何<rt>なん</rt></ruby>ですか。</p>
+          <p class="zh">这是什么？<span class="pinyin">Zhè shì shénme?</span></p>
+          <p class="en">What is this?</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">これ</span><span class="gl">[this]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">何</span><span class="gl">[what]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span><span class="w"><span class="word">か</span><span class="gl">[?]</span></span>
+            <p class="romaji">Kore wa nan desu ka.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp">あなたの<ruby>趣味<rt>しゅみ</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。</p>
+          <p class="zh">你的爱好是什么？<span class="pinyin">Nǐ de àihào shì shénme?</span></p>
+          <p class="en">What is your hobby?</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">あなた</span><span class="gl">[you]</span></span><span class="w"><span class="word">の</span><span class="gl">[&#x27;s]</span></span><span class="w"><span class="word">趣味</span><span class="gl">[hobby]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">何</span><span class="gl">[what]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span><span class="w"><span class="word">か</span><span class="gl">[?]</span></span>
+            <p class="romaji">Anata no shumi wa nan desu ka.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p17">
+        <div class="pat-head">
+          <span class="pat-num">17</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜は<ruby>誰<rt>だれ</rt></ruby>ですか</h2>
+            <p class="pat-romaji">~ wa dare desu ka</p>
+          </div>
+          <p class="pat-name">who is ~?</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[topic] は + 誰 + ですか</div>
+        <p class="note">Ask who someone is. 誰 = “who.”</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp">あの<ruby>人<rt>ひと</rt></ruby>は<ruby>誰<rt>だれ</rt></ruby>ですか。</p>
+          <p class="zh">那个人是谁？<span class="pinyin">Nàge rén shì shéi?</span></p>
+          <p class="en">Who is that person?</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">あの</span><span class="gl">[that]</span></span><span class="w"><span class="word">人</span><span class="gl">[person]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">誰</span><span class="gl">[who]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span><span class="w"><span class="word">か</span><span class="gl">[?]</span></span>
+            <p class="romaji">Ano hito wa dare desu ka.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp">この<ruby>人<rt>ひと</rt></ruby>は<ruby>誰<rt>だれ</rt></ruby>ですか。</p>
+          <p class="zh">这个人是谁？<span class="pinyin">Zhège rén shì shéi?</span></p>
+          <p class="en">Who is this person?</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">この</span><span class="gl">[this]</span></span><span class="w"><span class="word">人</span><span class="gl">[person]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">誰</span><span class="gl">[who]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span><span class="w"><span class="word">か</span><span class="gl">[?]</span></span>
+            <p class="romaji">Kono hito wa dare desu ka.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p18">
+        <div class="pat-head">
+          <span class="pat-num">18</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜はいつですか</h2>
+            <p class="pat-romaji">~ wa itsu desu ka</p>
+          </div>
+          <p class="pat-name">when is ~?</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[topic] は + いつ + ですか</div>
+        <p class="note">Ask when something happens. いつ = “when.”</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>試験<rt>しけん</rt></ruby>はいつですか。</p>
+          <p class="zh">考试是什么时候？<span class="pinyin">Kǎoshì shì shénme shíhou?</span></p>
+          <p class="en">When is the exam?</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">試験</span><span class="gl">[exam]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">いつ</span><span class="gl">[when]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span><span class="w"><span class="word">か</span><span class="gl">[?]</span></span>
+            <p class="romaji">Shiken wa itsu desu ka.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>誕生日<rt>たんじょうび</rt></ruby>はいつですか。</p>
+          <p class="zh">你的生日是什么时候？<span class="pinyin">Nǐ de shēngrì shì shénme shíhou?</span></p>
+          <p class="en">When is your birthday?</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">誕生日</span><span class="gl">[birthday]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">いつ</span><span class="gl">[when]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span><span class="w"><span class="word">か</span><span class="gl">[?]</span></span>
+            <p class="romaji">Tanjoubi wa itsu desu ka.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p19">
+        <div class="pat-head">
+          <span class="pat-num">19</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜はどこですか</h2>
+            <p class="pat-romaji">~ wa doko desu ka</p>
+          </div>
+          <p class="pat-name">where is ~?</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[topic] は + どこ + ですか</div>
+        <p class="note">Ask where something is. どこ = “where.”</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>駅<rt>えき</rt></ruby>はどこですか。</p>
+          <p class="zh">车站在哪里？<span class="pinyin">Chēzhàn zài nǎlǐ?</span></p>
+          <p class="en">Where is the station?</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">駅</span><span class="gl">[station]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">どこ</span><span class="gl">[where]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span><span class="w"><span class="word">か</span><span class="gl">[?]</span></span>
+            <p class="romaji">Eki wa doko desu ka.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp">お<ruby>手洗<rt>てあら</rt></ruby>いはどこですか。</p>
+          <p class="zh">洗手间在哪里？<span class="pinyin">Xǐshǒujiān zài nǎlǐ?</span></p>
+          <p class="en">Where is the restroom?</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">お手洗い</span><span class="gl">[restroom]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">どこ</span><span class="gl">[where]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span><span class="w"><span class="word">か</span><span class="gl">[?]</span></span>
+            <p class="romaji">Otearai wa doko desu ka.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p20">
+        <div class="pat-head">
+          <span class="pat-num">20</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">どうして〜? なぜ〜?</h2>
+            <p class="pat-romaji">Doushite ~ / Naze ~</p>
+          </div>
+          <p class="pat-name">why ~?</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>どうして / なぜ + [clause] + か</div>
+        <p class="note">Ask for a reason. どうして and なぜ both mean “why” (どうして is more conversational). んですか softens it to “how come.”</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp">どうして<ruby>遅<rt>おく</rt></ruby>れたんですか。</p>
+          <p class="zh">你为什么迟到了？<span class="pinyin">Nǐ wèishénme chídào le?</span></p>
+          <p class="en">Why were you late?</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">どうして</span><span class="gl">[why]</span></span><span class="w"><span class="word">遅れた</span><span class="gl">[were late]</span></span><span class="w"><span class="word">んです</span><span class="gl">[(explanatory)]</span></span><span class="w"><span class="word">か</span><span class="gl">[?]</span></span>
+            <p class="romaji">Doushite okureta n desu ka.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp">なぜ<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>しているんですか。</p>
+          <p class="zh">你为什么在学日语？<span class="pinyin">Nǐ wèishénme zài xué Rìyǔ?</span></p>
+          <p class="en">Why are you studying Japanese?</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">なぜ</span><span class="gl">[why]</span></span><span class="w"><span class="word">日本語</span><span class="gl">[Japanese]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">勉強している</span><span class="gl">[are studying]</span></span><span class="w"><span class="word">んです</span><span class="gl">[(explanatory)]</span></span><span class="w"><span class="word">か</span><span class="gl">[?]</span></span>
+            <p class="romaji">Naze nihongo o benkyou shite iru n desu ka.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p21">
+        <div class="pat-head">
+          <span class="pat-num">21</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜はどうですか</h2>
+            <p class="pat-romaji">~ wa dou desu ka</p>
+          </div>
+          <p class="pat-name">how is ~? / how about ~?</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[topic] は + どう + ですか</div>
+        <p class="note">Ask for an opinion, or make a friendly suggestion. どう = “how / how about.”</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>新<rt>あたら</rt></ruby>しい<ruby>仕事<rt>しごと</rt></ruby>はどうですか。</p>
+          <p class="zh">新工作怎么样？<span class="pinyin">Xīn gōngzuò zěnmeyàng?</span></p>
+          <p class="en">How is the new job?</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">新しい</span><span class="gl">[new]</span></span><span class="w"><span class="word">仕事</span><span class="gl">[job]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">どう</span><span class="gl">[how]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span><span class="w"><span class="word">か</span><span class="gl">[?]</span></span>
+            <p class="romaji">Atarashii shigoto wa dou desu ka.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp">コーヒーはどうですか。</p>
+          <p class="zh">来杯咖啡怎么样？<span class="pinyin">Lái bēi kāfēi zěnmeyàng?</span></p>
+          <p class="en">How about some coffee?</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">コーヒー</span><span class="gl">[coffee]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">どう</span><span class="gl">[how about]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span><span class="w"><span class="word">か</span><span class="gl">[?]</span></span>
+            <p class="romaji">Koohii wa dou desu ka.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p22">
+        <div class="pat-head">
+          <span class="pat-num">22</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜おめでとう</h2>
+            <p class="pat-romaji">~ omedetou</p>
+          </div>
+          <p class="pat-name">congratulations on ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[occasion] + おめでとう（ございます）</div>
+        <p class="note">Offer congratulations. Add ございます to make it polite.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>誕生日<rt>たんじょうび</rt></ruby>おめでとう。</p>
+          <p class="zh">生日快乐！<span class="pinyin">Shēngrì kuàilè!</span></p>
+          <p class="en">Happy birthday!</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">誕生日</span><span class="gl">[birthday]</span></span><span class="w"><span class="word">おめでとう</span><span class="gl">[congratulations]</span></span>
+            <p class="romaji">Tanjoubi omedetou.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>合格<rt>ごうかく</rt></ruby>おめでとうございます。</p>
+          <p class="zh">恭喜你考上了！<span class="pinyin">Gōngxǐ nǐ kǎoshàng le!</span></p>
+          <p class="en">Congratulations on passing!</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">合格</span><span class="gl">[passing (an exam)]</span></span><span class="w"><span class="word">おめでとうございます</span><span class="gl">[congratulations (polite)]</span></span>
+            <p class="romaji">Goukaku omedetou gozaimasu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p23">
+        <div class="pat-head">
+          <span class="pat-num">23</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜ありがとう</h2>
+            <p class="pat-romaji">~ arigatou</p>
+          </div>
+          <p class="pat-name">thank you for ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[thing] + ありがとう（ございます）</div>
+        <p class="note">Express thanks for a thing. Add ございます (or ございました for past kindness) to be polite.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp">プレゼントありがとう。</p>
+          <p class="zh">谢谢你的礼物。<span class="pinyin">Xièxie nǐ de lǐwù.</span></p>
+          <p class="en">Thanks for the present.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">プレゼント</span><span class="gl">[present]</span></span><span class="w"><span class="word">ありがとう</span><span class="gl">[thank you]</span></span>
+            <p class="romaji">Purezento arigatou.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>今日<rt>きょう</rt></ruby>はありがとうございました。</p>
+          <p class="zh">今天谢谢你了。<span class="pinyin">Jīntiān xièxie nǐ le.</span></p>
+          <p class="en">Thank you for today.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">今日</span><span class="gl">[today]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">ありがとうございました</span><span class="gl">[thank you (past, polite)]</span></span>
+            <p class="romaji">Kyou wa arigatou gozaimashita.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p24">
+        <div class="pat-head">
+          <span class="pat-num">24</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜してくれてありがとう</h2>
+            <p class="pat-romaji">~ shitekurete arigatou</p>
+          </div>
+          <p class="pat-name">thank you for doing ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[verb] て-form + くれて + ありがとう</div>
+        <p class="note">Thank someone for an action they did for you. くれて marks that the action was a favor toward you.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>来<rt>き</rt></ruby>てくれてありがとう。</p>
+          <p class="zh">谢谢你来。<span class="pinyin">Xièxie nǐ lái.</span></p>
+          <p class="en">Thanks for coming.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">来て</span><span class="gl">[come]</span></span><span class="w"><span class="word">くれて</span><span class="gl">[(did for me)]</span></span><span class="w"><span class="word">ありがとう</span><span class="gl">[thank you]</span></span>
+            <p class="romaji">Kite kurete arigatou.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>手伝<rt>てつだ</rt></ruby>ってくれてありがとう。</p>
+          <p class="zh">谢谢你帮我。<span class="pinyin">Xièxie nǐ bāng wǒ.</span></p>
+          <p class="en">Thanks for helping me.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">手伝って</span><span class="gl">[help]</span></span><span class="w"><span class="word">くれて</span><span class="gl">[(did for me)]</span></span><span class="w"><span class="word">ありがとう</span><span class="gl">[thank you]</span></span>
+            <p class="romaji">Tetsudatte kurete arigatou.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p25">
+        <div class="pat-head">
+          <span class="pat-num">25</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜（して）ごめんなさい</h2>
+            <p class="pat-romaji">~ (shite) gomennasai</p>
+          </div>
+          <p class="pat-name">sorry for ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[verb] て-form + ごめんなさい</div>
+        <p class="note">Apologize. Use the て-form to say what you're sorry for, or just ごめんなさい on its own.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>遅<rt>おく</rt></ruby>れてごめんなさい。</p>
+          <p class="zh">对不起，我迟到了。<span class="pinyin">Duìbuqǐ, wǒ chídào le.</span></p>
+          <p class="en">Sorry for being late.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">遅れて</span><span class="gl">[being late]</span></span><span class="w"><span class="word">ごめんなさい</span><span class="gl">[sorry]</span></span>
+            <p class="romaji">Okurete gomennasai.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>待<rt>ま</rt></ruby>たせてごめんなさい。</p>
+          <p class="zh">对不起，让你久等了。<span class="pinyin">Duìbuqǐ, ràng nǐ jiǔ děng le.</span></p>
+          <p class="en">Sorry for keeping you waiting.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">待たせて</span><span class="gl">[making (you) wait]</span></span><span class="w"><span class="word">ごめんなさい</span><span class="gl">[sorry]</span></span>
+            <p class="romaji">Matasete gomennasai.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p26">
+        <div class="pat-head">
+          <span class="pat-num">26</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜しませんか</h2>
+            <p class="pat-romaji">~ shimasen ka</p>
+          </div>
+          <p class="pat-name">won&#x27;t you ~? (invitation)</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[verb] polite-negative + か</div>
+        <p class="note">Invite someone to do something with you. The polite negative + か sounds warm and inviting, not literally negative.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>食事<rt>しょくじ</rt></ruby>しませんか。</p>
+          <p class="zh">要不要一起吃饭？<span class="pinyin">Yào bu yào yìqǐ chīfàn?</span></p>
+          <p class="en">Would you like to have a meal together?</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">一緒に</span><span class="gl">[together]</span></span><span class="w"><span class="word">食事</span><span class="gl">[meal]</span></span><span class="w"><span class="word">しませんか</span><span class="gl">[won&#x27;t you do?]</span></span>
+            <p class="romaji">Issho ni shokuji shimasen ka.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>ませんか。</p>
+          <p class="zh">要不要看电影？<span class="pinyin">Yào bu yào kàn diànyǐng?</span></p>
+          <p class="en">Would you like to see a movie?</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">映画</span><span class="gl">[movie]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">見ませんか</span><span class="gl">[won&#x27;t you watch?]</span></span>
+            <p class="romaji">Eiga o mimasen ka.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p27">
+        <div class="pat-head">
+          <span class="pat-num">27</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜しましょうか</h2>
+            <p class="pat-romaji">~ shimashou ka</p>
+          </div>
+          <p class="pat-name">shall I / shall we ~?</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[verb] volitional + か</div>
+        <p class="note">Offer to do something, or propose doing it together. The volitional form + か = “shall I / shall we?”</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>窓<rt>まど</rt></ruby>を<ruby>開<rt>あ</rt></ruby>けましょうか。</p>
+          <p class="zh">我来开窗户吧？<span class="pinyin">Wǒ lái kāi chuānghu ba?</span></p>
+          <p class="en">Shall I open the window?</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">窓</span><span class="gl">[window]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">開けましょうか</span><span class="gl">[shall I open?]</span></span>
+            <p class="romaji">Mado o akemashou ka.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp">そろそろ<ruby>行<rt>い</rt></ruby>きましょうか。</p>
+          <p class="zh">我们差不多该走了吧？<span class="pinyin">Wǒmen chàbuduō gāi zǒu le ba?</span></p>
+          <p class="en">Shall we get going soon?</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">そろそろ</span><span class="gl">[soon / about now]</span></span><span class="w"><span class="word">行きましょうか</span><span class="gl">[shall we go?]</span></span>
+            <p class="romaji">Sorosoro ikimashou ka.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p28">
+        <div class="pat-head">
+          <span class="pat-num">28</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜と<ruby>思<rt>おも</rt></ruby>います</h2>
+            <p class="pat-romaji">~ to omoimasu</p>
+          </div>
+          <p class="pat-name">I think that ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[plain-form clause] + と + 思います</div>
+        <p class="note">State an opinion or guess. Put a plain-form clause before と思います = “I think that ~.”</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>明日<rt>あした</rt></ruby>は<ruby>晴<rt>は</rt></ruby>れると<ruby>思<rt>おも</rt></ruby>います。</p>
+          <p class="zh">我觉得明天会晴。<span class="pinyin">Wǒ juéde míngtiān huì qíng.</span></p>
+          <p class="en">I think it&#x27;ll be sunny tomorrow.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">明日</span><span class="gl">[tomorrow]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">晴れる</span><span class="gl">[clear up]</span></span><span class="w"><span class="word">と</span><span class="gl">[that]</span></span><span class="w"><span class="word">思います</span><span class="gl">[think]</span></span>
+            <p class="romaji">Ashita wa hareru to omoimasu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp">それはいい<ruby>考<rt>かんが</rt></ruby>えだと<ruby>思<rt>おも</rt></ruby>います。</p>
+          <p class="zh">我觉得那是个好主意。<span class="pinyin">Wǒ juéde nà shì ge hǎo zhǔyi.</span></p>
+          <p class="en">I think that&#x27;s a good idea.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">それ</span><span class="gl">[that]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">いい</span><span class="gl">[good]</span></span><span class="w"><span class="word">考え</span><span class="gl">[idea]</span></span><span class="w"><span class="word">だ</span><span class="gl">[is]</span></span><span class="w"><span class="word">と</span><span class="gl">[that]</span></span><span class="w"><span class="word">思います</span><span class="gl">[think]</span></span>
+            <p class="romaji">Sore wa ii kangae da to omoimasu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p29">
+        <div class="pat-head">
+          <span class="pat-num">29</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜といいですね</h2>
+            <p class="pat-romaji">~ to ii desu ne</p>
+          </div>
+          <p class="pat-name">I hope ~ / it&#x27;d be nice if ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[plain-form clause] + といいですね</div>
+        <p class="note">Express a hope for someone. A plain clause + といいですね = “it'd be good if ~, wouldn't it.”</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>明日<rt>あした</rt></ruby><ruby>晴<rt>は</rt></ruby>れるといいですね。</p>
+          <p class="zh">希望明天是晴天。<span class="pinyin">Xīwàng míngtiān shì qíngtiān.</span></p>
+          <p class="en">I hope it&#x27;s sunny tomorrow.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">明日</span><span class="gl">[tomorrow]</span></span><span class="w"><span class="word">晴れる</span><span class="gl">[clear up]</span></span><span class="w"><span class="word">と</span><span class="gl">[if]</span></span><span class="w"><span class="word">いい</span><span class="gl">[good]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span><span class="w"><span class="word">ね</span><span class="gl">[isn&#x27;t it]</span></span>
+            <p class="romaji">Ashita hareru to ii desu ne.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>早<rt>はや</rt></ruby>く<ruby>良<rt>よ</rt></ruby>くなるといいですね。</p>
+          <p class="zh">希望你早点好起来。<span class="pinyin">Xīwàng nǐ zǎodiǎn hǎo qǐlái.</span></p>
+          <p class="en">I hope you get better soon.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">早く</span><span class="gl">[soon]</span></span><span class="w"><span class="word">良くなる</span><span class="gl">[get better]</span></span><span class="w"><span class="word">と</span><span class="gl">[if]</span></span><span class="w"><span class="word">いい</span><span class="gl">[good]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span><span class="w"><span class="word">ね</span><span class="gl">[isn&#x27;t it]</span></span>
+            <p class="romaji">Hayaku yoku naru to ii desu ne.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p30">
+        <div class="pat-head">
+          <span class="pat-num">30</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp"><ruby>前<rt>まえ</rt></ruby>は〜しました</h2>
+            <p class="pat-romaji">Mae wa ~ shimashita</p>
+          </div>
+          <p class="pat-name">before, I (used to) ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>前は + [verb stem] + ました</div>
+        <p class="note">Talk about what you did in the past, contrasting with now. 前は = “before / previously.”</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>前<rt>まえ</rt></ruby>はよくジョギングをしました。</p>
+          <p class="zh">我以前常去跑步。<span class="pinyin">Wǒ yǐqián cháng qù pǎobù.</span></p>
+          <p class="en">I used to go jogging a lot.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">前</span><span class="gl">[before]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">よく</span><span class="gl">[often]</span></span><span class="w"><span class="word">ジョギング</span><span class="gl">[jogging]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">しました</span><span class="gl">[did]</span></span>
+            <p class="romaji">Mae wa yoku jogingu o shimashita.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>前<rt>まえ</rt></ruby>は<ruby>中国<rt>ちゅうごく</rt></ruby>に<ruby>留学<rt>りゅうがく</rt></ruby>しました。</p>
+          <p class="zh">我以前在中国留学过。<span class="pinyin">Wǒ yǐqián zài Zhōngguó liúxuéguò.</span></p>
+          <p class="en">I studied abroad in China before.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">前</span><span class="gl">[before]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">中国</span><span class="gl">[China]</span></span><span class="w"><span class="word">に</span><span class="gl">[in]</span></span><span class="w"><span class="word">留学しました</span><span class="gl">[studied abroad]</span></span>
+            <p class="romaji">Mae wa Chuugoku ni ryuugaku shimashita.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p31">
+        <div class="pat-head">
+          <span class="pat-num">31</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">よく〜します</h2>
+            <p class="pat-romaji">yoku ~ shimasu</p>
+          </div>
+          <p class="pat-name">often do ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>よく + [verb]-ます</div>
+        <p class="note">Describe a frequent habit. よく in front of a verb = “often.”</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp">よく<ruby>公園<rt>こうえん</rt></ruby>を<ruby>散歩<rt>さんぽ</rt></ruby>します。</p>
+          <p class="zh">我常常在公园散步。<span class="pinyin">Wǒ chángcháng zài gōngyuán sànbù.</span></p>
+          <p class="en">I often take walks in the park.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">よく</span><span class="gl">[often]</span></span><span class="w"><span class="word">公園</span><span class="gl">[park]</span></span><span class="w"><span class="word">を</span><span class="gl">[[through]]</span></span><span class="w"><span class="word">散歩します</span><span class="gl">[take a walk]</span></span>
+            <p class="romaji">Yoku kouen o sanpo shimasu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>友達<rt>ともだち</rt></ruby>とよくカラオケに<ruby>行<rt>い</rt></ruby>きます。</p>
+          <p class="zh">我常和朋友去唱卡拉OK。<span class="pinyin">Wǒ cháng hé péngyou qù chàng kǎlā OK.</span></p>
+          <p class="en">I often go to karaoke with friends.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">友達</span><span class="gl">[friend]</span></span><span class="w"><span class="word">と</span><span class="gl">[with]</span></span><span class="w"><span class="word">よく</span><span class="gl">[often]</span></span><span class="w"><span class="word">カラオケ</span><span class="gl">[karaoke]</span></span><span class="w"><span class="word">に</span><span class="gl">[to]</span></span><span class="w"><span class="word">行きます</span><span class="gl">[go]</span></span>
+            <p class="romaji">Tomodachi to yoku karaoke ni ikimasu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p32">
+        <div class="pat-head">
+          <span class="pat-num">32</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜しやすいです</h2>
+            <p class="pat-romaji">~ shiyasui desu</p>
+          </div>
+          <p class="pat-name">easy to do ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[verb stem] + やすいです</div>
+        <p class="note">Say something is easy to do. Attach やすい to the verb stem.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp">この<ruby>本<rt>ほん</rt></ruby>は<ruby>読<rt>よ</rt></ruby>みやすいです。</p>
+          <p class="zh">这本书很好读。<span class="pinyin">Zhè běn shū hěn hǎo dú.</span></p>
+          <p class="en">This book is easy to read.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">この</span><span class="gl">[this]</span></span><span class="w"><span class="word">本</span><span class="gl">[book]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">読みやすい</span><span class="gl">[easy to read]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span>
+            <p class="romaji">Kono hon wa yomiyasui desu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp">この<ruby>町<rt>まち</rt></ruby>は<ruby>住<rt>す</rt></ruby>みやすいです。</p>
+          <p class="zh">这个城市很宜居。<span class="pinyin">Zhège chéngshì hěn yíjū.</span></p>
+          <p class="en">This town is easy to live in.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">この</span><span class="gl">[this]</span></span><span class="w"><span class="word">町</span><span class="gl">[town]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">住みやすい</span><span class="gl">[easy to live in]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span>
+            <p class="romaji">Kono machi wa sumiyasui desu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p33">
+        <div class="pat-head">
+          <span class="pat-num">33</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜しづらいです</h2>
+            <p class="pat-romaji">~ shizurai desu</p>
+          </div>
+          <p class="pat-name">hard to do ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[verb stem] + づらいです</div>
+        <p class="note">Say something is difficult or uncomfortable to do. Attach づらい (or にくい) to the verb stem — the opposite of やすい.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp">この<ruby>字<rt>じ</rt></ruby>は<ruby>読<rt>よ</rt></ruby>みづらいです。</p>
+          <p class="zh">这个字很难认。<span class="pinyin">Zhège zì hěn nán rèn.</span></p>
+          <p class="en">This handwriting is hard to read.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">この</span><span class="gl">[this]</span></span><span class="w"><span class="word">字</span><span class="gl">[character]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">読みづらい</span><span class="gl">[hard to read]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span>
+            <p class="romaji">Kono ji wa yomizurai desu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp">この<ruby>靴<rt>くつ</rt></ruby>は<ruby>歩<rt>ある</rt></ruby>きづらいです。</p>
+          <p class="zh">这双鞋走起来不舒服。<span class="pinyin">Zhè shuāng xié zǒu qǐlái bù shūfu.</span></p>
+          <p class="en">These shoes are hard to walk in.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">この</span><span class="gl">[this]</span></span><span class="w"><span class="word">靴</span><span class="gl">[shoes]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">歩きづらい</span><span class="gl">[hard to walk in]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span>
+            <p class="romaji">Kono kutsu wa arukizurai desu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p34">
+        <div class="pat-head">
+          <span class="pat-num">34</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜が<ruby>好<rt>す</rt></ruby>きです</h2>
+            <p class="pat-romaji">~ ga suki desu</p>
+          </div>
+          <p class="pat-name">like ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[thing] が + 好きです</div>
+        <p class="note">Say what you like. The thing you like is marked by が, not を. 好き is a な-adjective meaning “likable.”</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>私<rt>わたし</rt></ruby>は<ruby>犬<rt>いぬ</rt></ruby>が<ruby>好<rt>す</rt></ruby>きです。</p>
+          <p class="zh">我喜欢狗。<span class="pinyin">Wǒ xǐhuan gǒu.</span></p>
+          <p class="en">I like dogs.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">私</span><span class="gl">[I]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">犬</span><span class="gl">[dog]</span></span><span class="w"><span class="word">が</span><span class="gl">[[subject]]</span></span><span class="w"><span class="word">好き</span><span class="gl">[likable]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span>
+            <p class="romaji">Watashi wa inu ga suki desu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>音楽<rt>おんがく</rt></ruby>を<ruby>聞<rt>き</rt></ruby>くのが<ruby>好<rt>す</rt></ruby>きです。</p>
+          <p class="zh">我喜欢听音乐。<span class="pinyin">Wǒ xǐhuan tīng yīnyuè.</span></p>
+          <p class="en">I like listening to music.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">音楽</span><span class="gl">[music]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">聞く</span><span class="gl">[listen]</span></span><span class="w"><span class="word">の</span><span class="gl">[the act of]</span></span><span class="w"><span class="word">が</span><span class="gl">[[subject]]</span></span><span class="w"><span class="word">好き</span><span class="gl">[likable]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span>
+            <p class="romaji">Ongaku o kiku no ga suki desu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p35">
+        <div class="pat-head">
+          <span class="pat-num">35</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜がほしいです</h2>
+            <p class="pat-romaji">~ ga hoshii desu</p>
+          </div>
+          <p class="pat-name">want ~ (a thing)</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[noun] が + ほしいです</div>
+        <p class="note">Express that you want an object. The thing wanted takes が. (For wanting to do an action, use 〜したい, #8.)</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>新<rt>あたら</rt></ruby>しいパソコンがほしいです。</p>
+          <p class="zh">我想要一台新电脑。<span class="pinyin">Wǒ xiǎng yào yì tái xīn diànnǎo.</span></p>
+          <p class="en">I want a new computer.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">新しい</span><span class="gl">[new]</span></span><span class="w"><span class="word">パソコン</span><span class="gl">[computer]</span></span><span class="w"><span class="word">が</span><span class="gl">[[subject]]</span></span><span class="w"><span class="word">ほしい</span><span class="gl">[wanted]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span>
+            <p class="romaji">Atarashii pasokon ga hoshii desu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>時間<rt>じかん</rt></ruby>がほしいです。</p>
+          <p class="zh">我想要点时间。<span class="pinyin">Wǒ xiǎng yào diǎn shíjiān.</span></p>
+          <p class="en">I want (more) time.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">時間</span><span class="gl">[time]</span></span><span class="w"><span class="word">が</span><span class="gl">[[subject]]</span></span><span class="w"><span class="word">ほしい</span><span class="gl">[wanted]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span>
+            <p class="romaji">Jikan ga hoshii desu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p36">
+        <div class="pat-head">
+          <span class="pat-num">36</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜が<ruby>必要<rt>ひつよう</rt></ruby>です</h2>
+            <p class="pat-romaji">~ ga hitsuyou desu</p>
+          </div>
+          <p class="pat-name">need ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[noun] が + 必要です</div>
+        <p class="note">Say that something is necessary. The needed thing takes が; 必要 is a な-adjective meaning “necessary.”</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp">パスポートが<ruby>必要<rt>ひつよう</rt></ruby>です。</p>
+          <p class="zh">需要护照。<span class="pinyin">Xūyào hùzhào.</span></p>
+          <p class="en">You need a passport.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">パスポート</span><span class="gl">[passport]</span></span><span class="w"><span class="word">が</span><span class="gl">[[subject]]</span></span><span class="w"><span class="word">必要</span><span class="gl">[necessary]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span>
+            <p class="romaji">Pasupooto ga hitsuyou desu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp">もう<ruby>少<rt>すこ</rt></ruby>し<ruby>時間<rt>じかん</rt></ruby>が<ruby>必要<rt>ひつよう</rt></ruby>です。</p>
+          <p class="zh">我需要再多一点时间。<span class="pinyin">Wǒ xūyào zài duō yìdiǎn shíjiān.</span></p>
+          <p class="en">I need a little more time.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">もう少し</span><span class="gl">[a little more]</span></span><span class="w"><span class="word">時間</span><span class="gl">[time]</span></span><span class="w"><span class="word">が</span><span class="gl">[[subject]]</span></span><span class="w"><span class="word">必要</span><span class="gl">[necessary]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span>
+            <p class="romaji">Mou sukoshi jikan ga hitsuyou desu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p37">
+        <div class="pat-head">
+          <span class="pat-num">37</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜だそうです</h2>
+            <p class="pat-romaji">~ da sou desu</p>
+          </div>
+          <p class="pat-name">I hear that ~ (hearsay)</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[plain-form clause] + そうです</div>
+        <p class="note">Report something you heard or read. Attach そうです to a plain-form clause = “I hear / they say that ~.”</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>田中<rt>たなか</rt></ruby>さんは<ruby>来月<rt>らいげつ</rt></ruby><ruby>結婚<rt>けっこん</rt></ruby>するそうです。</p>
+          <p class="zh">听说田中下个月要结婚。<span class="pinyin">Tīngshuō Tiánzhōng xià ge yuè yào jiéhūn.</span></p>
+          <p class="en">I hear Mr. Tanaka is getting married next month.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">田中さん</span><span class="gl">[Mr. Tanaka]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">来月</span><span class="gl">[next month]</span></span><span class="w"><span class="word">結婚する</span><span class="gl">[get married]</span></span><span class="w"><span class="word">そうです</span><span class="gl">[I hear]</span></span>
+            <p class="romaji">Tanaka-san wa raigetsu kekkon suru sou desu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp">あの<ruby>店<rt>みせ</rt></ruby>は<ruby>安<rt>やす</rt></ruby>いそうです。</p>
+          <p class="zh">听说那家店很便宜。<span class="pinyin">Tīngshuō nà jiā diàn hěn piányi.</span></p>
+          <p class="en">I hear that shop is cheap.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">あの</span><span class="gl">[that]</span></span><span class="w"><span class="word">店</span><span class="gl">[shop]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">安い</span><span class="gl">[cheap]</span></span><span class="w"><span class="word">そうです</span><span class="gl">[I hear]</span></span>
+            <p class="romaji">Ano mise wa yasui sou desu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p38">
+        <div class="pat-head">
+          <span class="pat-num">38</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜らしい</h2>
+            <p class="pat-romaji">~ rashii</p>
+          </div>
+          <p class="pat-name">apparently / seems ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[plain-form clause] + らしい</div>
+        <p class="note">Say something seems true based on what you've heard or gathered. らしい reports indirect, secondhand information.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>彼<rt>かれ</rt></ruby>は<ruby>今日<rt>きょう</rt></ruby><ruby>休<rt>やす</rt></ruby>むらしい。</p>
+          <p class="zh">他今天好像请假。<span class="pinyin">Tā jīntiān hǎoxiàng qǐngjià.</span></p>
+          <p class="en">Apparently he&#x27;s off today.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">彼</span><span class="gl">[he]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">今日</span><span class="gl">[today]</span></span><span class="w"><span class="word">休む</span><span class="gl">[take off / rest]</span></span><span class="w"><span class="word">らしい</span><span class="gl">[apparently]</span></span>
+            <p class="romaji">Kare wa kyou yasumu rashii.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp">あの<ruby>映画<rt>えいが</rt></ruby>は<ruby>面白<rt>おもしろ</rt></ruby>いらしいです。</p>
+          <p class="zh">听说那部电影很有意思。<span class="pinyin">Tīngshuō nà bù diànyǐng hěn yǒuyìsi.</span></p>
+          <p class="en">That movie is supposedly interesting.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">あの</span><span class="gl">[that]</span></span><span class="w"><span class="word">映画</span><span class="gl">[movie]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">面白い</span><span class="gl">[interesting]</span></span><span class="w"><span class="word">らしい</span><span class="gl">[seems]</span></span><span class="w"><span class="word">です</span><span class="gl">[(polite)]</span></span>
+            <p class="romaji">Ano eiga wa omoshiroi rashii desu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p39">
+        <div class="pat-head">
+          <span class="pat-num">39</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜のようです</h2>
+            <p class="pat-romaji">~ no you desu</p>
+          </div>
+          <p class="pat-name">it seems like ~ / as if ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[noun] のよう / [plain clause] + ようです</div>
+        <p class="note">Say something appears to be the case, based on your own impression. With a noun, use のよう.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>外<rt>そと</rt></ruby>は<ruby>雨<rt>あめ</rt></ruby>のようです。</p>
+          <p class="zh">外面好像下雨了。<span class="pinyin">Wàimiàn hǎoxiàng xià yǔ le.</span></p>
+          <p class="en">It looks like it&#x27;s raining outside.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">外</span><span class="gl">[outside]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">雨</span><span class="gl">[rain]</span></span><span class="w"><span class="word">のよう</span><span class="gl">[like / seems]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span>
+            <p class="romaji">Soto wa ame no you desu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>彼<rt>かれ</rt></ruby>は<ruby>疲<rt>つか</rt></ruby>れているようです。</p>
+          <p class="zh">他好像很累。<span class="pinyin">Tā hǎoxiàng hěn lèi.</span></p>
+          <p class="en">He seems to be tired.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">彼</span><span class="gl">[he]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">疲れている</span><span class="gl">[is tired]</span></span><span class="w"><span class="word">ようです</span><span class="gl">[seems]</span></span>
+            <p class="romaji">Kare wa tsukarete iru you desu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p40">
+        <div class="pat-head">
+          <span class="pat-num">40</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜そうです</h2>
+            <p class="pat-romaji">~ sou desu</p>
+          </div>
+          <p class="pat-name">looks ~ (from appearance)</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[verb stem / adj stem] + そうです</div>
+        <p class="note">Make a guess from what you see. Attach そう to a verb or adjective stem = “looks like / seems about to.” (Different from hearsay そう in #37.)</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>りそうです。</p>
+          <p class="zh">看样子要下雨了。<span class="pinyin">Kàn yàngzi yào xià yǔ le.</span></p>
+          <p class="en">It looks like it&#x27;s going to rain.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">雨</span><span class="gl">[rain]</span></span><span class="w"><span class="word">が</span><span class="gl">[[subject]]</span></span><span class="w"><span class="word">降りそう</span><span class="gl">[looks about to fall]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span>
+            <p class="romaji">Ame ga furisou desu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp">このケーキはおいしそうです。</p>
+          <p class="zh">这个蛋糕看起来很好吃。<span class="pinyin">Zhège dàngāo kàn qǐlái hěn hǎochī.</span></p>
+          <p class="en">This cake looks delicious.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">この</span><span class="gl">[this]</span></span><span class="w"><span class="word">ケーキ</span><span class="gl">[cake]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">おいしそう</span><span class="gl">[looks tasty]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span>
+            <p class="romaji">Kono keeki wa oishisou desu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p41">
+        <div class="pat-head">
+          <span class="pat-num">41</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜するはずです</h2>
+            <p class="pat-romaji">~ suru hazu desu</p>
+          </div>
+          <p class="pat-name">should / ought to ~ (expectation)</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[plain form] + はずです</div>
+        <p class="note">State a logical expectation — what should be true based on reasoning. はず = “supposed to / expected to.”</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>彼<rt>かれ</rt></ruby>はもうすぐ<ruby>来<rt>く</rt></ruby>るはずです。</p>
+          <p class="zh">他应该马上就来。<span class="pinyin">Tā yīnggāi mǎshàng jiù lái.</span></p>
+          <p class="en">He should be here soon.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">彼</span><span class="gl">[he]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">もうすぐ</span><span class="gl">[soon]</span></span><span class="w"><span class="word">来る</span><span class="gl">[come]</span></span><span class="w"><span class="word">はず</span><span class="gl">[supposed to]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span>
+            <p class="romaji">Kare wa mou sugu kuru hazu desu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>鍵<rt>かぎ</rt></ruby>はかばんの<ruby>中<rt>なか</rt></ruby>にあるはずです。</p>
+          <p class="zh">钥匙应该在包里。<span class="pinyin">Yàoshi yīnggāi zài bāo lǐ.</span></p>
+          <p class="en">The key should be in the bag.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">鍵</span><span class="gl">[key]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">かばん</span><span class="gl">[bag]</span></span><span class="w"><span class="word">の</span><span class="gl">[&#x27;s]</span></span><span class="w"><span class="word">中</span><span class="gl">[inside]</span></span><span class="w"><span class="word">に</span><span class="gl">[in]</span></span><span class="w"><span class="word">ある</span><span class="gl">[be]</span></span><span class="w"><span class="word">はず</span><span class="gl">[supposed to]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span>
+            <p class="romaji">Kagi wa kaban no naka ni aru hazu desu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p42">
+        <div class="pat-head">
+          <span class="pat-num">42</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜すぎます</h2>
+            <p class="pat-romaji">~ sugimasu</p>
+          </div>
+          <p class="pat-name">too much ~ / over-do</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[verb stem / adj stem] + すぎます</div>
+        <p class="note">Say something is excessive. Attach すぎる to a verb or adjective stem = “too / overly.”</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>食<rt>た</rt></ruby>べすぎました。</p>
+          <p class="zh">我吃太多了。<span class="pinyin">Wǒ chī tài duō le.</span></p>
+          <p class="en">I ate too much.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">食べすぎました</span><span class="gl">[ate too much]</span></span>
+            <p class="romaji">Tabesugimashita.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp">この<ruby>問題<rt>もんだい</rt></ruby>は<ruby>難<rt>むずか</rt></ruby>しすぎます。</p>
+          <p class="zh">这个问题太难了。<span class="pinyin">Zhège wèntí tài nán le.</span></p>
+          <p class="en">This problem is too difficult.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">この</span><span class="gl">[this]</span></span><span class="w"><span class="word">問題</span><span class="gl">[problem]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">難しすぎます</span><span class="gl">[is too difficult]</span></span>
+            <p class="romaji">Kono mondai wa muzukashisugimasu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p43">
+        <div class="pat-head">
+          <span class="pat-num">43</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">…より〜です</h2>
+            <p class="pat-romaji">... yori ~ desu</p>
+          </div>
+          <p class="pat-name">more ~ than … (comparison)</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>A は B より + [adjective] + です</div>
+        <p class="note">Compare two things. “A は B より [adjective]” = “A is more [adjective] than B.” より = “than.”</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>飛行機<rt>ひこうき</rt></ruby>は<ruby>電車<rt>でんしゃ</rt></ruby>より<ruby>速<rt>はや</rt></ruby>いです。</p>
+          <p class="zh">飞机比火车快。<span class="pinyin">Fēijī bǐ huǒchē kuài.</span></p>
+          <p class="en">Planes are faster than trains.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">飛行機</span><span class="gl">[airplane]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">電車</span><span class="gl">[train]</span></span><span class="w"><span class="word">より</span><span class="gl">[than]</span></span><span class="w"><span class="word">速い</span><span class="gl">[fast]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span>
+            <p class="romaji">Hikouki wa densha yori hayai desu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>今日<rt>きょう</rt></ruby>は<ruby>昨日<rt>きのう</rt></ruby>より<ruby>暑<rt>あつ</rt></ruby>いです。</p>
+          <p class="zh">今天比昨天热。<span class="pinyin">Jīntiān bǐ zuótiān rè.</span></p>
+          <p class="en">Today is hotter than yesterday.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">今日</span><span class="gl">[today]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">昨日</span><span class="gl">[yesterday]</span></span><span class="w"><span class="word">より</span><span class="gl">[than]</span></span><span class="w"><span class="word">暑い</span><span class="gl">[hot]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span>
+            <p class="romaji">Kyou wa kinou yori atsui desu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p44">
+        <div class="pat-head">
+          <span class="pat-num">44</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜かもしれません</h2>
+            <p class="pat-romaji">~ kamoshiremasen</p>
+          </div>
+          <p class="pat-name">might / maybe ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[plain form] + かもしれません</div>
+        <p class="note">Express possibility — something that may or may not be true. Attach かもしれません to a plain-form clause.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>明日<rt>あした</rt></ruby>は<ruby>雪<rt>ゆき</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>るかもしれません。</p>
+          <p class="zh">明天可能会下雪。<span class="pinyin">Míngtiān kěnéng huì xià xuě.</span></p>
+          <p class="en">It might snow tomorrow.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">明日</span><span class="gl">[tomorrow]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">雪</span><span class="gl">[snow]</span></span><span class="w"><span class="word">が</span><span class="gl">[[subject]]</span></span><span class="w"><span class="word">降る</span><span class="gl">[fall]</span></span><span class="w"><span class="word">かもしれません</span><span class="gl">[might]</span></span>
+            <p class="romaji">Ashita wa yuki ga furu kamoshiremasen.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>彼<rt>かれ</rt></ruby>は<ruby>知<rt>し</rt></ruby>らないかもしれません。</p>
+          <p class="zh">他可能不知道。<span class="pinyin">Tā kěnéng bù zhīdào.</span></p>
+          <p class="en">He might not know.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">彼</span><span class="gl">[he]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">知らない</span><span class="gl">[not know]</span></span><span class="w"><span class="word">かもしれません</span><span class="gl">[might]</span></span>
+            <p class="romaji">Kare wa shiranai kamoshiremasen.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p45">
+        <div class="pat-head">
+          <span class="pat-num">45</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜してしまいました</h2>
+            <p class="pat-romaji">~ shiteshimaimashita</p>
+          </div>
+          <p class="pat-name">ended up ~ / did ~ (regret)</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[verb] て-form + しまいました</div>
+        <p class="note">Show that an action was completed — often by accident or with regret. て-form + しまいました.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>財布<rt>さいふ</rt></ruby>を<ruby>忘<rt>わす</rt></ruby>れてしまいました。</p>
+          <p class="zh">我把钱包忘了。<span class="pinyin">Wǒ bǎ qiánbāo wàng le.</span></p>
+          <p class="en">I (carelessly) forgot my wallet.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">財布</span><span class="gl">[wallet]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">忘れてしまいました</span><span class="gl">[ended up forgetting]</span></span>
+            <p class="romaji">Saifu o wasurete shimaimashita.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>全部<rt>ぜんぶ</rt></ruby><ruby>食<rt>た</rt></ruby>べてしまいました。</p>
+          <p class="zh">我全都吃光了。<span class="pinyin">Wǒ quán dōu chīguāng le.</span></p>
+          <p class="en">I ate it all up.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">全部</span><span class="gl">[all]</span></span><span class="w"><span class="word">食べてしまいました</span><span class="gl">[ate up completely]</span></span>
+            <p class="romaji">Zenbu tabete shimaimashita.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p46">
+        <div class="pat-head">
+          <span class="pat-num">46</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜したところです</h2>
+            <p class="pat-romaji">~ shita tokoro desu</p>
+          </div>
+          <p class="pat-name">just did ~ / just finished</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[verb] past-plain + ところです</div>
+        <p class="note">Say you've just finished doing something. Past-plain verb + ところです marks the moment right after an action.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>今<rt>いま</rt></ruby>、<ruby>駅<rt>えき</rt></ruby>に<ruby>着<rt>つ</rt></ruby>いたところです。</p>
+          <p class="zh">我刚到车站。<span class="pinyin">Wǒ gāng dào chēzhàn.</span></p>
+          <p class="en">I&#x27;ve just arrived at the station.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">今</span><span class="gl">[now]</span></span><span class="w"><span class="word">駅</span><span class="gl">[station]</span></span><span class="w"><span class="word">に</span><span class="gl">[at]</span></span><span class="w"><span class="word">着いた</span><span class="gl">[arrived]</span></span><span class="w"><span class="word">ところ</span><span class="gl">[the point/moment]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span>
+            <p class="romaji">Ima, eki ni tsuita tokoro desu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp">ご<ruby>飯<rt>はん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べたところです。</p>
+          <p class="zh">我刚吃完饭。<span class="pinyin">Wǒ gāng chīwán fàn.</span></p>
+          <p class="en">I&#x27;ve just eaten.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">ご飯</span><span class="gl">[meal]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">食べた</span><span class="gl">[ate]</span></span><span class="w"><span class="word">ところ</span><span class="gl">[the point/moment]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span>
+            <p class="romaji">Gohan o tabeta tokoro desu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p47">
+        <div class="pat-head">
+          <span class="pat-num">47</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜しなさい</h2>
+            <p class="pat-romaji">~ shinasai</p>
+          </div>
+          <p class="pat-name">do ~! (gentle command)</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[verb stem] + なさい</div>
+        <p class="note">A firm but caring command, typically from a parent or teacher to a child. Attach なさい to the verb stem.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>早<rt>はや</rt></ruby>く<ruby>寝<rt>ね</rt></ruby>なさい。</p>
+          <p class="zh">早点睡觉。<span class="pinyin">Zǎodiǎn shuìjiào.</span></p>
+          <p class="en">Go to bed early.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">早く</span><span class="gl">[early]</span></span><span class="w"><span class="word">寝なさい</span><span class="gl">[go to sleep (command)]</span></span>
+            <p class="romaji">Hayaku nenasai.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>宿題<rt>しゅくだい</rt></ruby>をしなさい。</p>
+          <p class="zh">去做作业。<span class="pinyin">Qù zuò zuòyè.</span></p>
+          <p class="en">Do your homework.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">宿題</span><span class="gl">[homework]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">しなさい</span><span class="gl">[do (command)]</span></span>
+            <p class="romaji">Shukudai o shinasai.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p48">
+        <div class="pat-head">
+          <span class="pat-num">48</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">あまり〜ない</h2>
+            <p class="pat-romaji">amari ~ nai</p>
+          </div>
+          <p class="pat-name">not very ~ / not much</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>あまり + [negative]</div>
+        <p class="note">Soften a negative statement. あまり paired with a negative = “not very / not much.”</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp">あまりお<ruby>酒<rt>さけ</rt></ruby>を<ruby>飲<rt>の</rt></ruby>みません。</p>
+          <p class="zh">我不太喝酒。<span class="pinyin">Wǒ bú tài hē jiǔ.</span></p>
+          <p class="en">I don&#x27;t drink much alcohol.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">あまり</span><span class="gl">[(not) much]</span></span><span class="w"><span class="word">お酒</span><span class="gl">[alcohol]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">飲みません</span><span class="gl">[don&#x27;t drink]</span></span>
+            <p class="romaji">Amari osake o nomimasen.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp">この<ruby>料理<rt>りょうり</rt></ruby>はあまり<ruby>辛<rt>から</rt></ruby>くないです。</p>
+          <p class="zh">这道菜不太辣。<span class="pinyin">Zhè dào cài bú tài là.</span></p>
+          <p class="en">This dish isn&#x27;t very spicy.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">この</span><span class="gl">[this]</span></span><span class="w"><span class="word">料理</span><span class="gl">[dish]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">あまり</span><span class="gl">[not very]</span></span><span class="w"><span class="word">辛くない</span><span class="gl">[not spicy]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span>
+            <p class="romaji">Kono ryouri wa amari karakunai desu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p49">
+        <div class="pat-head">
+          <span class="pat-num">49</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">それほど〜ない</h2>
+            <p class="pat-romaji">sorehodo ~ nai</p>
+          </div>
+          <p class="pat-name">not so ~ / not that ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>それほど + [negative]</div>
+        <p class="note">Say something is “not that ~,” often gently lowering an expectation. それほど + negative.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>今日<rt>きょう</rt></ruby>はそれほど<ruby>寒<rt>さむ</rt></ruby>くないです。</p>
+          <p class="zh">今天没那么冷。<span class="pinyin">Jīntiān méi nàme lěng.</span></p>
+          <p class="en">It&#x27;s not that cold today.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">今日</span><span class="gl">[today]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">それほど</span><span class="gl">[that much]</span></span><span class="w"><span class="word">寒くない</span><span class="gl">[not cold]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span>
+            <p class="romaji">Kyou wa sorehodo samukunai desu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp">その<ruby>映画<rt>えいが</rt></ruby>はそれほど<ruby>面白<rt>おもしろ</rt></ruby>くなかったです。</p>
+          <p class="zh">那部电影没那么有意思。<span class="pinyin">Nà bù diànyǐng méi nàme yǒuyìsi.</span></p>
+          <p class="en">That movie wasn&#x27;t that interesting.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">その</span><span class="gl">[that]</span></span><span class="w"><span class="word">映画</span><span class="gl">[movie]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">それほど</span><span class="gl">[that much]</span></span><span class="w"><span class="word">面白くなかった</span><span class="gl">[wasn&#x27;t interesting]</span></span><span class="w"><span class="word">です</span><span class="gl">[(polite)]</span></span>
+            <p class="romaji">Sono eiga wa sorehodo omoshiroku nakatta desu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p50">
+        <div class="pat-head">
+          <span class="pat-num">50</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">よく〜</h2>
+            <p class="pat-romaji">yoku ~</p>
+          </div>
+          <p class="pat-name">well / a lot ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>よく + [verb]</div>
+        <p class="note">Besides “often” (#31), よく also means “well” or “thoroughly.” Context tells you which: frequency or quality.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp">よく<ruby>眠<rt>ねむ</rt></ruby>れました。</p>
+          <p class="zh">我睡得很好。<span class="pinyin">Wǒ shuì de hěn hǎo.</span></p>
+          <p class="en">I slept well.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">よく</span><span class="gl">[well]</span></span><span class="w"><span class="word">眠れました</span><span class="gl">[was able to sleep]</span></span>
+            <p class="romaji">Yoku nemuremashita.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>先生<rt>せんせい</rt></ruby>の<ruby>話<rt>はなし</rt></ruby>をよく<ruby>聞<rt>き</rt></ruby>いてください。</p>
+          <p class="zh">请认真听老师讲。<span class="pinyin">Qǐng rènzhēn tīng lǎoshī jiǎng.</span></p>
+          <p class="en">Please listen carefully to the teacher.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">先生</span><span class="gl">[teacher]</span></span><span class="w"><span class="word">の</span><span class="gl">[&#x27;s]</span></span><span class="w"><span class="word">話</span><span class="gl">[talk]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">よく</span><span class="gl">[closely / well]</span></span><span class="w"><span class="word">聞いて</span><span class="gl">[listen]</span></span><span class="w"><span class="word">ください</span><span class="gl">[please]</span></span>
+            <p class="romaji">Sensei no hanashi o yoku kiite kudasai.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p51">
+        <div class="pat-head">
+          <span class="pat-num">51</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">まったく〜ない</h2>
+            <p class="pat-romaji">mattaku ~ nai</p>
+          </div>
+          <p class="pat-name">not at all ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>まったく + [negative]</div>
+        <p class="note">A strong, complete negative. まったく + negative = “not at all / not in the least.”</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>意味<rt>いみ</rt></ruby>がまったく<ruby>分<rt>わ</rt></ruby>かりません。</p>
+          <p class="zh">我完全不懂意思。<span class="pinyin">Wǒ wánquán bù dǒng yìsi.</span></p>
+          <p class="en">I don&#x27;t understand the meaning at all.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">意味</span><span class="gl">[meaning]</span></span><span class="w"><span class="word">が</span><span class="gl">[[subject]]</span></span><span class="w"><span class="word">まったく</span><span class="gl">[at all]</span></span><span class="w"><span class="word">分かりません</span><span class="gl">[don&#x27;t understand]</span></span>
+            <p class="romaji">Imi ga mattaku wakarimasen.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp">お<ruby>金<rt>かね</rt></ruby>がまったくありません。</p>
+          <p class="zh">我一点钱都没有。<span class="pinyin">Wǒ yìdiǎn qián dōu méiyǒu.</span></p>
+          <p class="en">I have no money at all.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">お金</span><span class="gl">[money]</span></span><span class="w"><span class="word">が</span><span class="gl">[[subject]]</span></span><span class="w"><span class="word">まったく</span><span class="gl">[at all]</span></span><span class="w"><span class="word">ありません</span><span class="gl">[there isn&#x27;t]</span></span>
+            <p class="romaji">Okane ga mattaku arimasen.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p52">
+        <div class="pat-head">
+          <span class="pat-num">52</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜させてください</h2>
+            <p class="pat-romaji">~ sasete kudasai</p>
+          </div>
+          <p class="pat-name">please let me ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[verb] causative て-form + ください</div>
+        <p class="note">Ask permission to do something yourself. The causative て-form + ください = “please let me ~.”</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp">ここで<ruby>写真<rt>しゃしん</rt></ruby>を<ruby>撮<rt>と</rt></ruby>らせてください。</p>
+          <p class="zh">请让我在这里拍张照。<span class="pinyin">Qǐng ràng wǒ zài zhèlǐ pāi zhāng zhào.</span></p>
+          <p class="en">Please let me take a photo here.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">ここ</span><span class="gl">[here]</span></span><span class="w"><span class="word">で</span><span class="gl">[at]</span></span><span class="w"><span class="word">写真</span><span class="gl">[photo]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">撮らせて</span><span class="gl">[let (me) take]</span></span><span class="w"><span class="word">ください</span><span class="gl">[please]</span></span>
+            <p class="romaji">Koko de shashin o torasete kudasai.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>少<rt>すこ</rt></ruby>し<ruby>考<rt>かんが</rt></ruby>えさせてください。</p>
+          <p class="zh">请让我想一下。<span class="pinyin">Qǐng ràng wǒ xiǎng yíxià.</span></p>
+          <p class="en">Please let me think for a moment.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">少し</span><span class="gl">[a little]</span></span><span class="w"><span class="word">考えさせて</span><span class="gl">[let (me) think]</span></span><span class="w"><span class="word">ください</span><span class="gl">[please]</span></span>
+            <p class="romaji">Sukoshi kangaesasete kudasai.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p53">
+        <div class="pat-head">
+          <span class="pat-num">53</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜させます</h2>
+            <p class="pat-romaji">~ sasemasu</p>
+          </div>
+          <p class="pat-name">make / let someone ~ (causative)</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[person] に + [verb] causative + ます</div>
+        <p class="note">Cause someone to do something — make or let them. The person who acts is marked by に.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>母<rt>はは</rt></ruby>は<ruby>弟<rt>おとうと</rt></ruby>に<ruby>部屋<rt>へや</rt></ruby>を<ruby>掃除<rt>そうじ</rt></ruby>させます。</p>
+          <p class="zh">妈妈让弟弟打扫房间。<span class="pinyin">Māma ràng dìdi dǎsǎo fángjiān.</span></p>
+          <p class="en">My mother makes my little brother clean the room.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">母</span><span class="gl">[mother]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">弟</span><span class="gl">[little brother]</span></span><span class="w"><span class="word">に</span><span class="gl">[[causee]]</span></span><span class="w"><span class="word">部屋</span><span class="gl">[room]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">掃除させます</span><span class="gl">[makes (him) clean]</span></span>
+            <p class="romaji">Haha wa otouto ni heya o souji sasemasu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>先生<rt>せんせい</rt></ruby>は<ruby>学生<rt>がくせい</rt></ruby>に<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>ませます。</p>
+          <p class="zh">老师让学生读书。<span class="pinyin">Lǎoshī ràng xuésheng dúshū.</span></p>
+          <p class="en">The teacher has the students read a book.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">先生</span><span class="gl">[teacher]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">学生</span><span class="gl">[student]</span></span><span class="w"><span class="word">に</span><span class="gl">[[causee]]</span></span><span class="w"><span class="word">本</span><span class="gl">[book]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">読ませます</span><span class="gl">[makes (them) read]</span></span>
+            <p class="romaji">Sensei wa gakusei ni hon o yomasemasu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p54">
+        <div class="pat-head">
+          <span class="pat-num">54</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜されました</h2>
+            <p class="pat-romaji">~ saremashita</p>
+          </div>
+          <p class="pat-name">was done to me (passive past)</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[verb] passive + ました</div>
+        <p class="note">The passive — something was done to the subject, often unwanted. The doer is marked by に.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>財布<rt>さいふ</rt></ruby>を<ruby>盗<rt>ぬす</rt></ruby>まれました。</p>
+          <p class="zh">我的钱包被偷了。<span class="pinyin">Wǒ de qiánbāo bèi tōu le.</span></p>
+          <p class="en">My wallet was stolen.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">財布</span><span class="gl">[wallet]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">盗まれました</span><span class="gl">[was stolen]</span></span>
+            <p class="romaji">Saifu o nusumaremashita.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>先生<rt>せんせい</rt></ruby>に<ruby>褒<rt>ほ</rt></ruby>められました。</p>
+          <p class="zh">我被老师表扬了。<span class="pinyin">Wǒ bèi lǎoshī biǎoyáng le.</span></p>
+          <p class="en">I was praised by the teacher.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">先生</span><span class="gl">[teacher]</span></span><span class="w"><span class="word">に</span><span class="gl">[by]</span></span><span class="w"><span class="word">褒められました</span><span class="gl">[was praised]</span></span>
+            <p class="romaji">Sensei ni homeraremashita.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p55">
+        <div class="pat-head">
+          <span class="pat-num">55</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜するつもりです</h2>
+            <p class="pat-romaji">~ suru tsumori desu</p>
+          </div>
+          <p class="pat-name">intend to ~ / plan to ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[dictionary form] + つもりです</div>
+        <p class="note">State an intention or plan you've decided on. Dictionary-form verb + つもりです.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>来年<rt>らいねん</rt></ruby><ruby>日本<rt>にほん</rt></ruby>に<ruby>留学<rt>りゅうがく</rt></ruby>するつもりです。</p>
+          <p class="zh">我打算明年去日本留学。<span class="pinyin">Wǒ dǎsuàn míngnián qù Rìběn liúxué.</span></p>
+          <p class="en">I plan to study in Japan next year.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">来年</span><span class="gl">[next year]</span></span><span class="w"><span class="word">日本</span><span class="gl">[Japan]</span></span><span class="w"><span class="word">に</span><span class="gl">[in]</span></span><span class="w"><span class="word">留学する</span><span class="gl">[study abroad]</span></span><span class="w"><span class="word">つもり</span><span class="gl">[intention]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span>
+            <p class="romaji">Rainen Nihon ni ryuugaku suru tsumori desu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>週末<rt>しゅうまつ</rt></ruby>は<ruby>家<rt>いえ</rt></ruby>にいるつもりです。</p>
+          <p class="zh">周末我打算待在家里。<span class="pinyin">Zhōumò wǒ dǎsuàn dāi zài jiā lǐ.</span></p>
+          <p class="en">I intend to stay home this weekend.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">週末</span><span class="gl">[weekend]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">家</span><span class="gl">[home]</span></span><span class="w"><span class="word">に</span><span class="gl">[at]</span></span><span class="w"><span class="word">いる</span><span class="gl">[stay]</span></span><span class="w"><span class="word">つもり</span><span class="gl">[intention]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span>
+            <p class="romaji">Shuumatsu wa ie ni iru tsumori desu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p56">
+        <div class="pat-head">
+          <span class="pat-num">56</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜が<ruby>得意<rt>とくい</rt></ruby>（<ruby>苦手<rt>にがて</rt></ruby>）です</h2>
+            <p class="pat-romaji">~ ga tokui (nigate) desu</p>
+          </div>
+          <p class="pat-name">good (bad) at ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[skill] が + 得意 / 苦手 + です</div>
+        <p class="note">Say what you're good or bad at. 得意 = good at; 苦手 = poor at / not a fan of. The skill takes が.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>私<rt>わたし</rt></ruby>は<ruby>料理<rt>りょうり</rt></ruby>が<ruby>得意<rt>とくい</rt></ruby>です。</p>
+          <p class="zh">我擅长做饭。<span class="pinyin">Wǒ shàncháng zuòfàn.</span></p>
+          <p class="en">I&#x27;m good at cooking.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">私</span><span class="gl">[I]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">料理</span><span class="gl">[cooking]</span></span><span class="w"><span class="word">が</span><span class="gl">[[subject]]</span></span><span class="w"><span class="word">得意</span><span class="gl">[good at]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span>
+            <p class="romaji">Watashi wa ryouri ga tokui desu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>私<rt>わたし</rt></ruby>は<ruby>数学<rt>すうがく</rt></ruby>が<ruby>苦手<rt>にがて</rt></ruby>です。</p>
+          <p class="zh">我不擅长数学。<span class="pinyin">Wǒ bú shàncháng shùxué.</span></p>
+          <p class="en">I&#x27;m bad at math.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">私</span><span class="gl">[I]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">数学</span><span class="gl">[math]</span></span><span class="w"><span class="word">が</span><span class="gl">[[subject]]</span></span><span class="w"><span class="word">苦手</span><span class="gl">[bad at]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span>
+            <p class="romaji">Watashi wa suugaku ga nigate desu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p57">
+        <div class="pat-head">
+          <span class="pat-num">57</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜しそうです</h2>
+            <p class="pat-romaji">~ shisou desu</p>
+          </div>
+          <p class="pat-name">looks about to ~ (on the verge)</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[verb stem] + そうです</div>
+        <p class="note">Say something looks about to happen any moment. Verb stem + そう, judged from appearance (like #40).</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp">ボタンが<ruby>取<rt>と</rt></ruby>れそうです。</p>
+          <p class="zh">扣子好像要掉了。<span class="pinyin">Kòuzi hǎoxiàng yào diào le.</span></p>
+          <p class="en">The button looks like it&#x27;s about to come off.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">ボタン</span><span class="gl">[button]</span></span><span class="w"><span class="word">が</span><span class="gl">[[subject]]</span></span><span class="w"><span class="word">取れそう</span><span class="gl">[looks about to come off]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span>
+            <p class="romaji">Botan ga toresou desu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>赤<rt>あか</rt></ruby>ちゃんが<ruby>泣<rt>な</rt></ruby>きそうです。</p>
+          <p class="zh">宝宝好像要哭了。<span class="pinyin">Bǎobao hǎoxiàng yào kū le.</span></p>
+          <p class="en">The baby looks like it&#x27;s about to cry.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">赤ちゃん</span><span class="gl">[baby]</span></span><span class="w"><span class="word">が</span><span class="gl">[[subject]]</span></span><span class="w"><span class="word">泣きそう</span><span class="gl">[looks about to cry]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span>
+            <p class="romaji">Akachan ga nakisou desu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p58">
+        <div class="pat-head">
+          <span class="pat-num">58</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜をどうぞ</h2>
+            <p class="pat-romaji">~ wo douzo</p>
+          </div>
+          <p class="pat-name">here you go / please have ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[noun] を + どうぞ</div>
+        <p class="note">Offer something to someone graciously. Noun + をどうぞ = “please, have ~ / here you are.”</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp">お<ruby>茶<rt>ちゃ</rt></ruby>をどうぞ。</p>
+          <p class="zh">请喝茶。<span class="pinyin">Qǐng hē chá.</span></p>
+          <p class="en">Here&#x27;s some tea.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">お茶</span><span class="gl">[tea]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">どうぞ</span><span class="gl">[please (here you are)]</span></span>
+            <p class="romaji">Ocha o douzo.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp">こちらをどうぞ。</p>
+          <p class="zh">这边请。<span class="pinyin">Zhèbiān qǐng.</span></p>
+          <p class="en">This one, please. / Right this way.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">こちら</span><span class="gl">[this way / this one]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">どうぞ</span><span class="gl">[please]</span></span>
+            <p class="romaji">Kochira o douzo.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p59">
+        <div class="pat-head">
+          <span class="pat-num">59</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">どうぞ〜してください</h2>
+            <p class="pat-romaji">Douzo ~ shite kudasai</p>
+          </div>
+          <p class="pat-name">please go ahead and ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>どうぞ + [verb] て-form + ください</div>
+        <p class="note">Warmly invite someone to do something. どうぞ adds “please, go ahead” to a normal て-form request.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp">どうぞ<ruby>座<rt>すわ</rt></ruby>ってください。</p>
+          <p class="zh">请坐。<span class="pinyin">Qǐng zuò.</span></p>
+          <p class="en">Please, have a seat.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">どうぞ</span><span class="gl">[please / go ahead]</span></span><span class="w"><span class="word">座って</span><span class="gl">[sit]</span></span><span class="w"><span class="word">ください</span><span class="gl">[please]</span></span>
+            <p class="romaji">Douzo suwatte kudasai.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp">どうぞ<ruby>入<rt>はい</rt></ruby>ってください。</p>
+          <p class="zh">请进。<span class="pinyin">Qǐng jìn.</span></p>
+          <p class="en">Please come in.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">どうぞ</span><span class="gl">[please / go ahead]</span></span><span class="w"><span class="word">入って</span><span class="gl">[enter]</span></span><span class="w"><span class="word">ください</span><span class="gl">[please]</span></span>
+            <p class="romaji">Douzo haitte kudasai.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p60">
+        <div class="pat-head">
+          <span class="pat-num">60</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">どうも〜</h2>
+            <p class="pat-romaji">Doumo ~</p>
+          </div>
+          <p class="pat-name">thanks / somehow / really ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>どうも + [phrase]</div>
+        <p class="note">どうも is versatile: a quick “thanks,” a vague “somehow,” or an intensifier “really.” Tone and context decide.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp">どうもありがとうございます。</p>
+          <p class="zh">非常感谢。<span class="pinyin">Fēicháng gǎnxiè.</span></p>
+          <p class="en">Thank you very much.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">どうも</span><span class="gl">[very / much]</span></span><span class="w"><span class="word">ありがとうございます</span><span class="gl">[thank you]</span></span>
+            <p class="romaji">Doumo arigatou gozaimasu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp">どうも<ruby>風邪<rt>かぜ</rt></ruby>を<ruby>引<rt>ひ</rt></ruby>いたようです。</p>
+          <p class="zh">我好像感冒了。<span class="pinyin">Wǒ hǎoxiàng gǎnmào le.</span></p>
+          <p class="en">It seems I&#x27;ve somehow caught a cold.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">どうも</span><span class="gl">[somehow]</span></span><span class="w"><span class="word">風邪</span><span class="gl">[cold]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">引いた</span><span class="gl">[caught]</span></span><span class="w"><span class="word">ようです</span><span class="gl">[seems]</span></span>
+            <p class="romaji">Doumo kaze o hiita you desu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p61">
+        <div class="pat-head">
+          <span class="pat-num">61</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">とても〜</h2>
+            <p class="pat-romaji">totemo ~</p>
+          </div>
+          <p class="pat-name">very ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>とても + [adjective]</div>
+        <p class="note">Intensify an adjective. とても = “very,” placed right before the adjective.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp">この<ruby>料理<rt>りょうり</rt></ruby>はとてもおいしいです。</p>
+          <p class="zh">这道菜非常好吃。<span class="pinyin">Zhè dào cài fēicháng hǎochī.</span></p>
+          <p class="en">This dish is very delicious.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">この</span><span class="gl">[this]</span></span><span class="w"><span class="word">料理</span><span class="gl">[dish]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">とても</span><span class="gl">[very]</span></span><span class="w"><span class="word">おいしい</span><span class="gl">[delicious]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span>
+            <p class="romaji">Kono ryouri wa totemo oishii desu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>今日<rt>きょう</rt></ruby>はとても<ruby>疲<rt>つか</rt></ruby>れました。</p>
+          <p class="zh">今天我非常累。<span class="pinyin">Jīntiān wǒ fēicháng lèi.</span></p>
+          <p class="en">I got very tired today.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">今日</span><span class="gl">[today]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">とても</span><span class="gl">[very]</span></span><span class="w"><span class="word">疲れました</span><span class="gl">[got tired]</span></span>
+            <p class="romaji">Kyou wa totemo tsukaremashita.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p62">
+        <div class="pat-head">
+          <span class="pat-num">62</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">また〜</h2>
+            <p class="pat-romaji">mata ~</p>
+          </div>
+          <p class="pat-name">again ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>また + [verb / phrase]</div>
+        <p class="note">また = “again.” Use it for repetition, or in friendly farewells like “see you again.”</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp">また<ruby>会<rt>あ</rt></ruby>いましょう。</p>
+          <p class="zh">我们再见面吧。<span class="pinyin">Wǒmen zài jiànmiàn ba.</span></p>
+          <p class="en">Let&#x27;s meet again.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">また</span><span class="gl">[again]</span></span><span class="w"><span class="word">会いましょう</span><span class="gl">[let&#x27;s meet]</span></span>
+            <p class="romaji">Mata aimashou.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp">また<ruby>同<rt>おな</rt></ruby>じ<ruby>間違<rt>まちが</rt></ruby>いをしました。</p>
+          <p class="zh">我又犯了同样的错误。<span class="pinyin">Wǒ yòu fàn le tóngyàng de cuòwù.</span></p>
+          <p class="en">I made the same mistake again.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">また</span><span class="gl">[again]</span></span><span class="w"><span class="word">同じ</span><span class="gl">[same]</span></span><span class="w"><span class="word">間違い</span><span class="gl">[mistake]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">しました</span><span class="gl">[made]</span></span>
+            <p class="romaji">Mata onaji machigai o shimashita.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p63">
+        <div class="pat-head">
+          <span class="pat-num">63</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">たぶん〜</h2>
+            <p class="pat-romaji">tabun ~</p>
+          </div>
+          <p class="pat-name">probably ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>たぶん + [clause]（でしょう）</div>
+        <p class="note">Express likelihood. たぶん = “probably,” often paired with でしょう or かもしれません.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp">たぶん<ruby>明日<rt>あした</rt></ruby>は<ruby>雨<rt>あめ</rt></ruby>でしょう。</p>
+          <p class="zh">明天大概会下雨。<span class="pinyin">Míngtiān dàgài huì xià yǔ.</span></p>
+          <p class="en">It&#x27;ll probably rain tomorrow.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">たぶん</span><span class="gl">[probably]</span></span><span class="w"><span class="word">明日</span><span class="gl">[tomorrow]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">雨</span><span class="gl">[rain]</span></span><span class="w"><span class="word">でしょう</span><span class="gl">[probably is]</span></span>
+            <p class="romaji">Tabun ashita wa ame deshou.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>彼<rt>かれ</rt></ruby>はたぶん<ruby>来<rt>き</rt></ruby>ません。</p>
+          <p class="zh">他大概不来。<span class="pinyin">Tā dàgài bù lái.</span></p>
+          <p class="en">He probably won&#x27;t come.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">彼</span><span class="gl">[he]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">たぶん</span><span class="gl">[probably]</span></span><span class="w"><span class="word">来ません</span><span class="gl">[won&#x27;t come]</span></span>
+            <p class="romaji">Kare wa tabun kimasen.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p64">
+        <div class="pat-head">
+          <span class="pat-num">64</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">きっと〜</h2>
+            <p class="pat-romaji">kitto ~</p>
+          </div>
+          <p class="pat-name">surely / certainly ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>きっと + [clause]</div>
+        <p class="note">Express confidence. きっと = “surely / I'm sure,” stronger than たぶん.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp">きっと<ruby>大丈夫<rt>だいじょうぶ</rt></ruby>です。</p>
+          <p class="zh">一定没问题。<span class="pinyin">Yídìng méi wèntí.</span></p>
+          <p class="en">It&#x27;ll surely be fine.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">きっと</span><span class="gl">[surely]</span></span><span class="w"><span class="word">大丈夫</span><span class="gl">[all right / fine]</span></span><span class="w"><span class="word">です</span><span class="gl">[is]</span></span>
+            <p class="romaji">Kitto daijoubu desu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>彼女<rt>かのじょ</rt></ruby>はきっと<ruby>成功<rt>せいこう</rt></ruby>します。</p>
+          <p class="zh">她一定会成功。<span class="pinyin">Tā yídìng huì chénggōng.</span></p>
+          <p class="en">She will surely succeed.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">彼女</span><span class="gl">[she]</span></span><span class="w"><span class="word">は</span><span class="gl">[topic]</span></span><span class="w"><span class="word">きっと</span><span class="gl">[surely]</span></span><span class="w"><span class="word">成功します</span><span class="gl">[will succeed]</span></span>
+            <p class="romaji">Kanojo wa kitto seikou shimasu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p65">
+        <div class="pat-head">
+          <span class="pat-num">65</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp"><ruby>念<rt>ねん</rt></ruby>のために〜</h2>
+            <p class="pat-romaji">nen no tame ni ~</p>
+          </div>
+          <p class="pat-name">just in case ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>念のために + [action]</div>
+        <p class="note">Do something as a precaution. 念のために = “just in case / to be safe.”</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>念<rt>ねん</rt></ruby>のために<ruby>傘<rt>かさ</rt></ruby>を<ruby>持<rt>も</rt></ruby>っていきます。</p>
+          <p class="zh">为了以防万一，我带把伞。<span class="pinyin">Wèile yǐfáng wànyī, wǒ dài bǎ sǎn.</span></p>
+          <p class="en">I&#x27;ll take an umbrella just in case.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">念のために</span><span class="gl">[just in case]</span></span><span class="w"><span class="word">傘</span><span class="gl">[umbrella]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">持っていきます</span><span class="gl">[take along]</span></span>
+            <p class="romaji">Nen no tame ni kasa o motte ikimasu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>念<rt>ねん</rt></ruby>のためにもう<ruby>一度<rt>いちど</rt></ruby><ruby>確認<rt>かくにん</rt></ruby>します。</p>
+          <p class="zh">为了保险，我再确认一次。<span class="pinyin">Wèile bǎoxiǎn, wǒ zài quèrèn yí cì.</span></p>
+          <p class="en">I&#x27;ll check once more just to be sure.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">念のために</span><span class="gl">[to be safe]</span></span><span class="w"><span class="word">もう一度</span><span class="gl">[once more]</span></span><span class="w"><span class="word">確認します</span><span class="gl">[confirm / check]</span></span>
+            <p class="romaji">Nen no tame ni mou ichido kakunin shimasu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p66">
+        <div class="pat-head">
+          <span class="pat-num">66</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜しないで（ください）</h2>
+            <p class="pat-romaji">~ shinaide (kudasai)</p>
+          </div>
+          <p class="pat-name">please don&#x27;t ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[verb] ない-form + で + ください</div>
+        <p class="note">Ask someone not to do something. ない-form + で + ください = “please don't ~.”</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp">ここで<ruby>写真<rt>しゃしん</rt></ruby>を<ruby>撮<rt>と</rt></ruby>らないでください。</p>
+          <p class="zh">请不要在这里拍照。<span class="pinyin">Qǐng búyào zài zhèlǐ pāizhào.</span></p>
+          <p class="en">Please don&#x27;t take photos here.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">ここ</span><span class="gl">[here]</span></span><span class="w"><span class="word">で</span><span class="gl">[at]</span></span><span class="w"><span class="word">写真</span><span class="gl">[photo]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">撮らないで</span><span class="gl">[don&#x27;t take]</span></span><span class="w"><span class="word">ください</span><span class="gl">[please]</span></span>
+            <p class="romaji">Koko de shashin o toranaide kudasai.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>心配<rt>しんぱい</rt></ruby>しないでください。</p>
+          <p class="zh">请不要担心。<span class="pinyin">Qǐng búyào dānxīn.</span></p>
+          <p class="en">Please don&#x27;t worry.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">心配しないで</span><span class="gl">[don&#x27;t worry]</span></span><span class="w"><span class="word">ください</span><span class="gl">[please]</span></span>
+            <p class="romaji">Shinpai shinaide kudasai.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p67">
+        <div class="pat-head">
+          <span class="pat-num">67</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜してはいけません</h2>
+            <p class="pat-romaji">~ shitewa ikemasen</p>
+          </div>
+          <p class="pat-name">must not ~ (forbidden)</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[verb] て-form + はいけません</div>
+        <p class="note">State a prohibition or rule. て-form + はいけません = “you must not ~.”</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp">ここでタバコを<ruby>吸<rt>す</rt></ruby>ってはいけません。</p>
+          <p class="zh">这里不可以吸烟。<span class="pinyin">Zhèlǐ bù kěyǐ xīyān.</span></p>
+          <p class="en">You must not smoke here.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">ここ</span><span class="gl">[here]</span></span><span class="w"><span class="word">で</span><span class="gl">[at]</span></span><span class="w"><span class="word">タバコ</span><span class="gl">[cigarette]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">吸っては</span><span class="gl">[as for smoking]</span></span><span class="w"><span class="word">いけません</span><span class="gl">[must not]</span></span>
+            <p class="romaji">Koko de tabako o sutte wa ikemasen.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>授業中<rt>じゅぎょうちゅう</rt></ruby>に<ruby>寝<rt>ね</rt></ruby>てはいけません。</p>
+          <p class="zh">上课时不可以睡觉。<span class="pinyin">Shàngkè shí bù kěyǐ shuìjiào.</span></p>
+          <p class="en">You must not sleep during class.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">授業中</span><span class="gl">[during class]</span></span><span class="w"><span class="word">に</span><span class="gl">[at]</span></span><span class="w"><span class="word">寝ては</span><span class="gl">[as for sleeping]</span></span><span class="w"><span class="word">いけません</span><span class="gl">[must not]</span></span>
+            <p class="romaji">Jugyou chuu ni nete wa ikemasen.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p68">
+        <div class="pat-head">
+          <span class="pat-num">68</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜してみて（ください）</h2>
+            <p class="pat-romaji">~ shitemite (kudasai)</p>
+          </div>
+          <p class="pat-name">try doing ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[verb] て-form + みて（ください）</div>
+        <p class="note">Suggest trying something out. て-form + みる literally means “do and see,” so + みてください = “try ~ (and see).”</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp">この<ruby>服<rt>ふく</rt></ruby>を<ruby>着<rt>き</rt></ruby>てみてください。</p>
+          <p class="zh">请试穿一下这件衣服。<span class="pinyin">Qǐng shìchuān yíxià zhè jiàn yīfu.</span></p>
+          <p class="en">Please try this outfit on.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">この</span><span class="gl">[this]</span></span><span class="w"><span class="word">服</span><span class="gl">[clothes]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">着てみて</span><span class="gl">[try wearing]</span></span><span class="w"><span class="word">ください</span><span class="gl">[please]</span></span>
+            <p class="romaji">Kono fuku o kite mite kudasai.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>一度<rt>いちど</rt></ruby><ruby>食<rt>た</rt></ruby>べてみてください。</p>
+          <p class="zh">请尝一下。<span class="pinyin">Qǐng cháng yíxià.</span></p>
+          <p class="en">Try eating it once.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">一度</span><span class="gl">[once]</span></span><span class="w"><span class="word">食べてみて</span><span class="gl">[try eating]</span></span><span class="w"><span class="word">ください</span><span class="gl">[please]</span></span>
+            <p class="romaji">Ichido tabete mite kudasai.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p69">
+        <div class="pat-head">
+          <span class="pat-num">69</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜、お<ruby>願<rt>ねが</rt></ruby>いします</h2>
+            <p class="pat-romaji">~, onegai shimasu</p>
+          </div>
+          <p class="pat-name">~, please / I&#x27;d like ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[noun] を + お願いします</div>
+        <p class="note">Politely request a thing or service. Noun + をお願いします — common when ordering or asking for help.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp">コーヒーをお<ruby>願<rt>ねが</rt></ruby>いします。</p>
+          <p class="zh">请给我一杯咖啡。<span class="pinyin">Qǐng gěi wǒ yì bēi kāfēi.</span></p>
+          <p class="en">Coffee, please.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">コーヒー</span><span class="gl">[coffee]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">お願いします</span><span class="gl">[please (I request)]</span></span>
+            <p class="romaji">Koohii o onegai shimasu.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp"><ruby>会計<rt>かいけい</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いします。</p>
+          <p class="zh">请结账。<span class="pinyin">Qǐng jiézhàng.</span></p>
+          <p class="en">The check, please.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">会計</span><span class="gl">[bill / check]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">お願いします</span><span class="gl">[please (I request)]</span></span>
+            <p class="romaji">Kaikei o onegai shimasu.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p70">
+        <div class="pat-head">
+          <span class="pat-num">70</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜をください</h2>
+            <p class="pat-romaji">~ wo kudasai</p>
+          </div>
+          <p class="pat-name">please give me ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[noun] を + ください</div>
+        <p class="note">Ask for a thing directly. Noun + をください = “please give me ~.” Add a counter for quantity.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>水<rt>みず</rt></ruby>を<ruby>一杯<rt>いっぱい</rt></ruby>ください。</p>
+          <p class="zh">请给我一杯水。<span class="pinyin">Qǐng gěi wǒ yì bēi shuǐ.</span></p>
+          <p class="en">Please give me a glass of water.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">水</span><span class="gl">[water]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">一杯</span><span class="gl">[one glass]</span></span><span class="w"><span class="word">ください</span><span class="gl">[please give me]</span></span>
+            <p class="romaji">Mizu o ippai kudasai.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp">これをください。</p>
+          <p class="zh">请给我这个。<span class="pinyin">Qǐng gěi wǒ zhège.</span></p>
+          <p class="en">I&#x27;ll take this one.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">これ</span><span class="gl">[this]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">ください</span><span class="gl">[please give me]</span></span>
+            <p class="romaji">Kore o kudasai.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p71">
+        <div class="pat-head">
+          <span class="pat-num">71</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜してください</h2>
+            <p class="pat-romaji">~ shite kudasai</p>
+          </div>
+          <p class="pat-name">please do ~</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[verb] て-form + ください</div>
+        <p class="note">The standard polite request. Take the て-form of the verb and add ください.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp">もう<ruby>一度<rt>いちど</rt></ruby><ruby>言<rt>い</rt></ruby>ってください。</p>
+          <p class="zh">请再说一遍。<span class="pinyin">Qǐng zài shuō yí biàn.</span></p>
+          <p class="en">Please say it once more.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">もう一度</span><span class="gl">[once more]</span></span><span class="w"><span class="word">言って</span><span class="gl">[say]</span></span><span class="w"><span class="word">ください</span><span class="gl">[please]</span></span>
+            <p class="romaji">Mou ichido itte kudasai.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp">ゆっくり<ruby>話<rt>はな</rt></ruby>してください。</p>
+          <p class="zh">请说慢一点。<span class="pinyin">Qǐng shuō màn yìdiǎn.</span></p>
+          <p class="en">Please speak slowly.</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">ゆっくり</span><span class="gl">[slowly]</span></span><span class="w"><span class="word">話して</span><span class="gl">[speak]</span></span><span class="w"><span class="word">ください</span><span class="gl">[please]</span></span>
+            <p class="romaji">Yukkuri hanashite kudasai.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+      <section class="pat" id="p72">
+        <div class="pat-head">
+          <span class="pat-num">72</span>
+          <div class="pat-headtext">
+            <h2 class="pat-jp">〜していただけませんか</h2>
+            <p class="pat-romaji">~ shite itadakemasen ka</p>
+          </div>
+          <p class="pat-name">could you please ~? (very polite)</p>
+        </div>
+        <div class="pattern-box"><span class="pb-label">Pattern</span>[verb] て-form + いただけませんか</div>
+        <p class="note">A very polite, humble request. て-form + いただけませんか is softer and more deferential than ください.</p>
+        <div class="examples">
+        <div class="s">
+          <p class="jp"><ruby>写真<rt>しゃしん</rt></ruby>を<ruby>撮<rt>と</rt></ruby>っていただけませんか。</p>
+          <p class="zh">能帮我拍张照吗？<span class="pinyin">Néng bāng wǒ pāi zhāng zhào ma?</span></p>
+          <p class="en">Could you take a photo for me?</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">写真</span><span class="gl">[photo]</span></span><span class="w"><span class="word">を</span><span class="gl">[[object]]</span></span><span class="w"><span class="word">撮って</span><span class="gl">[take]</span></span><span class="w"><span class="word">いただけませんか</span><span class="gl">[could you please?]</span></span>
+            <p class="romaji">Shashin o totte itadakemasen ka.</p>
+          </div>
+        </div>
+        <div class="s">
+          <p class="jp">もう<ruby>少<rt>すこ</rt></ruby>し<ruby>待<rt>ま</rt></ruby>っていただけませんか。</p>
+          <p class="zh">能再等一会儿吗？<span class="pinyin">Néng zài děng yíhuìr ma?</span></p>
+          <p class="en">Could you wait a little longer?</p>
+          <div class="bd" hidden>
+            <span class="w"><span class="word">もう少し</span><span class="gl">[a little more]</span></span><span class="w"><span class="word">待って</span><span class="gl">[wait]</span></span><span class="w"><span class="word">いただけませんか</span><span class="gl">[could you please?]</span></span>
+            <p class="romaji">Mou sukoshi matte itadakemasen ka.</p>
+          </div>
+        </div>
+        </div>
+        <p class="backtotop"><a href="#toc">↑ contents</a></p>
+      </section>
+</main>
+
+<div class="nav" style="margin-top: 30px; border-top: 1px solid #ccc; border-bottom: none;"><a href="index.html">← Home</a><a href="#toc">↑ Contents</a></div>
+
+<script>
+    // Tap a sentence to reveal its word-by-word breakdown (one open at a time).
+    document.querySelectorAll('.s').forEach(function (s) {
+      s.addEventListener('click', function (e) {
+        if (e.target.closest('a')) return;
+        var bd = s.querySelector('.bd');
+        if (!bd) return;
+        if (bd.hidden) {
+          document.querySelectorAll('.bd:not([hidden])').forEach(function (other) {
+            other.hidden = true;
+            other.closest('.s').classList.remove('active');
+          });
+          bd.hidden = false;
+          s.classList.add('active');
+        } else {
+          bd.hidden = true;
+          s.classList.remove('active');
+        }
+      });
+    });
+
+    // Furigana toggle.
+    (function () {
+      var btn = document.getElementById('furi-toggle');
+      btn.addEventListener('click', function () {
+        document.body.classList.toggle('no-furigana');
+        var on = !document.body.classList.contains('no-furigana');
+        btn.classList.toggle('active', on);
+        btn.textContent = on ? 'Furigana: on' : 'Furigana: off';
+      });
+    })();
+</script>
+</body>
+</html>
